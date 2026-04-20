@@ -1,0 +1,6 @@
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Infrastructure\obj\Debug\SchoolLibrary.Infrastructure.csproj.AssemblyReference.cache
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Infrastructure\obj\Debug\SchoolLibrary.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Infrastructure\bin\Debug\SchoolLibrary.Infrastructure.dll
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Infrastructure\bin\Debug\SchoolLibrary.Infrastructure.pdb
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Infrastructure\obj\Debug\SchoolLibrary.Infrastructure.dll
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Infrastructure\obj\Debug\SchoolLibrary.Infrastructure.pdb

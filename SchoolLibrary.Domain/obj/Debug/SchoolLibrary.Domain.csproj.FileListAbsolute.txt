@@ -1,0 +1,6 @@
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\bin\Debug\SchoolLibrary.Domain.dll
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\bin\Debug\SchoolLibrary.Domain.pdb
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\SchoolLibrary.Domain.csproj.AssemblyReference.cache
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\SchoolLibrary.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\SchoolLibrary.Domain.dll
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\SchoolLibrary.Domain.pdb
