@@ -1,6 +1,0 @@
-C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Appliaction\bin\Debug\SchoolLibrary.Appliaction.dll
-C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Appliaction\bin\Debug\SchoolLibrary.Appliaction.pdb
-C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Appliaction\obj\Debug\SchoolLibrary.Application.csproj.AssemblyReference.cache
-C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Appliaction\obj\Debug\SchoolLibrary.Application.csproj.CoreCompileInputs.cache
-C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Appliaction\obj\Debug\SchoolLibrary.Appliaction.dll
-C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Appliaction\obj\Debug\SchoolLibrary.Appliaction.pdb

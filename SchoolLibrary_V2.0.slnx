@@ -1,6 +1,6 @@
 <Solution>
   <Project Path="SchoolLibrary.API/SchoolLibrary.API.csproj" />
-  <Project Path="SchoolLibrary.Appliaction/SchoolLibrary.Application.csproj" />
-  <Project Path="SchoolLibrary.Domain/SchoolLibrary.Domain.csproj" />
-  <Project Path="SchoolLibrary.Infrastructure/SchoolLibrary.Infrastructure.csproj" />
+  <Project Path="SchoolLibrary.Application/SchoolLibrary.Application.csproj" Id="1a1b5873-a22b-44e1-9968-0dffc416db8f" />
+  <Project Path="SchoolLibrary.Domain/SchoolLibrary.Domain.csproj" Id="1ff913de-ebe8-4d83-b1f2-2d65eda3528d" />
+  <Project Path="SchoolLibrary.Infrastructure/SchoolLibrary.Infrastructure.csproj" Id="14103e10-f645-4051-80bd-8d60ec78c8c8" />
 </Solution>
