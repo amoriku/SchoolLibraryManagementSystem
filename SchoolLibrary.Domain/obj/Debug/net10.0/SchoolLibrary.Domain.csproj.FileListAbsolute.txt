@@ -1,0 +1,13 @@
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\bin\Debug\net10.0\SchoolLibrary.Domain.deps.json
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\bin\Debug\net10.0\SchoolLibrary.Domain.dll
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\bin\Debug\net10.0\SchoolLibrary.Domain.pdb
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\SchoolLibrary.Domain.csproj.AssemblyReference.cache
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\SchoolLibrary.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\SchoolLibrary.Domain.AssemblyInfoInputs.cache
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\SchoolLibrary.Domain.AssemblyInfo.cs
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\SchoolLibrary.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\SchoolLibrary.Domain.sourcelink.json
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\SchoolLibrary.Domain.dll
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\refint\SchoolLibrary.Domain.dll
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\SchoolLibrary.Domain.pdb
+C:\Projects\C#\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Debug\net10.0\ref\SchoolLibrary.Domain.dll

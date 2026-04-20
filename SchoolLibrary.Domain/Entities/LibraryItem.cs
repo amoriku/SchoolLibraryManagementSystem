@@ -1,0 +1,16 @@
+﻿using SchoolLibrary.Domain.Interfaces;
+
+namespace SchoolLibrary.Domain.Entities
+{
+    public abstract class LibraryItem : ISoftDeletable
+    {
+        public int Id { get; set; }
+
+        public string Title { get; set; } = string.Empty;
+        public string? Description { get; set; }
+        public int? PublishedYear { get; set; }
+
+        public bool IsDeleted { get; set; } = false;
+        public DateTimeOffset? DeletedAt { get; set; }
+    }
+}
