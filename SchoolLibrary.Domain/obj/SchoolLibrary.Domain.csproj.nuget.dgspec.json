@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\C#\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj": {}
+    "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\C#\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj": {
+    "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\C#\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj",
+        "projectUniqueName": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj",
         "projectName": "SchoolLibrary.Domain",
-        "projectPath": "C:\\Projects\\C#\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj",
+        "projectPath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj",
         "packagesPath": "C:\\Users\\Артем\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\C#\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\obj\\",
+        "outputPath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -2,7 +2,7 @@
 {
     public interface ISoftDeletable
     {
-        bool IsDeleted { get; }
-        DateTimeOffset? DeletedAt { get; }
+        bool IsDeleted { get; set; }
+        DateTimeOffset? DeletedAt { get; set; }
     }
 }
