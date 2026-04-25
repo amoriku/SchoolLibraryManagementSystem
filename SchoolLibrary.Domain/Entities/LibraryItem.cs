@@ -2,7 +2,7 @@
 
 namespace SchoolLibrary.Domain.Entities
 {
-    public abstract class LibraryItem : ISoftDeletable
+    public class LibraryItem : ISoftDeletable
     {
         public int Id { get; set; }
 
@@ -12,5 +12,8 @@ namespace SchoolLibrary.Domain.Entities
 
         public bool IsDeleted { get; set; } = false;
         public DateTimeOffset? DeletedAt { get; set; }
+
+        public ICollection<ItemAuthor> ItemAuthors { get; set; } = [];
+        public ICollection<LibraryItemCopy> LibraryItemCopies { get; set; } = [];
     }
 }

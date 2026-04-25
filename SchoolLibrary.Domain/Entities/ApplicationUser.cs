@@ -1,17 +1,25 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using SchoolLibrary.Domain.Interfaces;
+using SchoolLibrary.Domain.ValueObjects;
 
 namespace SchoolLibrary.Domain.Entities
 {
     public class ApplicationUser : IdentityUser, ISoftDeletable
     {
-        public string FirstName { get; set; } = string.Empty;
-        public string LastName { get; set; } = string.Empty;
-        public string? MiddleName { get; set; }
+        public FullName FullName { get; set; } = null!;
 
+        public short? GradeId { get; set; }
+        public Grade? Grade { get; set; } = null!;
 
-        public bool IsDeleted { get; } = false;
-        public DateTimeOffset? DeletedAt { get; }
+        public bool IsDeleted { get; set; } = false;
+        public DateTimeOffset? DeletedAt { get; set; }
+
+        public DateTimeOffset CreatedAt { get; set; }
+        public DateTimeOffset? LastModifiedAt { get; set; }
+
+        public string RefreshToken { get; set; } = string.Empty;
+
+        public ICollection<UserHistory> UserHistories { get; set; } = [];
     }
 }
