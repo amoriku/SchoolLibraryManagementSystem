@@ -8,8 +8,12 @@
 
         public ItemCopyStatus Status { get; set; }
 
+        public short FundId { get; set; }
+        public Fund Fund { get; set; } = null!;
+
         public int LibraryItemId { get; set; }
         public LibraryItem LibraryItem { get; set; } = null!;
 
+        public ICollection<UserHistory> UserHistories { get; set; } = [];
     }
 }

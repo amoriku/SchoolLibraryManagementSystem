@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wI8iSc/F3AU=",
+  "dgSpecHash": "gobeO/5MaCI=",
   "success": true,
-  "projectFilePath": "C:\\Projects\\C#\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj",
+  "projectFilePath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Артем\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\10.0.6\\microsoft.aspnetcore.cryptography.internal.10.0.6.nupkg.sha512",
     "C:\\Users\\Артем\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\10.0.6\\microsoft.aspnetcore.cryptography.keyderivation.10.0.6.nupkg.sha512",

@@ -4,13 +4,18 @@ namespace SchoolLibrary.Domain.ValueObjects
 {
     public record FullName
     {
+        // Имя
         public string FirstName { get; init; } = string.Empty;
+        
+        // Фамилия
         public string LastName { get; init; } = string.Empty;
+
+        // Отчество
         public string? MiddleName { get; init; }
 
         public string Full => string.IsNullOrWhiteSpace(MiddleName)
             ? $"{FirstName} {LastName}"
-            : $"{FirstName} {LastName} {MiddleName}";
+            : $"{FirstName} {MiddleName} {LastName}";
 
         private FullName() { }
 

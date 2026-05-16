@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SchoolLibrary.Infrastructure.Common;
 
 namespace SchoolLibrary.Infrastructure
 {
@@ -12,6 +13,8 @@ namespace SchoolLibrary.Infrastructure
             {
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
             });
+
+            services.AddScoped<IDbInitializer, DbInitializer>();
 
             return services;
         }

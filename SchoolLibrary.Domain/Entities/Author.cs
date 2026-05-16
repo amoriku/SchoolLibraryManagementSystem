@@ -2,6 +2,9 @@
 
 namespace SchoolLibrary.Domain.Entities
 {
+    /// <summary>
+    /// Сущность автора | Содержит справочные данные для запросов.
+    /// </summary>
     public class Author
     {
         public int Id { get; set; }

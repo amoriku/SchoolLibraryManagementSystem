@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JYTaA2CC84o=",
+  "dgSpecHash": "PemlvJVxN00=",
   "success": true,
   "projectFilePath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj",
   "expectedPackageFiles": [
@@ -28,15 +28,5 @@
     "C:\\Users\\Артем\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\10.0.6\\microsoft.extensions.options.configurationextensions.10.0.6.nupkg.sha512",
     "C:\\Users\\Артем\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.6\\microsoft.extensions.primitives.10.0.6.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json.",
-      "projectPath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

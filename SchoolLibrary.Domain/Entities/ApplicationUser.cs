@@ -18,8 +18,6 @@ namespace SchoolLibrary.Domain.Entities
         public DateTimeOffset CreatedAt { get; set; }
         public DateTimeOffset? LastModifiedAt { get; set; }
 
-        public string RefreshToken { get; set; } = string.Empty;
-
         public ICollection<UserHistory> UserHistories { get; set; } = [];
     }
 }

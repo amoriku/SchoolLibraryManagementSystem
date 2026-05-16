@@ -1,14 +1,179 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projects\\C#\\SchoolLibrary_V2.0\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\author\\authorcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\author\\authorcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\querydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\querydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\author\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\author\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\book\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\book\\bookdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\libraryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\libraryitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\libraryitemcopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\libraryitemcopy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\common\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\common\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\book\\bookcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\book\\bookcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\fundscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\fundscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\itemauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\itemauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\schoollibrary.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\schoollibrary.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\fund.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\fund.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\configurations\\gradeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\configurations\\gradeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\configurations\\fullnameconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\configurations\\fullnameconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\configurations\\authorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\configurations\\authorconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\configurations\\applicationuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\configurations\\applicationuserconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\configurations\\userhistoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\configurations\\userhistoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\valueobjects\\fullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\valueobjects\\fullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 293,
+          "DockedHeight": 379,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -22,12 +187,524 @@
           ]
         },
         {
-          "DockedHeight": 107,
-          "SelectedChildIndex": -1,
+          "DockedHeight": 111,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SchoolLibrary.API.http",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\SchoolLibrary.API.http",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\SchoolLibrary.API.http",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\SchoolLibrary.API.http",
+              "RelativeToolTip": "SchoolLibrary.API\\SchoolLibrary.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-05-09T06:20:27.635Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAkwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T13:11:57.205Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\BookService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BookService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\BookService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwEoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T07:10:41.113Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBookService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IBookService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBookService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T07:09:13.634Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthorService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthorService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\AuthorService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthorService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\AuthorService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAASwB8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T14:06:56.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Author.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Author.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Author.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Author.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:25:21.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthorCreateDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Author\\AuthorCreateDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Author\\AuthorCreateDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Author\\AuthorCreateDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Author\\AuthorCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T14:06:08.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAwwFkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T05:00:26.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "QueryDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\QueryDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\QueryDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\QueryDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\QueryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T16:01:41.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthorDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Author\\AuthorDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Author\\AuthorDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Author\\AuthorDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Author\\AuthorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T14:06:16.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthorsController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthorsController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\AuthorsController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthorsController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\AuthorsController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwCQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T14:08:34.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IAuthorService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IAuthorService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IAuthorService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IAuthorService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IAuthorService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T14:05:57.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Book\\BookDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Book\\BookDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T15:02:05.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LibraryItem.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\LibraryItem.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\LibraryItem.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\LibraryItem.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\LibraryItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T16:11:07.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LibraryItemCopy.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\LibraryItemCopy.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\LibraryItemCopy.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\LibraryItemCopy.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\LibraryItemCopy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T16:09:49.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Book.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Book.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Book.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:26:01.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\BooksController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAADgvyIAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T16:04:43.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IBaseService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBaseService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IBaseService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBaseService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T14:23:24.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Program.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Program.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Program.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Program.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAADwv2wAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T07:17:09.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAArwCwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T05:03:27.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T04:59:58.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T05:00:08.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T05:00:05.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T04:18:19.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T13:46:41.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\AppDbContext.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T04:18:12.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "BookCreateDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T14:55:21.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FundsController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\FundsController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\FundsController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\FundsController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\FundsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T14:56:08.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BaseService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\BaseService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BaseService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\BaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T07:10:24.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ItemAuthor.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\ItemAuthor.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\ItemAuthor.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\ItemAuthor.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\ItemAuthor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:00:47.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Grade.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Grade.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Grade.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Grade.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Grade.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:24:30.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Fund.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Fund.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Fund.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Fund.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Fund.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:26:03.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "FullNameConfiguration.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\FullNameConfiguration.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Configurations\\FullNameConfiguration.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\FullNameConfiguration.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\FullNameConfiguration.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:21:24.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AuthorConfiguration.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\AuthorConfiguration.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Configurations\\AuthorConfiguration.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\AuthorConfiguration.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\AuthorConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:07:28.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\ApplicationUser.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\ApplicationUser.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwBQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:00:20.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ApplicationUserConfiguration.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\ApplicationUserConfiguration.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Configurations\\ApplicationUserConfiguration.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\ApplicationUserConfiguration.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\ApplicationUserConfiguration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:07:21.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "GradeConfiguration.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\GradeConfiguration.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Configurations\\GradeConfiguration.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\GradeConfiguration.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\GradeConfiguration.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAywA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:07:33.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\RefreshToken.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\RefreshToken.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T04:59:55.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UserHistory.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\UserHistory.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\UserHistory.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\UserHistory.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\UserHistory.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:23:10.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UserHistoryConfiguration.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\UserHistoryConfiguration.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Configurations\\UserHistoryConfiguration.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\UserHistoryConfiguration.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\UserHistoryConfiguration.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:07:57.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "FullName.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\ValueObjects\\FullName.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\ValueObjects\\FullName.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\ValueObjects\\FullName.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\ValueObjects\\FullName.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA0wBkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:22:28.097Z"
             }
           ]
         }

@@ -1,0 +1,13 @@
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\bin\Release\net10.0\SchoolLibrary.Domain.deps.json
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\bin\Release\net10.0\SchoolLibrary.Domain.dll
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\bin\Release\net10.0\SchoolLibrary.Domain.pdb
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\SchoolLibrary.Domain.csproj.AssemblyReference.cache
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\SchoolLibrary.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\SchoolLibrary.Domain.AssemblyInfoInputs.cache
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\SchoolLibrary.Domain.AssemblyInfo.cs
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\SchoolLibrary.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\SchoolLibrary.Domain.sourcelink.json
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\SchoolLibrary.Domain.dll
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\refint\SchoolLibrary.Domain.dll
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\SchoolLibrary.Domain.pdb
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.Domain\obj\Release\net10.0\ref\SchoolLibrary.Domain.dll
