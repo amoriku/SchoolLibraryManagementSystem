@@ -35,13 +35,21 @@ namespace SchoolLibrary.API.Controllers
             }         
         }
 
-        [HttpGet("current")]
         [Authorize]
-        public IActionResult GetCurrent()
+        [HttpDelete("logout")]
+        public IActionResult Logout()
         {
-            string? userId = authService.GetCurrentUser();
+            authService.Logout();
+            return Ok();
+        }
 
-            return string.IsNullOrEmpty(userId) ? Unauthorized("You`r not authorized") : Ok(userId);
+        [Authorize]
+        [HttpGet("current")]
+        public async Task<IActionResult> GetCurrent(CancellationToken cancellationToken)
+        {
+            var user = await authService.GetCurrentUserAsync(cancellationToken);
+
+            return user == null ? Unauthorized("You`r not authorized") : Ok(user);
         }
 
         [HttpPost("login")]
@@ -50,16 +58,6 @@ namespace SchoolLibrary.API.Controllers
             try
             {
                 var tokenResponse = await authService.LoginAsync(dto, cancellationToken);
-
-                Response.Cookies.Append("user_session", tokenResponse!.AccessToken,
-                    new CookieOptions
-                    {
-                        Expires = DateTime.UtcNow.AddDays(7),
-                        Secure = true,
-                        SameSite = SameSiteMode.None,
-                        HttpOnly = true,  
-                    });
-
                 return Ok(tokenResponse);
             }
             catch (Exception ex)
@@ -68,6 +66,7 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete("revoke-refresh-tokens")]
         public async Task<IActionResult> RevokeRefreshTokens(CancellationToken cancellationToken)
         {
@@ -88,7 +87,7 @@ namespace SchoolLibrary.API.Controllers
         [HttpGet("test-auth")]
         public IActionResult TestAuth()
         {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var isAuthenticated = User.Identity?.IsAuthenticated;
             var claims = User.Claims.ToDictionary(c => $"{c.Type}: {c.Value}");
 

@@ -1,15 +1,6 @@
-import axios from "axios";
+import { api } from "../api";
+import type { BookDto } from "./Entity.Types";
 
-export interface Book{
-    id: number,
-    receiptDate: Date,
-    title: string,
-    // description?: string,
-    publishedYear?: number,
-    price?: number
-}
-
-const BASE_API_URL: string = import.meta.env.VITE_API_URL;
 
 export const GetBookCoverByTitle = async (title: string) => {
     const encodedTitle: string = encodeURIComponent(title);
@@ -21,24 +12,21 @@ export const GetBookCoverByTitle = async (title: string) => {
     }
 }
 
-export const GetAllBooks = async (title?: string) =>{
-    const options = {
-        method: "GET",
-        url: `${BASE_API_URL}/Books`,
-        params: {
-            Search: title
-        },
-        headers:{
-            accept: "*/*"
-        }
-    }
-
+export const GetAllBooks = async (title?: string): Promise<BookDto[]> =>{
     try{
-        const response = await axios.request(options)
-        // console.log(response.data);
+        const response = await api.get<BookDto[]>(
+            "/Books",
+            {
+                params: {
+                    Search: title
+                }
+            }
+        )
+        console.log(response.data);
         return response.data;
     }
     catch (error){
         console.error(error)
+        return [];
     }
 }

@@ -8,5 +8,6 @@ namespace SchoolLibrary.Application.Interfaces
         // Loan (Borrowing), Return, History
         Task<UserHistory> CreateUserHistoryRecordAsync(UserHistoryCreateDto dto, CancellationToken cancellationToken);
         Task<UserHistory?> GetUserHistoryAsync(string userId, CancellationToken cancellationToken);
+        Task<List<ReaderDto>> GetAllAsync(CancellationToken cancellationToken);
     }
 }

@@ -1,34 +1,54 @@
-import { useState } from "react";
-import { GetAllBooks, type Book } from "../api/entities/BookApi"
-import { SearchInput } from "./CustomInput"
-import { BookCard } from "./book/BookCard";
+import { FiLogOut, FiLayout, FiUsers } from "react-icons/fi";
+import { useAuth } from "../hooks/useAuth";
+import { SideBarItem } from "./SideBarItem";
+import { RoleBased } from "./RoleBased";
+import { Outlet } from "react-router";
+import { FaBookOpen, FaUserPlus } from "react-icons/fa";
+import { BiUser } from "react-icons/bi";
+import { CgGlass, CgUser } from "react-icons/cg";
+import { GrUser } from "react-icons/gr";
+import { GoFileDirectory } from "react-icons/go";
 
 export default function Hero() {
-    const [books, setBooks] = useState<Book[]>([]);
-
-    const GetBooks = async (title?: string) => {
-        setBooks(await GetAllBooks(title));
-        // console.log(books);
-    }
+    const authContext = useAuth();
 
     return (
-        <div className="bg-slate-800 h-screen">
-            <div className="flex flex-col justify-center items-center">
-                <div className="flex justify-center pt-4">
-                    <SearchInput
-                        placeholder="Введите название книги..."
-                        onSearch={GetBooks}
-                    >
-                    </SearchInput>
+        <>
+            {authContext.user && (
+                <div className="w-full h-[calc(100dvh-76px)] overflow-hidden bg-slate-50">
+                    <div className="flex h-full w-full">
 
-                </div>
-                <div>
-                    {books.map((book) => (
-                        <BookCard BookData={book}></BookCard>
-                    ))}
-                </div>
-            </div>
+                        <aside className="flex flex-col justify-between h-full w-64 min-w-64 max-w-64 bg-white py-6 pl-4 pr-4 border-r border-slate-100 shrink-0">
+                            <nav className="flex flex-col gap-1">
+                                <RoleBased role="Admin">
+                                    <SideBarItem name="Дашборд" icon={<FiLayout />} to="/admin/dashboard" />
+                                    <SideBarItem name="Пользователи" icon={<FiUsers />} to="/admin/users" />
+                                    <SideBarItem name="Классы" icon={<CgGlass />} to="/admin/classes" />
+                                </RoleBased>
 
-        </div>
-    )
+                                <RoleBased role="Librarian">
+                                    <SideBarItem name="Дашборд" icon={<FiLayout />} to="/librarian/dashboard"></SideBarItem>
+                                    <SideBarItem name="Книги" icon={<FaBookOpen />} to="/librarian/books"></SideBarItem>
+                                    <SideBarItem name="Читатели" icon={<GrUser />} to="/librarian/readers"></SideBarItem>
+                                    <SideBarItem name="Авторы" icon={<FaUserPlus />} to="/librarian/authors"></SideBarItem>
+                                </RoleBased>
+                            </nav>
+
+                            <div className="pt-4 px-4 border-t border-slate-100">
+                                <button onClick={authContext.logout} className="flex items-center gap-3 w-full text-slate-500 hover:text-red-500 py-3 rounded-lg font-medium transition-colors">
+                                    <FiLogOut className="text-xl" />
+                                    <span>Выйти из аккаунта</span>
+                                </button>
+                            </div>
+                        </aside>
+
+                        <main className="flex-1 h-full overflow-y-auto p-6 pl-12">
+                            <Outlet></Outlet>
+                        </main>
+
+                    </div>
+                </div>
+            )}
+        </>
+    );
 }

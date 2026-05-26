@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Login } from "../../api/auth/Auth";
 import { useNavigate } from "react-router";
 import HLine from "../../utils/components/HLine";
 import { BaseInput } from "../../components/CustomInput";
@@ -27,17 +26,16 @@ export default function SignIn() {
         e.preventDefault();
         const identifier: string = formData.identifier;
         const password: string = formData.password;
-        
+
         setIsLoading(true)
-        try{
-            await login({identifier, password});
+        try {
+            await login({ identifier, password });
             navigate("/home");
         }
-        catch(error)
-        {
+        catch (error) {
             console.error(error);
         }
-        finally{
+        finally {
             setIsLoading(false);
         }
 
@@ -45,36 +43,39 @@ export default function SignIn() {
 
     return (
         <>
-            <div className="flex items-center justify-center h-screen text-white bg-slate-800">
-                <div className="flex flex-col gap-4 border-2 rounded-2xl p-6 bg-indigo-700 border-slate-500 w-80 max-w-96">
+            <div className="flex items-center justify-center h-screen bg-slate-100">
+                <div className="flex flex-col gap-4 border shadow rounded-2xl p-6 bg-white border-my-light-green w-80 max-w-96">
                     <div className="flex flex-col">
-                        <h2 className="mb-3 text-center text-2xl">Вход в систему</h2>
-                        <HLine></HLine>
+                        <h2 className="text-center text-2xl font-semibold">Вход в систему</h2>
                     </div>
-                    <form className="sign-up-form" onSubmit={handleSignIn}>
-                        <div className="sign-up-form__container flex flex-col items-center justify-center gap-2">
-                            <BaseInput
-                                type="text"
-                                name="identifier"
-                                placeholder="Никнейм или почта"
-                                required={true}
-                                value={formData.identifier}
-                                onChange={handleInputChange}
-                            >
+                    <div className="mt-6">
+                        <form className="" onSubmit={handleSignIn}>
+                            <div className="flex flex-col gap-2">
+                                <BaseInput
+                                    type="text"
+                                    name="identifier"
+                                    placeholder="Никнейм или почта"
+                                    required={true}
+                                    value={formData.identifier}
+                                    onChange={handleInputChange}
+                                >
 
-                            </BaseInput>
-                            <BaseInput
-                                type="password"
-                                name="password"
-                                placeholder="Пароль"
-                                required={true}
-                                value={formData.password}
-                                onChange={handleInputChange}>
+                                </BaseInput>
+                                <BaseInput
+                                    type="password"
+                                    name="password"
+                                    placeholder="Пароль"
+                                    required={true}
+                                    value={formData.password}
+                                    onChange={handleInputChange}>
 
-                            </BaseInput>
-                            <button className="w-full border p-2 bg-slate-500 rounded-lg hover:bg-slate-600 transition-all ">Войти</button>
-                        </div>
-                    </form>
+                                </BaseInput>
+                                <button 
+                                    type="submit"
+                                    className="mt-6 w-full border border-slate-400 p-2 text-xl rounded-lg hover:text-slate-50 hover:border-slate-600 hover:bg-my-light-green/80 transition-all ">Войти</button>
+                            </div>
+                        </form>
+                    </div>
                     {/* <div className="flex flex-col text-center">
                         <HLine></HLine>
                         <span>Еще нет аккаунта? <Link to={"/sign-up"}>Зарегистрироваться</Link> </span>

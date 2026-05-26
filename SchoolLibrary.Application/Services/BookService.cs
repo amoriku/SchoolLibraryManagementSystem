@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SchoolLibrary.Application.DTOs;
+using SchoolLibrary.Application.DTOs.Author;
 using SchoolLibrary.Application.DTOs.Book;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
@@ -13,7 +14,7 @@ namespace SchoolLibrary.Application.Services
     {
         public BookService(AppDbContext context, ILogger<BookService> logger) : base(context, logger) { }
 
-        public async Task<Book> CreateAsync(BookCreateDto dto, CancellationToken cancellationToken)
+        public async Task<BookDto> CreateAsync(BookCreateDto dto, CancellationToken cancellationToken)
         {
             bool bookExists = await context.Books
                 .AnyAsync(
@@ -22,17 +23,20 @@ namespace SchoolLibrary.Application.Services
                     cancellationToken
                 );
 
+            // Если у автора уже есть книга, то вывод ошибки о том, что она уже есть в базе
             if (bookExists)
             {
                 logger.LogWarning("Book {BookName} already exists", dto.Title);
                 throw new Exception("Book already exists");
             }
 
+            // Проверка на существование авторов
             var existingAuthorIds = await context.Authors
                 .Where(a => dto.AuthorIds.Contains(a.Id))
                 .Select(a => a.Id)
                 .ToListAsync(cancellationToken);
 
+            // Если каких-то авторов не существует вывод об ошибке
             if (existingAuthorIds.Count != dto.AuthorIds.Count)
             {
                 string message = "Some of authors dont exist";
@@ -41,6 +45,8 @@ namespace SchoolLibrary.Application.Services
                 throw new NotFoundException(message);
             }
 
+
+            // Создание книги
             Book book = new Book
             {
                 Title = dto.Title,
@@ -56,7 +62,23 @@ namespace SchoolLibrary.Application.Services
             context.Books.Add(book);
             await context.SaveChangesAsync(cancellationToken);
 
-            return book;
+            var authors = book.ItemAuthors
+                .Where(ia => ia.LibraryItemId == book.Id)
+                .Join(context.Authors, ia => ia.Id, a => a.Id, (ia, a) => new AuthorDto(
+                    ia.AuthorId,
+                    ia.Author.FullName.FirstName,
+                    ia.Author.FullName.LastName,
+                    ia.Author.FullName.MiddleName
+                ))
+                .ToList();
+
+            return new BookDto(
+                book.Id, 
+                book.ReceiptDate, 
+                book.Title, 
+                book.PublishedYear, 
+                authors
+            );
         }
 
         public async Task<List<BookDto>> GetAllAsync(QueryDto query, CancellationToken cancellationToken)
@@ -74,7 +96,16 @@ namespace SchoolLibrary.Application.Services
                     b.Title,
                     //b.Description,
                     b.PublishedYear,
-                    b.Price
+                    context.ItemAuthors
+                        .Where(ia => ia.LibraryItemId == b.Id)
+                        .Select(ia => new AuthorDto(
+                            ia.AuthorId,
+                            ia.Author.FullName.FirstName,
+                            ia.Author.FullName.LastName,
+                            ia.Author.FullName.MiddleName
+                            ))
+                        .ToList()
+                //b.Price
                 ))
                 .ToListAsync();
 

@@ -1,34 +1,35 @@
 import axios from "axios";
 import toast from "react-hot-toast";
+import type { LoginResponse, UserRole } from "./Auth.Types";
+import { authApi } from "../api";
 
 const BASE_API_URL: string = import.meta.env.VITE_API_URL;
-
-export interface User {
-    id?: string,
-    username?: string,
-    roles?: [string]
-}
-export interface LoginResponse {
-    accessToken: string,
-    refreshToken: string,
-}
-
 
 // const cancelToken = axios.CancelToken;
 // const source = cancelToken.source();
 
-export const GetCurrentUser = async () => {
-    const options = {
-        method: "GET",
-        url: `${BASE_API_URL}/Auth/current`,
-        withCredentials: true,
-        headers: {
-            accept: "*/*"
-        }
-    }
+export const Logout = async () => {
+    const logoutPromise = authApi.delete("/Auth/logout")
+
+    toast.promise(logoutPromise, {
+        loading: "Ожидание выхода...",
+        success: "Вы вышли из аккаунта",
+        error: "Что-то пошло не так"
+    })
 
     try {
-        const response = await axios.request(options);
+        const response = await logoutPromise;
+        if (response.status === 200) {
+            console.log("Successfully logout");
+        }
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+export const getCurrentUser = async () => {
+    try {
+        const response = await authApi.get("/Auth/current");
         return response.data;
     }
     catch (error) {
@@ -44,6 +45,7 @@ export const Login = async (identifier: string, password: string): Promise<Login
             identifier: identifier,
             password: password
         },
+        withCredentials: true,
         headers: {
             accept: '*/*'
         }
@@ -58,7 +60,7 @@ export const Login = async (identifier: string, password: string): Promise<Login
             const status = err.response?.status;
             switch (status) {
                 case 415:
-                    return "Ошибка формата данных 415"
+                    return "Ошибка формата данных"
                 case 400:
                 case 401:
                     return "Неверный пароль или логин"
@@ -74,6 +76,6 @@ export const Login = async (identifier: string, password: string): Promise<Login
     }
     catch (error) {
         console.error(error);
-        throw error; 
+        throw error;
     }
 }

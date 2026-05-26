@@ -27,14 +27,15 @@ namespace SchoolLibrary.Application.Services
         {
             bool exists = await context.Authors
                 .AnyAsync(
-                    a => a.Pseudonym == dto.Pseudonym
-                    || 
+                    a => !string.IsNullOrEmpty(a.Pseudonym)
+                    && a.Pseudonym == dto.Pseudonym
+                    ||
                     a.FullName.FirstName == dto.FirstName
                     && a.FullName.LastName == dto.LastName,
                     cancellationToken
                 );
-            var fullName = new FullName(dto.FirstName, dto.LastName, dto.MiddleName);
 
+            var fullName = new FullName(dto.FirstName, dto.LastName, dto.MiddleName);
             if (exists)
             {
                 logger.LogInformation("Author {FullName} already exists", fullName);
@@ -97,14 +98,13 @@ namespace SchoolLibrary.Application.Services
             {
                 throw new NotFoundException($"Author not found");
             }
-            else
-            {
-                author.Pseudonym = dto.Pseudonym;
-                author.FullName = dto.FullName;
-            }
+            
+            author.Pseudonym = dto.Pseudonym;
+
+            FullName fullName = new FullName(dto.FirstName, dto.LastName, dto.MiddleName);
+            author.FullName = fullName;
 
             await context.SaveChangesAsync(cancellationToken);
-
             return author;
         }
     }

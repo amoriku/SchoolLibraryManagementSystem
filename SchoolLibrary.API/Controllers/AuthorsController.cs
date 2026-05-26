@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SchoolLibrary.Application.DTOs.Author;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
 using SchoolLibrary.Application.Services;
+using SchoolLibrary.Domain;
+using SchoolLibrary.Domain.Constants;
 using SchoolLibrary.Domain.Shared;
 
 namespace SchoolLibrary.API.Controllers
@@ -20,6 +23,7 @@ namespace SchoolLibrary.API.Controllers
         }
 
         [HttpPost("create")]
+        [Authorize(Roles = $"{UserRoles.Librarian}, {UserRoles.Admin}")]
         public async Task<IActionResult> Create([FromBody] AuthorCreateDto dto, CancellationToken cancellationToken)
         {
             try

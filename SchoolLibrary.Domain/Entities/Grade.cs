@@ -7,7 +7,10 @@
     {
         public short Id { get; set; }
 
-        public string Name { get; set; } = string.Empty; 
+        public byte Number { get; set; }
+        public string Letter { get; set; } = string.Empty;
+
+        public string DisplayName => $"{Number}-{Letter}";
 
         public ICollection<ApplicationUser> Users { get; set; } = [];
     }

@@ -16,6 +16,7 @@ namespace SchoolLibrary.Application
             services.AddScoped<IFundService, FundService>();
             //services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<ITokenProvider, TokenProvider>();
+            services.AddScoped<IGradeService, GradeService>();
 
             return services;
         }

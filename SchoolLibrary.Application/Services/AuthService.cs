@@ -22,8 +22,11 @@ namespace SchoolLibrary.Application.Services
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly ITokenProvider tokenProvider;
         private readonly IHttpContextAccessor httpContextAccessor;
+
+        private readonly string CookieSessionTokenName = "user_session";
         //private readonly IJwtService jwtService;
 
+        // Первичная подгрузка сервисов
         public AuthService(
             AppDbContext context,
             ILogger<AuthService> logger,
@@ -41,6 +44,7 @@ namespace SchoolLibrary.Application.Services
             //this.jwtService = jwtService;
         }
 
+        // Вход в приложение и выдача токенов доступа и обновления.
         public async Task<TokenResponseDto?> LoginAsync(UserLoginDto dto, CancellationToken cancellationToken)
         {
             var user = await userManager.FindByEmailAsync(dto.Identifier);
@@ -58,38 +62,62 @@ namespace SchoolLibrary.Application.Services
             string accessToken = await tokenProvider.CreateTokenAsync(user);
             string refreshToken = tokenProvider.GenerateRefreshToken();
 
+            // Добавление сессии пользователя в куки браузера для верификации пользователя.
+            httpContextAccessor.HttpContext.Response.Cookies.Append(CookieSessionTokenName, accessToken,
+                    new CookieOptions
+                    {
+                        Expires = DateTime.UtcNow.AddDays(7),
+                        Secure = true,
+                        SameSite = SameSiteMode.None,
+                        HttpOnly = true,
+                    });
+
             return new TokenResponseDto
                 (
                     AccessToken: accessToken,
                     RefreshToken: refreshToken
                 );
-            //IList<string> userRole = await userManager
-            //    .GetRolesAsync(user);
-            //string accessToken = string.Empty;
-            //string refreshToken = jwtService.GenerateRefreshToken();
-
-            //if (userRole.Count != 0)
-            //{
-            //    accessToken = jwtService.GenerateToken
-            //        (user.UserName, user.Id, userRole.First());
-            //}
-
-            //if (user.RefreshToken != refreshToken
-            //    || string.IsNullOrEmpty(user.RefreshToken))
-            //{
-            //    user.RefreshToken = refreshToken;
-            //    await userManager.UpdateAsync(user);
-            //}
-
 
         }
 
-        public string? GetCurrentUser()
+        // Обработка выхода из приложения.
+        public void Logout()
         {
-            string? userId = httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            return userId;
+            // Получение и очистика сессии пользователя в случае, если он авторизован.
+            string? userId = httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
+            
+            if (!string.IsNullOrEmpty(userId))
+            {
+                httpContextAccessor.HttpContext.Response.Cookies.Delete(CookieSessionTokenName, new CookieOptions
+                {
+                    Expires = DateTime.UtcNow.AddDays(-1),
+                    Secure = true,
+                    SameSite = SameSiteMode.None,
+                    HttpOnly = true,
+                });
+            }
         }
+
+        // Получение текущего пользователя
+        public async Task<UserDto> GetCurrentUserAsync(CancellationToken cancellationToken)
+        {
+            string? userId = httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            
+            if (!string.IsNullOrEmpty(userId))
+            {
+                var user = await userManager.FindByIdAsync(userId);
+
+                if (user != null)
+                {
+                    var roles = await userManager.GetRolesAsync(user);
+                    return new UserDto(user.Id, user.Email, user.UserName!, roles[0]);
+                }
+            }
+
+            throw new NotFoundException("User not found");
+        }
+
         public async Task<ApplicationUser?> RegisterAsync(UserRegisterDto dto, CancellationToken cancellationToken)
         {
             string defaultRoleName = UserRoles.Reader;

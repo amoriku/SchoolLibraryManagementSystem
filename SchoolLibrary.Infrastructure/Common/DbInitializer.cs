@@ -1,13 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using SchoolLibrary.Domain;
 using SchoolLibrary.Domain.Constants;
 using SchoolLibrary.Domain.Entities;
 using SchoolLibrary.Domain.ValueObjects;
-using System.ComponentModel.DataAnnotations;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
 namespace SchoolLibrary.Infrastructure.Common
 {
@@ -28,6 +23,7 @@ namespace SchoolLibrary.Infrastructure.Common
             this.context = context;
         }
 
+        // Первичная инициализая базы данных.
         public void Initialize() 
         {
             try
@@ -37,13 +33,6 @@ namespace SchoolLibrary.Infrastructure.Common
                     Console.WriteLine("[Infrastructure:DbInitializer] Applying pending migratoins");
                     context.Database.Migrate();
                 }
-                //else if (context.Database.CanConnect()
-                //    && context.Database.)
-                //{
-                //    Console.WriteLine("[Infrastructure:DbInitializer] Creating Database...");
-                //    //context.Database.Migrate();
-                //}
-
                 SeedData().GetAwaiter().GetResult();
             }
             catch (Exception ex)
@@ -53,15 +42,18 @@ namespace SchoolLibrary.Infrastructure.Common
             }
         }
 
+        // Добавление первичных данных в базу данных.
         private async Task SeedData()
         {
+            // Создание первичного класса для администратора L-A (Library-Admin).
             if (!context.Grades.Any())
             {
-                var defaultGrade = new Grade { Id = 1, Name = "L-A" };
+                var defaultGrade = new Grade { Id = 1, Letter = "ША", Number = 0 };
                 context.Grades.Add(defaultGrade);
                 await context.SaveChangesAsync();
             }
 
+            // Ввод первичных ролей.
             List<string> roles = new List<string>()
             {
                 UserRoles.Admin,
@@ -70,6 +62,7 @@ namespace SchoolLibrary.Infrastructure.Common
                 UserRoles.Guest,
             };
 
+            // Добавление ролей в базу данных.
             foreach (var role in roles)
             {
                 var roleName = role;
@@ -79,7 +72,7 @@ namespace SchoolLibrary.Infrastructure.Common
                 }
             }
 
-
+            // Создание первичного пользователя в системе (Администратора)
             if (!userManager.Users.Any())
             {
                 var adminUser = new ApplicationUser
@@ -95,7 +88,7 @@ namespace SchoolLibrary.Infrastructure.Common
 
                 if (result.Succeeded)
                 {
-                    await userManager.AddToRoleAsync(adminUser, UserRoles.Admin.ToString());
+                    await userManager.AddToRoleAsync(adminUser, UserRoles.Admin);
                     Console.WriteLine($"[Infrastructure:DbInitializer] Successfully created {adminUser.UserName}");
                 }
             }

@@ -11,12 +11,12 @@ namespace SchoolLibrary.Infrastructure.Configurations
             builder.HasKey(g => g.Id);
 
             builder
-                .HasIndex(g => g.Name)
-                .IsUnique();
+                .Property(g => g.Letter)
+                .IsRequired()
+                .HasMaxLength(2);
 
-            builder
-                .Property(g => g.Name)
-                .HasMaxLength(5);
+            builder.Ignore(g => g.DisplayName);
+
         }
     }
 }

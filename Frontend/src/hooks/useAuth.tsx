@@ -1,12 +1,14 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
-import { GetCurrentUser, Login, type LoginResponse, type User } from "../api/auth/Auth";
+import { getCurrentUser, Login, Logout } from "../api/auth/Auth";
+import type { User, LoginResponse, UserRole } from "../api/auth/Auth.Types";
 
 interface AuthContextType {
     user: User | null,
+    role: UserRole | null,
     isLoading: boolean,
     login: ({ identifier, password }: { identifier: string, password: string }) => Promise<LoginResponse>,
     logout: () => void,
-    isAuthenticated: boolean
+    isAuthenticated: boolean,
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -18,7 +20,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     useEffect(() => {
         const checkUser = async () => {
             try {
-                const userData = await GetCurrentUser();
+                const userData = await getCurrentUser();
                 if (userData) {
                     setUser(userData);
                 }
@@ -28,36 +30,41 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
             }
             finally {
                 setIsLoading(false);
-            }
-
-            checkUser();
+            } 
         }
+        checkUser();
     }, [])
 
     const login = async ({ identifier, password }: { identifier: string, password: string }) => {
         const response = await Login(identifier, password);
         if (response) {
-            const userData = await GetCurrentUser();
+            const userData = await getCurrentUser();
             if (userData) {
-                setUser(userData)
+                setUser(userData);
             }
         }
 
         return response;
     }
 
-    const logout = () => {
-
+    const logout = async () => {
+        await Logout();
+        setUser(null);
     }
 
+
+    if (isLoading){
+        return
+    }
 
     return (
         <AuthContext.Provider value={{
             user,
+            role: user?.role || null,
             isLoading,
             login,
             logout,
-            isAuthenticated: !!user
+            isAuthenticated: !!user,
         }}>
             {children}
         </AuthContext.Provider>

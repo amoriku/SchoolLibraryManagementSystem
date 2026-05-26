@@ -1,5 +1,58 @@
 @import "tailwindcss";
 
-button{
+@theme {
+    --color-my-white: #FDFDFD;
+    --color-my-gray: #F0EFF2;
+    --color-my-light-gray: #FCFBFC;
+    --color-my-light-green: #73C17A;
+    --debug-border: border 1px solid black;
+}
+
+button {
     cursor: pointer;
+}
+
+.create-form{
+    @apply flex flex-col gap-2
+}
+
+.select-input{
+    @apply p-3 rounded-xl border border-slate-400 focus:border-slate-500
+}
+
+.table-tr{
+    @apply border-b border-slate-300 hover:bg-slate-100/50 transition-colors text-lg
+}
+
+.table-td-id {
+    @apply py-3 px-4 font-mono text-xl max-w-xs overflow-hidden text-ellipsis;
+}
+
+.table-td,
+.table-th {
+    @apply py-3 px-4 text-xl font-semibold;
+}
+
+.button {
+    @apply text-slate-50 rounded-xl p-2 transition-colors font-medium
+}
+
+.button-green {
+    @apply bg-my-light-green hover:bg-my-light-green/80
+}
+
+.button-red {
+    @apply bg-red-500 hover:bg-red-500/80 text-slate-200
+}
+
+.main-section-header-button {
+    @apply flex items-center gap-2 text-xl rounded-2xl pt-3 pb-3 px-6 font-semibold
+}
+
+.main-section-header-button-green {
+    @apply  bg-my-light-green text-white hover:bg-my-light-green/80 transition-colors
+}
+
+.main-section-header-button-slate {
+    @apply bg-slate-400 text-white hover:bg-slate-400/80 transition-colors
 }

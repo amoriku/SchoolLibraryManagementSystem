@@ -1,18 +1,7 @@
 import axios from "axios"
+import { type AuthorCreateDto } from "./Entity.Types"
+import { api } from "../api"
 
-export interface AuthorDto {
-    id: number,
-    firstName: string,
-    lastName: string,
-    middleName?: string,
-    // fullName: string 
-}
-
-export interface AuthorCreateDto {
-    firstName: string,
-    lastName: string,
-    middleName?: string
-}
 
 const BASE_API_URL = import.meta.env.VITE_API_URL
 
@@ -41,16 +30,8 @@ const CreateAuthor = async ({ firstName, lastName, middleName }: AuthorCreateDto
 }
 
 const GetAllAuthors = async () => {
-    const options = {
-        method: "GET",
-        url: `${BASE_API_URL}/Authors`,
-        headers: {
-            accept: "*/*"
-        }
-    }
-
     try {
-        const response = await axios.request(options);
+        const response = await api.get("/Authors")
         return response.data
     }
     catch (error) {

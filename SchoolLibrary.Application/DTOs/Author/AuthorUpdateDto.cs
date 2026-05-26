@@ -2,5 +2,12 @@
 
 namespace SchoolLibrary.Application.DTOs.Author
 {
-    public record AuthorUpdateDto(int Id, string? Pseudonym, FullName FullName);
+    public record AuthorUpdateDto
+    (
+        int Id, 
+        string FirstName,
+        string LastName,
+        string? MiddleName,
+        string? Pseudonym
+    );
 }

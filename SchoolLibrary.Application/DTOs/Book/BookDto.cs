@@ -1,12 +1,15 @@
-﻿namespace SchoolLibrary.Application.DTOs.Book
+﻿using SchoolLibrary.Application.DTOs.Author;
+
+namespace SchoolLibrary.Application.DTOs.Book
 {
     public record BookDto
     (
         int Id,
-        DateTime receiptDate,
+        DateTime ReceiptDate,
         string Title,
         //string? Description,
-        int? publishedYear,
-        decimal? price
+        int? PublishedYear,
+        List<AuthorDto> Authors
+        //decimal? Price
     );
 }

@@ -10,18 +10,20 @@ export const BaseInput = (
         name,
         error,
         onChange,
+        width,
         ...rest
     }: BaseInputProps) => {
 
     return (
         <input
             type={type}
-            className={`text-center w-full px-4 py-2 bg-slate-500 rounded-lg outline-none caret-white placeholder:text-gray-300 border focus:placeholder:text-transparent focus:border-slate-800 focus:bg-slate-600 transition-all| 
+            className={`caret-my-light-green p-3 transition-all rounded-xl outline-slate-400 outline-1 hover:outline-slate-600 hover:outline-2 focus:outline-2 focus:outline-slate-600 focus:placeholder-transparent 
                 ${ error ? 'border-red-500' : ''}`} 
             placeholder={placeholder}
             required={required}
             name={name}
             onChange={onChange}
+            width={width}
             {...rest}
         />
     )

@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SchoolLibrary.Application.DTOs;
 using SchoolLibrary.Application.DTOs.Book;
 using SchoolLibrary.Application.Interfaces;
 using SchoolLibrary.Application.Services;
+using SchoolLibrary.Domain.Constants;
 
 namespace SchoolLibrary.API.Controllers
 {
@@ -18,6 +20,7 @@ namespace SchoolLibrary.API.Controllers
             this.bookService = bookService;
         }
 
+        [Authorize(Roles = $"{UserRoles.Admin}, {UserRoles.Librarian}")]
         [HttpPost("create")]
         public async Task<IActionResult> Create(BookCreateDto dto, CancellationToken cancellationToken)
         {

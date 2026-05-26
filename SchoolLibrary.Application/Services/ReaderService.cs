@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SchoolLibrary.Application.DTOs.Reader;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
+using SchoolLibrary.Domain.Constants;
 using SchoolLibrary.Domain.Entities;
 using SchoolLibrary.Domain.Shared;
 using SchoolLibrary.Infrastructure;
@@ -12,7 +14,17 @@ namespace SchoolLibrary.Application.Services
 {
     public class ReaderService : BaseService<ReaderService>, IReaderService
     {
-        public ReaderService(AppDbContext context, ILogger<ReaderService> logger) : base(context, logger) { }
+        private readonly UserManager<ApplicationUser> userManager;
+
+        public ReaderService(
+            AppDbContext context, 
+            ILogger<ReaderService> logger,
+            UserManager<ApplicationUser> userManager
+        ) 
+            : base(context, logger) 
+        {
+            this.userManager = userManager;
+        }
 
         // So operations for reader are:
         // - Loan || Borrow (Выдача, заимствование)
@@ -36,6 +48,26 @@ namespace SchoolLibrary.Application.Services
             return null;
         }
 
+        public async Task<List<ReaderDto>> GetAllAsync(CancellationToken cancellationToken)
+        {
+            var users = await userManager
+                .GetUsersInRoleAsync(UserRoles.Reader);
+
+            List<ReaderDto> readers = [];
+
+            foreach (var user in users)
+            {
+                readers.Add(new ReaderDto(
+                    user.Id,
+                    user.FullName.FirstName,
+                    user.FullName.LastName,
+                    user.FullName.LastName,
+                    string.Empty
+                ));
+            }
+
+            return readers;
+        }
         public async Task<UserHistory?> GetUserHistoryAsync(string userId, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(userId))

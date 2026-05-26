@@ -37,6 +37,16 @@
   },
   {
     "ContainingType": "SchoolLibrary.API.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/logout",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.AuthController",
     "Method": "Reader",
     "RelativePath": "api/Auth/reader-auth",
     "HttpMethod": "GET",
@@ -218,6 +228,42 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SchoolLibrary.API.Controllers.GradesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Grades",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.GradesController",
+    "Method": "Create",
+    "RelativePath": "api/Grades/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SchoolLibrary.Application.DTOs.Grades.CreateGradeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.ReadersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Readers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SchoolLibrary.API.Controllers.ReadersController",
     "Method": "CreateHistoryRecord",
     "RelativePath": "api/Readers/create-history-record",
@@ -250,9 +296,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SchoolLibrary.API.Controllers.UsersController",
+    "ContainingType": "SchoolLibrary.API.Controllers.RolesController",
     "Method": "GetAll",
-    "RelativePath": "api/Users/get-all",
+    "RelativePath": "api/Roles",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -261,9 +307,51 @@
   },
   {
     "ContainingType": "SchoolLibrary.API.Controllers.UsersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.UsersController",
+    "Method": "Create",
+    "RelativePath": "api/Users/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SchoolLibrary.Application.DTOs.User.UserCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.UsersController",
     "Method": "Get",
     "RelativePath": "api/Users/get-by-id",
     "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.UsersController",
+    "Method": "Remove",
+    "RelativePath": "api/Users/remove",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

@@ -11,7 +11,9 @@ using System.Text;
 var reactAppOrigins = "ReactApp";
 var builder = WebApplication.CreateBuilder(args);
 
-
+// Выдача разрешений веб-сайту на выполнение запросов 
+// Allow query execution to website with origins
+#region Cors
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(reactAppOrigins,
@@ -23,26 +25,28 @@ builder.Services.AddCors(options =>
             .AllowCredentials();
         });
 });
+#endregion
 
 
-// Add services to the container.
 builder.Services.AddControllers();
-// User identity
+// Добавление сервиса пользователей / Add user identity
 builder.Services
     .AddIdentityCore<ApplicationUser>(options => { })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-
+// Добавление сервиса логов / Add log service
 builder.Services.AddLogging();
 
-// Dependency Injection from layers
+#region DependencyInjection
+// Инверсия зависимостей слоев / Dependency injection 
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
+#endregion
 
 builder.Services.AddOpenApi();
 
+#region AuthServices
 builder.Services.AddAuthorization();
 builder.Services
     .AddAuthentication(options =>
@@ -74,9 +78,8 @@ builder.Services
             }
         };
     });
-
-builder.Services.AddHttpContextAccessor();
-
+    builder.Services.AddHttpContextAccessor();
+#endregion
 
 var app = builder.Build();
 
@@ -95,9 +98,11 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Первичное добавление данных в базу данных / Initial data seeding
 DataSeeding();
 app.Run();
 
+// Инициализия базы данных / Data base initialization
 void DataSeeding()
 {
     using (var scope = app.Services.CreateScope())
