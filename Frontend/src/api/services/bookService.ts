@@ -17,6 +17,16 @@ export const useBookService = () => {
                 },
                 config: { headers: { "Content-Type": "application/json" } }
             }
-        )
+        ),
+        getByTitle: (title: string): Promise<BookDto> => request<BookDto>({
+            type: "Public",
+            method: "get",
+            endpoint: "Books/get-by-title",
+            config: {
+                params: {
+                    title: title
+                }
+            }
+        })
     }
 }

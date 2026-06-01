@@ -18,7 +18,5 @@ namespace SchoolLibrary.Infrastructure.Configurations
                 .HasForeignKey(au => au.GradeId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
-
     }
-
 }

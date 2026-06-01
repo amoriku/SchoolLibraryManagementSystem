@@ -85,7 +85,7 @@ export const AuthorsPage = () => {
                                 key={author.middleName}
                                 className="table-td"
                             >
-                                {author.middleName}
+                                {author.middleName ? author.middleName : "-"}
                             </td>
                         </tr>
                     ))}

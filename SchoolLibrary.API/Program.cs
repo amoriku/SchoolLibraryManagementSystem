@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Scalar.AspNetCore;
 using SchoolLibrary.Application;
+using SchoolLibrary.Application.Shared;
 using SchoolLibrary.Domain.Entities;
 using SchoolLibrary.Infrastructure;
 using SchoolLibrary.Infrastructure.Common;
@@ -19,7 +20,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(reactAppOrigins,
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173")
+            policy.WithOrigins("http://localhost:5173", "http://localhost:3000", "http://localhost:5000")
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();
@@ -31,7 +32,14 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 // Добавление сервиса пользователей / Add user identity
 builder.Services
-    .AddIdentityCore<ApplicationUser>(options => { })
+    .AddIdentityCore<ApplicationUser>(options =>
+    {
+        options.Password.RequireDigit = false;
+        options.Password.RequireLowercase = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequiredLength = 4;
+    })
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>();
 
@@ -68,7 +76,7 @@ builder.Services
         {
             OnMessageReceived = context =>
             {
-                var token = context.Request.Cookies["user_session"];
+                var token = context.Request.Cookies[CookieHeaderNames.CookieHeaderNameAccessToken];
                 if (!string.IsNullOrEmpty(token))
                 {
                     context.Token = token;
@@ -90,7 +98,7 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseCors(reactAppOrigins);
 
 app.UseAuthentication();
@@ -103,11 +111,11 @@ DataSeeding();
 app.Run();
 
 // Инициализия базы данных / Data base initialization
-void DataSeeding()
+async void DataSeeding()
 {
     using (var scope = app.Services.CreateScope())
     {
         var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
-        dbInitializer.Initialize();
+        await dbInitializer.Initialize();
     }
 }

@@ -3,10 +3,14 @@ import type { CreateUserDto, RoleDto } from "../../api/entities/Entity.Types"
 import { useForm } from "../../hooks/useForm"
 import { BaseInput } from "../CustomInput";
 import { useDataService } from "../../api/services/dataService";
+import type { MyFormProps } from "./Props";
+import { useUserService } from "../../api/services/userService";
+import toast from "react-hot-toast";
 
-export const CreateUserForm = () => {
+export const CreateUserForm = ({handleSubmit}: MyFormProps) => {
     const [roles, setRoles] = useState<RoleDto[]>([]);
     const { getAllRoles } = useDataService();
+    const { create } = useUserService();
 
     const { values, handleChange, resetForm } = useForm<CreateUserDto>({
         firstName: "",
@@ -17,6 +21,16 @@ export const CreateUserForm = () => {
         username: "",
         email: ""
     });
+
+    const handleCreate = async (e: React.SubmitEvent) => {
+        e.preventDefault();
+
+        const result = await create(values);
+        if (result.id){
+            toast.success("Пользователь создан");
+            handleSubmit();
+        }
+    }
 
     const fetchRoles = async () => {
         setRoles(await getAllRoles());
@@ -32,6 +46,7 @@ export const CreateUserForm = () => {
                 action="POST"
                 id="create-user-form"
                 className="create-form"
+                onSubmit={handleCreate}
                 autoComplete="off"
             >
                 <BaseInput
@@ -59,16 +74,18 @@ export const CreateUserForm = () => {
                 </BaseInput>
 
                 <BaseInput
-                    placeholder="Пароль (от 6 символов)"
+                    placeholder="Пароль (от 4 символов)"
                     onChange={handleChange}
                     required={true}
-                    title="Пароль должен содержать не менее 1 специального символа, заглавной буквы, цифры и маленькой буквы."
+                    minLength={4}
+                    maxLength={32}
                 >
 
                 </BaseInput>
 
                 <BaseInput
                     placeholder="Почта (например: test@example.com)"
+                    type="email"
                     onChange={handleChange}
                     required={false}
                 >

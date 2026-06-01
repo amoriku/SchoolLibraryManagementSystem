@@ -287,6 +287,39 @@ namespace SchoolLibrary.Infrastructure.Migrations
                     b.ToTable("Authors");
                 });
 
+            modelBuilder.Entity("SchoolLibrary.Domain.Entities.Borrowing", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("BorrowedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("DueDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("LibraryItemCopyId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ReaderId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("ReturnedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LibraryItemCopyId");
+
+                    b.HasIndex("ReaderId");
+
+                    b.ToTable("Borrowings");
+                });
+
             modelBuilder.Entity("SchoolLibrary.Domain.Entities.Fund", b =>
                 {
                     b.Property<short>("Id")
@@ -431,8 +464,14 @@ namespace SchoolLibrary.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<DateTime>("ExpiresOnUtc")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsRevoked")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Token")
                         .IsRequired()
@@ -451,6 +490,41 @@ namespace SchoolLibrary.Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("RefreshTokens");
+                });
+
+            modelBuilder.Entity("SchoolLibrary.Domain.Entities.Reservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("boolean");
+
+                    b.Property<int?>("LibraryItemCopyId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("LibraryItemId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("ReaderId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("ReservedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LibraryItemCopyId");
+
+                    b.HasIndex("LibraryItemId");
+
+                    b.HasIndex("ReaderId");
+
+                    b.ToTable("Reservations");
                 });
 
             modelBuilder.Entity("SchoolLibrary.Domain.Entities.UserHistory", b =>
@@ -580,6 +654,25 @@ namespace SchoolLibrary.Infrastructure.Migrations
                     b.Navigation("Grade");
                 });
 
+            modelBuilder.Entity("SchoolLibrary.Domain.Entities.Borrowing", b =>
+                {
+                    b.HasOne("SchoolLibrary.Domain.Entities.LibraryItemCopy", "LibraryItemCopy")
+                        .WithMany("Borrowings")
+                        .HasForeignKey("LibraryItemCopyId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("SchoolLibrary.Domain.Entities.ApplicationUser", "Reader")
+                        .WithMany()
+                        .HasForeignKey("ReaderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("LibraryItemCopy");
+
+                    b.Navigation("Reader");
+                });
+
             modelBuilder.Entity("SchoolLibrary.Domain.Entities.ItemAuthor", b =>
                 {
                     b.HasOne("SchoolLibrary.Domain.Entities.Author", "Author")
@@ -629,6 +722,29 @@ namespace SchoolLibrary.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("SchoolLibrary.Domain.Entities.Reservation", b =>
+                {
+                    b.HasOne("SchoolLibrary.Domain.Entities.LibraryItemCopy", null)
+                        .WithMany("Reservations")
+                        .HasForeignKey("LibraryItemCopyId");
+
+                    b.HasOne("SchoolLibrary.Domain.Entities.LibraryItem", "LibraryItem")
+                        .WithMany("Reservations")
+                        .HasForeignKey("LibraryItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("SchoolLibrary.Domain.Entities.ApplicationUser", "Reader")
+                        .WithMany()
+                        .HasForeignKey("ReaderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("LibraryItem");
+
+                    b.Navigation("Reader");
+                });
+
             modelBuilder.Entity("SchoolLibrary.Domain.Entities.UserHistory", b =>
                 {
                     b.HasOne("SchoolLibrary.Domain.Entities.LibraryItemCopy", "LibraryItemCopy")
@@ -668,10 +784,16 @@ namespace SchoolLibrary.Infrastructure.Migrations
                     b.Navigation("ItemAuthors");
 
                     b.Navigation("LibraryItemCopies");
+
+                    b.Navigation("Reservations");
                 });
 
             modelBuilder.Entity("SchoolLibrary.Domain.Entities.LibraryItemCopy", b =>
                 {
+                    b.Navigation("Borrowings");
+
+                    b.Navigation("Reservations");
+
                     b.Navigation("UserHistories");
                 });
 #pragma warning restore 612, 618

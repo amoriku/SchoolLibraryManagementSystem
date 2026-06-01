@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
+            "NickBuhro.Translit": {
+              "target": "Package",
+              "version": "[1.4.5, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.0.1, )"

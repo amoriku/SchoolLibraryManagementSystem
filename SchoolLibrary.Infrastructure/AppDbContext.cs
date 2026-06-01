@@ -24,6 +24,8 @@ namespace SchoolLibrary.Infrastructure
         public DbSet<UserHistory> UserHistories { get; set; }
         public DbSet<Fund> Funds { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Borrowing> Borrowings { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -38,8 +40,8 @@ namespace SchoolLibrary.Infrastructure
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(LibraryItemCopyConfiguration).Assembly);            
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(FullNameConfiguration).Assembly);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(RefreshTokenConfiguration).Assembly);
-            
-
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ReservationConfiguration).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(BorrowingConfiguration).Assembly);
         }
     }
 }

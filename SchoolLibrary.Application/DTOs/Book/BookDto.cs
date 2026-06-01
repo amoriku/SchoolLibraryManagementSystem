@@ -9,6 +9,7 @@ namespace SchoolLibrary.Application.DTOs.Book
         string Title,
         //string? Description,
         int? PublishedYear,
+        int? Quantity,
         List<AuthorDto> Authors
         //decimal? Price
     );

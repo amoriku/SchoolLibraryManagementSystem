@@ -9,6 +9,7 @@ namespace SchoolLibrary.Application.Interfaces
         Task<TokenResponseDto?> LoginAsync(UserLoginDto dto, CancellationToken cancellationToken);
         Task<ApplicationUser?> RegisterAsync(UserRegisterDto dto, CancellationToken cancellationToken);
         Task<UserDto> GetCurrentUserAsync(CancellationToken cancellationToken);
-        void Logout();
+        Task<TokenResponseDto> RefreshAsync(CancellationToken cancellationToken);
+        Task Logout(CancellationToken cancellationToken);
     }
 }

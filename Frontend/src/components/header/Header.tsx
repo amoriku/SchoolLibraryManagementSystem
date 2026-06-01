@@ -1,8 +1,8 @@
 import { Link } from "react-router";
 import { useAuth } from "../../hooks/useAuth";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import {  useState } from "react";
-import { FiBookOpen } from "react-icons/fi";
+import { useState } from "react";
+import { FiBookOpen, FiLogOut } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
 
 export function Header() {
@@ -34,7 +34,6 @@ export function Header() {
                     )}
 
 
-
                     {!authContext.user ? (
                         <div className="hover:bg-my-light-green hover:text-white px-4 transition-colors rounded">
                             <Link to="/login">Войти</Link>
@@ -46,7 +45,15 @@ export function Header() {
                             title="Открыть профиль пользователя"
                             onClick={() => setProfileOpen(!profileOpen)}
                         >
-                            <p className="font-medium text-slate-700">{authContext.user.username}</p>
+                            <p className="">{authContext.user.username}</p>
+                            {profileOpen && (
+                                <div className="px-4 fixed top-16 right-0">
+                                    <button onClick={authContext.logout} className="flex items-center gap-3 w-full text-slate-500 hover:text-red-500 py-3 rounded-lg font-medium transition-colors">
+                                        <FiLogOut className="text-xl" />
+                                        <span>Выйти из аккаунта</span>
+                                    </button>
+                                </div>
+                            )}
                             {!profileOpen ? <FaAngleDown className="text-slate-400" /> : <FaAngleUp className="text-slate-400" />}
                         </div>
                     )}

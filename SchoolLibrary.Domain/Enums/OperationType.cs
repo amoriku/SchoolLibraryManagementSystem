@@ -6,5 +6,6 @@
 
         Loan = 1,
         Return = 2,
+        Borrowing = 3,
     }
 }

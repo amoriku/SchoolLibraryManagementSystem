@@ -15,8 +15,6 @@ export function useForm<T>(initialValues: T, options?: UseFormOptions) {
             ...prev,
             [name]: value
         }))
-
-        console.log(values);
     }
 
     const handleSubmit = (submitCallback: (formData: T) => Promise<any>) => {

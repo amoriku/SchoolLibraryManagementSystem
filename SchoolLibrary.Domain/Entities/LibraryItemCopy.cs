@@ -2,7 +2,6 @@
 {
     public class LibraryItemCopy
     {
-        // Is it counts as inventory code?
         public int Id { get; set; } 
         public string? InventoryCode { get; set; }
 
@@ -15,5 +14,7 @@
         public LibraryItem LibraryItem { get; set; } = null!;
 
         public ICollection<UserHistory> UserHistories { get; set; } = [];
+        public ICollection<Borrowing> Borrowings { get; set; } = [];
+
     }
 }

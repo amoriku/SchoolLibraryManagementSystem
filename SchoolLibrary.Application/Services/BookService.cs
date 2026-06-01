@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using SchoolLibrary.Application.Common;
 using SchoolLibrary.Application.DTOs;
 using SchoolLibrary.Application.DTOs.Author;
 using SchoolLibrary.Application.DTOs.Book;
@@ -16,54 +17,62 @@ namespace SchoolLibrary.Application.Services
 
         public async Task<BookDto> CreateAsync(BookCreateDto dto, CancellationToken cancellationToken)
         {
-            bool bookExists = await context.Books
-                .AnyAsync(
-                    b => b.Title == dto.Title
-                    && b.ItemAuthors.Any(ia => dto.AuthorIds.Contains(ia.AuthorId)),
-                    cancellationToken
-                );
+            Book? bookInstance = await context.Books
+                .FirstOrDefaultAsync(b => b.Title == dto.Title, cancellationToken);
 
-            // Если у автора уже есть книга, то вывод ошибки о том, что она уже есть в базе
-            if (bookExists)
+            // Создаем книгу если её нет в базе
+            if (bookInstance == null)
             {
-                logger.LogWarning("Book {BookName} already exists", dto.Title);
-                throw new Exception("Book already exists");
-            }
+                // Проверка на существование авторов
+                var existingAuthorIds = await context.Authors
+                    .Where(a => dto.AuthorIds.Contains(a.Id))
+                    .Select(a => a.Id)
+                    .ToListAsync(cancellationToken);
 
-            // Проверка на существование авторов
-            var existingAuthorIds = await context.Authors
-                .Where(a => dto.AuthorIds.Contains(a.Id))
-                .Select(a => a.Id)
-                .ToListAsync(cancellationToken);
-
-            // Если каких-то авторов не существует вывод об ошибке
-            if (existingAuthorIds.Count != dto.AuthorIds.Count)
-            {
-                string message = "Some of authors dont exist";
-
-                logger.LogWarning(message);
-                throw new NotFoundException(message);
-            }
-
-
-            // Создание книги
-            Book book = new Book
-            {
-                Title = dto.Title,
-                Description = dto.Description,
-                PublishedYear = dto.PublishedYear,
-                Price = dto.Price,
-                ItemAuthors = dto.AuthorIds.Select(id => new ItemAuthor
+                // Если каких-то авторов не существует выводим сообщение об ошибке
+                if (existingAuthorIds.Count != dto.AuthorIds.Count)
                 {
-                    AuthorId = id,
-                }).ToList()
-            };
+                    string message = "Some of authors dont exist";
 
-            context.Books.Add(book);
+                    logger.LogWarning(message);
+                    throw new NotFoundException(message);
+                }
+
+                // Создание книги
+                bookInstance = new Book
+                {
+                    Title = dto.Title,
+                    Description = dto.Description,
+                    PublishedYear = dto.PublishedYear,
+                    Price = dto.Price,
+                    ItemAuthors = dto.AuthorIds.Select(id => new ItemAuthor
+                    {
+                        AuthorId = id,
+                    }).ToList(),
+                    ISBN_13 = !string.IsNullOrEmpty(dto.Isbn) ? dto.Isbn : DataGenerator.GenerateIsbn13(),
+                };
+
+                context.Books.Add(bookInstance);
+                await context.SaveChangesAsync();
+            }
+            
+            for (int i = 0; i < dto.Quantity; i++)
+            {
+                var itemCopy = new LibraryItemCopy
+                {
+                    FundId = 1,
+                    LibraryItem = bookInstance,
+                    Status = Domain.ItemCopyStatus.Available,
+                    InventoryCode = $"SLIC-{bookInstance.Id}-{DateTime.UtcNow.Ticks.ToString().Substring(11)}"
+                };
+
+                context.LibraryItemCopies.Add(itemCopy);
+            }
+
             await context.SaveChangesAsync(cancellationToken);
 
-            var authors = book.ItemAuthors
-                .Where(ia => ia.LibraryItemId == book.Id)
+            var authors = bookInstance.ItemAuthors
+                .Where(ia => ia.LibraryItemId == bookInstance.Id)
                 .Join(context.Authors, ia => ia.Id, a => a.Id, (ia, a) => new AuthorDto(
                     ia.AuthorId,
                     ia.Author.FullName.FirstName,
@@ -73,22 +82,24 @@ namespace SchoolLibrary.Application.Services
                 .ToList();
 
             return new BookDto(
-                book.Id, 
-                book.ReceiptDate, 
-                book.Title, 
-                book.PublishedYear, 
+                bookInstance.Id,
+                bookInstance.ReceiptDate,
+                bookInstance.Title,
+                bookInstance.PublishedYear,
+                bookInstance.LibraryItemCopies.Count(),
                 authors
             );
         }
 
         public async Task<List<BookDto>> GetAllAsync(QueryDto query, CancellationToken cancellationToken)
         {
-            var books = await context.Books
-                .Where(b => b.Title.Contains(
-                    string.IsNullOrEmpty(query.Search)
-                    ? string.Empty
-                    : query.Search)
-                )
+            var booksQuery = context.Books.AsNoTracking();
+
+            if (!string.IsNullOrEmpty(query.Search))
+            {
+                booksQuery = booksQuery.Where(b => b.Title.Contains(query.Search));
+            }
+            var books = await booksQuery
                 .Select(b => new BookDto
                 (
                     b.Id,
@@ -96,33 +107,24 @@ namespace SchoolLibrary.Application.Services
                     b.Title,
                     //b.Description,
                     b.PublishedYear,
-                    context.ItemAuthors
-                        .Where(ia => ia.LibraryItemId == b.Id)
+
+                    b.LibraryItemCopies.Count(c => c.Status == Domain.ItemCopyStatus.Available) 
+                    - b.Reservations.Count(r => r.IsActive),
+
+                    b.ItemAuthors
                         .Select(ia => new AuthorDto(
                             ia.AuthorId,
                             ia.Author.FullName.FirstName,
                             ia.Author.FullName.LastName,
                             ia.Author.FullName.MiddleName
-                            ))
+                        ))
                         .ToList()
                 //b.Price
                 ))
-                .ToListAsync();
+                .ToListAsync(cancellationToken);
 
 
             return books;
-
-            //var query = context.Books.AsQueryable();
-            
-            //if (!string.IsNullOrEmpty(title))
-            //{
-            //    query = query
-            //        .Where(b => b.Title.Contains(title));
-
-                
-            //}
-
-            //return await query.ToListAsync(cancellationToken);
         }
 
         public async Task<Book?> GetByIdAsync(int id, CancellationToken cancellationToken)

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { type AuthorDto, type BookDto } from "../api/entities/Entity.Types";
 import { MainSectionHeader } from "../components/MainSectionHeader"
 import { Table } from "../components/Table"
-import { FiBook, FiRefreshCcw } from "react-icons/fi";
+import { FiBook } from "react-icons/fi";
 import Modal from "../components/Modal";
 import { useDataService } from "../api/services/dataService";
 import { CreateBookForm } from "../components/forms/CreateBookForm";
@@ -19,7 +19,8 @@ export const BooksPage = () => {
     const columnNames: string[] = [
         "Идентификатор",
         "Название",
-        "Год выпуска",
+        "Год издания",
+        "Количество копий",
         "Автор"
     ]
 
@@ -80,13 +81,20 @@ export const BooksPage = () => {
                                 key={book.publishedYear}
                                 className="table-td"
                             >
-                                {book.publishedYear}
+                                {book.publishedYear ? book.publishedYear : "-"}
+                            </td>
+                            <td
+                                key={book.quantity}
+                                className="table-td"
+                            >
+                                {book.quantity ? book.quantity : "-"}
                             </td>
                             {book.authors.map(author => (
                                 <td
                                     key={author.id}
                                     className="table-td"
                                 >
+                                    
                                     {`${author.lastName} ${author.firstName[0]}. ${author.middleName ? author.middleName[0] : ""}.`}
                                 </td>
                             ))}

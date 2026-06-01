@@ -43,6 +43,20 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
+        [HttpPost("create")]
+        public async Task<IResult> Create(CreateReaderDto dto, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var reader = await readerService.CreateAsync(dto, cancellationToken);
+                return Results.Ok(reader);
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
+        }
+
         [HttpGet("get-user-history")]
         public async Task<IActionResult> GetUserHistory(string userId, CancellationToken cancellationToken)
         {

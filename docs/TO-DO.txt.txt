@@ -1,0 +1,9 @@
+27.05.2026
+
+- Transfer users to new grade when its 1th of september.
+
+- Separate the users panels (if they have it) from home page.
+
+- Deploy my backend
+
+Like Admin, Librarian and Reader home pages are literally the same to be honest. (do i even need to spend time on it?)

@@ -8,9 +8,9 @@ namespace SchoolLibrary.Infrastructure.Common
 {
     public class DbInitializer : IDbInitializer
     {
-        private UserManager<ApplicationUser> userManager;
-        private RoleManager<IdentityRole> roleManager;
-        private AppDbContext context;
+         private readonly UserManager<ApplicationUser> userManager;
+        private readonly RoleManager<IdentityRole> roleManager;
+        private readonly AppDbContext context;
 
         public DbInitializer(
             UserManager<ApplicationUser> userManager,
@@ -23,34 +23,59 @@ namespace SchoolLibrary.Infrastructure.Common
             this.context = context;
         }
 
-        // Первичная инициализая базы данных.
-        public void Initialize() 
+        // ИСПРАВЛЕНО: Метод стал асинхронным Task вместо void
+        public async Task Initialize() 
         {
-            try
+            int retryCount = 6;
+            bool isDbReady = false;
+
+            while (!isDbReady && retryCount > 0)
             {
-                if (context.Database.GetPendingMigrations().Any())
+                try
                 {
-                    Console.WriteLine("[Infrastructure:DbInitializer] Applying pending migratoins");
-                    context.Database.Migrate();
+                    Console.WriteLine($"[DbInitializer] Checking pending migrations... (Attempts left: {retryCount})");
+
+                    // Используем асинхронную проверку миграций
+                    var pendingMigrations = await context.Database.GetPendingMigrationsAsync();
+                    if (pendingMigrations.Any())
+                    {
+                        Console.WriteLine("[DbInitializer] Applying pending migrations...");
+                        await context.Database.MigrateAsync();
+                    }
+
+                    isDbReady = true; 
                 }
-                SeedData().GetAwaiter().GetResult();
+                catch (Exception ex)
+                {
+                    retryCount--;
+                    Console.WriteLine($"[DbInitializer] Database is NOT ready yet: {ex.Message}");
+
+                    if (retryCount == 0)
+                    {
+                        Console.WriteLine("[DbInitializer] CRITICAL: Could not connect to the database. Exiting.");
+                        throw; 
+                    }
+
+                    Console.WriteLine("[DbInitializer] Waiting 5 seconds before retrying...");
+                    await Task.Delay(5000); // ИСПРАВЛЕНО: Task.Delay вместо Thread.Sleep для асинхронного кода
+                }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[Infrastructure] error when initializing database: \n{ex}");
-                throw;
-            }
+
+            // ИСПРАВЛЕНО: Вызываем добавление первичных данных только после успеха миграций
+            Console.WriteLine("[DbInitializer] Starting SeedData...");
+            await SeedData();
         }
 
         // Добавление первичных данных в базу данных.
         private async Task SeedData()
         {
             // Создание первичного класса для администратора L-A (Library-Admin).
-            if (!context.Grades.Any())
+            if (!await context.Grades.AnyAsync())
             {
                 var defaultGrade = new Grade { Id = 1, Letter = "ША", Number = 0 };
                 context.Grades.Add(defaultGrade);
                 await context.SaveChangesAsync();
+                Console.WriteLine("[DbInitializer] Default grade created.");
             }
 
             // Ввод первичных ролей.
@@ -65,15 +90,15 @@ namespace SchoolLibrary.Infrastructure.Common
             // Добавление ролей в базу данных.
             foreach (var role in roles)
             {
-                var roleName = role;
-                if (!await roleManager.RoleExistsAsync(roleName))
+                if (!await roleManager.RoleExistsAsync(role))
                 {
-                    await roleManager.CreateAsync(new IdentityRole(roleName));
+                    await roleManager.CreateAsync(new IdentityRole(role));
+                    Console.WriteLine($"[DbInitializer] Role {role} created.");
                 }
             }
 
             // Создание первичного пользователя в системе (Администратора)
-            if (!userManager.Users.Any())
+            if (!await userManager.Users.AnyAsync())
             {
                 var adminUser = new ApplicationUser
                 {
@@ -84,12 +109,16 @@ namespace SchoolLibrary.Infrastructure.Common
                     GradeId = 1,
                 };
 
-                var result = await userManager.CreateAsync(adminUser);
+                var result = await userManager.CreateAsync(adminUser, "12345Aa%");
 
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(adminUser, UserRoles.Admin);
-                    Console.WriteLine($"[Infrastructure:DbInitializer] Successfully created {adminUser.UserName}");
+                    Console.WriteLine($"[DbInitializer] Successfully created {adminUser.UserName}");
+                }
+                else
+                {
+                    Console.WriteLine($"[DbInitializer] ERROR creating admin: {string.Join(", ", result.Errors.Select(e => e.Description))}");
                 }
             }
         }

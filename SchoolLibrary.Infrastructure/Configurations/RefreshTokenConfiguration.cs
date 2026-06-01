@@ -18,11 +18,14 @@ namespace SchoolLibrary.Infrastructure.Configurations
                 .HasIndex(rt => rt.Token)
                 .IsUnique();
 
-            // One token per user 
+            // One token per user session (theres an history included)
             builder
                 .HasOne(rt => rt.User)
                 .WithMany()
-                .HasForeignKey(rt => rt.UserId);
+                .HasForeignKey(rt => rt.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
         }
     }
 }

@@ -9,5 +9,6 @@ namespace SchoolLibrary.Application.Interfaces
         Task<UserHistory> CreateUserHistoryRecordAsync(UserHistoryCreateDto dto, CancellationToken cancellationToken);
         Task<UserHistory?> GetUserHistoryAsync(string userId, CancellationToken cancellationToken);
         Task<List<ReaderDto>> GetAllAsync(CancellationToken cancellationToken);
+        Task<ReaderDto> CreateAsync(CreateReaderDto dto, CancellationToken cancellationToken);
     }
 }

@@ -6,7 +6,9 @@
         List<int> AuthorIds,
         int? PublishedYear,
         decimal? Price,
-        string? Description
+        string? Description,
+        int Quantity,
+        string? Isbn
     );
 
     

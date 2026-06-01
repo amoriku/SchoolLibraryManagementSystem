@@ -511,6 +511,37 @@
           }
         }
       },
+      "Microsoft.NETCore.Platforms/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "NETStandard.Library/1.6.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "NickBuhro.Translit/1.4.5": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/NickBuhro.Translit.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/NickBuhro.Translit.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Npgsql/10.0.2": {
         "type": "package",
         "dependencies": {
@@ -1343,6 +1374,55 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json"
+      ]
+    },
+    "NETStandard.Library/1.6.1": {
+      "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
+      "type": "package",
+      "path": "netstandard.library/1.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "netstandard.library.1.6.1.nupkg.sha512",
+        "netstandard.library.nuspec"
+      ]
+    },
+    "NickBuhro.Translit/1.4.5": {
+      "sha512": "C4Hy1hXOvmisfjsHdFIFCqrqT4y8wrn7UUHATDVNGQhDMg2StIVHr7SJ17yE6z1TjYjZnv1iYeoahzwN3FdtYg==",
+      "type": "package",
+      "path": "nickbuhro.translit/1.4.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/NickBuhro.Translit.dll",
+        "lib/net20/NickBuhro.Translit.xml",
+        "lib/net35/NickBuhro.Translit.dll",
+        "lib/net35/NickBuhro.Translit.xml",
+        "lib/net40/NickBuhro.Translit.dll",
+        "lib/net40/NickBuhro.Translit.xml",
+        "lib/net45/NickBuhro.Translit.dll",
+        "lib/net45/NickBuhro.Translit.xml",
+        "lib/netstandard1.3/NickBuhro.Translit.dll",
+        "lib/netstandard1.3/NickBuhro.Translit.xml",
+        "nickbuhro.translit.1.4.5.nupkg.sha512",
+        "nickbuhro.translit.nuspec"
+      ]
+    },
     "Npgsql/10.0.2": {
       "sha512": "q5RfBI+wywJSFUNDE1L4ZbHEHCFTblo8Uf6A6oe4feOUFYiUQXyAf9GBh5qEZpvJaHiEbpBPkQumjEhXCJxdrg==",
       "type": "package",
@@ -1416,6 +1496,7 @@
       "Microsoft.AspNetCore.Http.Abstractions >= 2.3.9",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 10.0.6",
       "Microsoft.IdentityModel.Tokens >= 8.0.1",
+      "NickBuhro.Translit >= 1.4.5",
       "SchoolLibrary.Domain >= 1.0.0",
       "SchoolLibrary.Infrastructure >= 1.0.0",
       "System.IdentityModel.Tokens.Jwt >= 8.0.1"
@@ -1491,6 +1572,10 @@
           "Microsoft.IdentityModel.Tokens": {
             "target": "Package",
             "version": "[8.0.1, )"
+          },
+          "NickBuhro.Translit": {
+            "target": "Package",
+            "version": "[1.4.5, )"
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",

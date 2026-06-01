@@ -20,11 +20,25 @@ namespace SchoolLibrary.API.Controllers
             this.bookService = bookService;
         }
 
+        [HttpGet("get-by-title")]
+        public async Task<IResult> GetByTitle(string title, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var book = await bookService.GetByTitleAsync(title, cancellationToken);
+                return Results.Ok(book);
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
+        }
+
         [Authorize(Roles = $"{UserRoles.Admin}, {UserRoles.Librarian}")]
         [HttpPost("create")]
         public async Task<IActionResult> Create(BookCreateDto dto, CancellationToken cancellationToken)
         {
-            try 
+            try
             { 
                 return Ok(await bookService.CreateAsync(dto, cancellationToken));
             }

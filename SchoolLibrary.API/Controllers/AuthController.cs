@@ -37,10 +37,32 @@ namespace SchoolLibrary.API.Controllers
 
         [Authorize]
         [HttpDelete("logout")]
-        public IActionResult Logout()
+        public async Task<IResult> Logout(CancellationToken cancellationToken)
         {
-            authService.Logout();
-            return Ok();
+            try
+            {
+                await authService.Logout(cancellationToken);
+                return Results.Ok();
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
+            
+        }
+
+        [AllowAnonymous]
+        [HttpPost("refresh")]
+        public async Task<IResult> Refresh(CancellationToken cancellationToken)
+        {
+            try 
+            {
+                return Results.Ok(await authService.RefreshAsync(cancellationToken));
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
         }
 
         [Authorize]
@@ -51,6 +73,7 @@ namespace SchoolLibrary.API.Controllers
 
             return user == null ? Unauthorized("You`r not authorized") : Ok(user);
         }
+
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDto dto, CancellationToken cancellationToken)

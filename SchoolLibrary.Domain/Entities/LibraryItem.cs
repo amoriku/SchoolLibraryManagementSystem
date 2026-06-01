@@ -18,5 +18,6 @@ namespace SchoolLibrary.Domain.Entities
 
         public ICollection<ItemAuthor> ItemAuthors { get; set; } = [];
         public ICollection<LibraryItemCopy> LibraryItemCopies { get; set; } = [];
+        public ICollection<Reservation> Reservations { get; set; } = [];
     }
 }

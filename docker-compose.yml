@@ -1,0 +1,40 @@
+services:
+  postgres_db:
+    image: postgres:16-alpine
+    container_name: postgres_api_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: school_library
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  schoollibrary.api:
+    image: ${DOCKER_REGISTRY-}schoollibraryapi
+    build:
+      context: .
+      dockerfile: SchoolLibrary.API/Dockerfile
+    environment:
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+    ports:
+      - "5000:8080"
+    depends_on:
+      - postgres_db
+
+  reactjs:
+    image: ${DOCKER_REGISTRY-}reactjs
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile.production
+      args:
+        - VITE_API_URL=http://localhost:5000/api
+    ports:
+      - "3000:80"
+    depends_on:
+      - schoollibrary.api
+  
+volumes:
+  pgdata:

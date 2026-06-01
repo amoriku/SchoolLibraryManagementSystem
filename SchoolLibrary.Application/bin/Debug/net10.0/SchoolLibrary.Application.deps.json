@@ -11,6 +11,7 @@
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.9",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.6",
           "Microsoft.IdentityModel.Tokens": "8.0.1",
+          "NickBuhro.Translit": "1.4.5",
           "SchoolLibrary.Domain": "1.0.0",
           "SchoolLibrary.Infrastructure": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "8.0.1"
@@ -339,6 +340,14 @@
           }
         }
       },
+      "NickBuhro.Translit/1.4.5": {
+        "runtime": {
+          "lib/netstandard1.3/NickBuhro.Translit.dll": {
+            "assemblyVersion": "1.4.5.0",
+            "fileVersion": "1.4.5.0"
+          }
+        }
+      },
       "Npgsql/10.0.2": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "10.0.6"
@@ -601,6 +610,13 @@
       "sha512": "sha512-kDimB6Dkd3nkW2oZPDkMkVHfQt3IDqO5gL0oa8WVy3OP4uE8Ij+8TXnqg9TOd9ufjsY3IDiGz7pCUbnfL18tjg==",
       "path": "microsoft.identitymodel.tokens/8.0.1",
       "hashPath": "microsoft.identitymodel.tokens.8.0.1.nupkg.sha512"
+    },
+    "NickBuhro.Translit/1.4.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C4Hy1hXOvmisfjsHdFIFCqrqT4y8wrn7UUHATDVNGQhDMg2StIVHr7SJ17yE6z1TjYjZnv1iYeoahzwN3FdtYg==",
+      "path": "nickbuhro.translit/1.4.5",
+      "hashPath": "nickbuhro.translit.1.4.5.nupkg.sha512"
     },
     "Npgsql/10.0.2": {
       "type": "package",

@@ -29,7 +29,9 @@ export const Logout = async () => {
 
 export const getCurrentUser = async () => {
     try {
-        const response = await authApi.get("/Auth/current");
+        const response = await authApi.get("Auth/current", {
+            _skipRefresh: true
+        } as any);
         return response.data;
     }
     catch (error) {

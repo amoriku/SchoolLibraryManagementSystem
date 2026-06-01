@@ -5,8 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
+using SchoolLibrary.Application.DTOs;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
+using SchoolLibrary.Application.Shared;
 using SchoolLibrary.Domain.Entities;
 using SchoolLibrary.Infrastructure;
 using System.Security.Claims;
@@ -32,6 +34,86 @@ namespace SchoolLibrary.Application.Services
             this.context = context;
             this.userManager = userManager;
             this.httpContextAccessor = httpContextAccessor;
+        }
+
+        public async Task<TokenResponseDto> RefreshAsync(string refreshToken, CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrEmpty(refreshToken))
+            {
+                throw new UnauthorizedAccessException("Refresh token is missing");
+            }
+
+            var refreshTokenEntity = await context.RefreshTokens
+                .Include(rt => rt.User)
+                .FirstOrDefaultAsync(rt => rt.Token == refreshToken, cancellationToken);
+
+            if (refreshTokenEntity is null || !refreshTokenEntity.IsActive)
+            {
+                throw new UnauthorizedAccessException("Invalid or expired refresh token");
+            }
+
+            var user = refreshTokenEntity.User;
+            refreshTokenEntity.IsRevoked = true;
+
+            string newAccessToken = await CreateTokenAsync(user);
+            string newRefreshToken = GenerateRefreshToken();
+
+            await SaveRefreshTokenAsync(user, newRefreshToken, cancellationToken);
+
+            var httpContext = httpContextAccessor.HttpContext;
+            if (httpContext != null)
+            {
+                httpContext.Response.Cookies.Append(
+                    CookieHeaderNames.CookieHeaderNameAccessToken,
+                    newAccessToken,
+                    new CookieOptions
+                    {
+                        Secure = true,
+                        SameSite = SameSiteMode.None,
+                        HttpOnly = true,
+                        Expires = DateTime.UtcNow.AddMinutes(configuration.GetValue<int>("JwtConfig:ExpiryInMinutes"))
+                    }
+                );
+
+                httpContext.Response.Cookies.Append(
+                    CookieHeaderNames.CookieHeaderNameRefreshToken,
+                    newRefreshToken,
+                    new CookieOptions
+                    {
+                        Secure = true,
+                        SameSite = SameSiteMode.None,
+                        HttpOnly = true,
+                        Expires = DateTime.UtcNow.AddDays(30)
+                    }
+                );
+            }
+
+            return new TokenResponseDto(newAccessToken, newRefreshToken);
+        }
+
+        public async Task SaveRefreshTokenAsync(ApplicationUser user, string refreshToken, CancellationToken cancellationToken)
+        {
+            var activeTokens = await context.RefreshTokens
+                .Where(rt => rt.UserId == user.Id && !rt.IsRevoked && rt.ExpiresOnUtc > DateTime.UtcNow)
+                .ToListAsync(cancellationToken);
+
+            foreach (var token in activeTokens)
+            {
+                token.IsRevoked = true;
+            }
+
+            RefreshToken newEntity = new()
+            {
+                Token = refreshToken,
+                UserId = user.Id,
+                ExpiresOnUtc = DateTime.UtcNow.AddDays(30),
+                CreatedAt = DateTime.UtcNow,
+                IsRevoked = false
+            };
+
+            context.RefreshTokens.Add(newEntity);
+
+            await context.SaveChangesAsync(cancellationToken);
         }
 
         public async Task<string> CreateTokenAsync(ApplicationUser user)
@@ -68,28 +150,6 @@ namespace SchoolLibrary.Application.Services
         public string GenerateRefreshToken()
         {
             return Convert.ToBase64String(RandomNumberGenerator.GetBytes(32));
-        }
-
-        public async Task SaveRefreshTokenAsync(ApplicationUser user, string refreshToken, CancellationToken cancellationToken)
-        {
-            var userRefreshToken = await context.RefreshTokens
-                .FirstOrDefaultAsync(rt => rt.UserId == user.Id);
-
-            if (userRefreshToken != null)
-            {
-                userRefreshToken.ExpiresOnUtc = DateTime.UtcNow.AddDays(-1);
-            }
-
-            RefreshToken token = new()
-            {
-                Token = refreshToken,
-                UserId = user.Id,
-                User = user,
-                ExpiresOnUtc = DateTime.UtcNow.AddDays(3),
-            };
-
-            context.RefreshTokens.Add(token);
-            await context.SaveChangesAsync();
         }
 
         public async Task<bool> RevokeRefreshTokensAsync(CancellationToken cancellationToken)

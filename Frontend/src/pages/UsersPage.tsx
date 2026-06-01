@@ -8,6 +8,9 @@ import type { RoleDto, CreateUserDto, UserDto } from "../api/entities/Entity.Typ
 import { MainSectionHeader } from "../components/MainSectionHeader";
 import { CreateUserForm } from "../components/forms/CreateUserForm";
 import { useDataService } from "../api/services/dataService";
+import { TableDeleteButton } from "../components/buttons/TableDeleteButton";
+import { TableEditButton } from "../components/buttons/TableEditButton";
+import { ActionsContainer } from "../components/ActionsContainer";
 
 export const UsersPage = () => {
     const [users, setUsers] = useState<UserDto[]>([]);
@@ -32,36 +35,6 @@ export const UsersPage = () => {
         "Роль"
     ]
 
-    const createUser = async (e: React.SubmitEvent) => {
-        e.preventDefault();
-
-        const userData: CreateUserDto = {
-            firstName: createUserFormData.firstName,
-            lastName: createUserFormData.lastName,
-            username: createUserFormData.username,
-            middleName: createUserFormData.middleName,
-            role: createUserFormData.role,
-            password: createUserFormData.password,
-            email: createUserFormData.email,
-        }
-
-        console.log(userData);
-
-        if (userData.role == "None") {
-            toast.error("Выберите роль пользователя");
-            return;
-        }
-
-        try {
-
-            await CreateUser(userData);
-            getAllUsers();
-        }
-        catch (error) {
-            console.error("Ошибка при создании пользователя: \n", error)
-        }
-    }
-
     const handleUserDelete = async (userId: string) => {
         // console.log(userId);
 
@@ -85,7 +58,7 @@ export const UsersPage = () => {
             <div>
                 {createModalOpen && (
                     <Modal onClose={() => setCreateModalOpen(false)} formId="create-user-form" isOpen={createModalOpen} modalTitle="Создание пользователя">
-                        <CreateUserForm></CreateUserForm>
+                        <CreateUserForm handleSubmit={() => fetchInitialData()}></CreateUserForm>
                     </Modal>
                 )}
 
@@ -121,24 +94,20 @@ export const UsersPage = () => {
                                     {user.username}
                                 </td>
                                 <td className="table-td">
-                                    {user.email}
+                                    {user.email ? user.email : "-"}
                                 </td>
                                 <td className="table-td">
                                     {user.role}
                                 </td>
                                 {/* Блок операций */}
-                                <td className="table-td text-right">
-                                    <div className="flex justify-end gap-4">
-                                        <button className="button button-green">
-                                            Изменить
-                                        </button>
-                                        <button
-                                            onClick={() => handleUserDelete(user.id)}
-                                            className="button button-red">
-                                            Удалить
-                                        </button>
-                                    </div>
-                                </td>
+                                <ActionsContainer>
+                                    <TableEditButton handleEdit={() => console.log("edit user")}>
+
+                                    </TableEditButton>
+                                    <TableDeleteButton handleDelete={() => handleUserDelete(user.id)}>
+
+                                    </TableDeleteButton>
+                                </ActionsContainer>
                             </tr>
                         ))}
                     </Table>

@@ -247,7 +247,7 @@
           ]
         },
         {
-          "DockedHeight": 111,
+          "DockedHeight": 163,
           "SelectedChildIndex": 9,
           "Children": [
             {
@@ -287,8 +287,11 @@
               "ViewState": "AgIAACsAAAAAAAAAAAAIwDcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-25T06:50:20.188Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -300,12 +303,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T15:56:10.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2026-05-26T15:56:10.159Z"
             },
             {
               "$type": "Document",
@@ -317,8 +315,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T14:55:21.375Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T14:55:21.375Z"
             },
             {
               "$type": "Document",
@@ -330,8 +327,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T08:41:29.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T08:41:29.765Z"
             },
             {
               "$type": "Document",
@@ -343,8 +339,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IReaderService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:32:11.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T09:32:11.127Z"
             },
             {
               "$type": "Document",
@@ -356,8 +351,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Services\\GradeService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAawBEAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T07:56:16.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T07:56:16.213Z"
             },
             {
               "$type": "Document",
@@ -382,8 +376,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBookService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T13:43:49.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T13:43:49.068Z"
             },
             {
               "$type": "Document",
@@ -395,8 +388,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Services\\AuthorService.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAUwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:06:56.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T14:06:56.651Z"
             },
             {
               "$type": "Document",
@@ -408,8 +400,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IAuthorService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:05:57.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T14:05:57.026Z"
             },
             {
               "$type": "Document",
@@ -421,12 +412,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\UserHistoryCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T07:35:21.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2026-05-26T07:35:21.383Z"
             },
             {
               "$type": "Document",
@@ -438,8 +424,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\Controllers\\AuthorsController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:08:34.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T14:08:34.265Z"
             },
             {
               "$type": "Document",
@@ -487,8 +472,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\Controllers\\BooksController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAjwBwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:04:43.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-09T16:04:43.431Z"
             },
             {
               "$type": "Document",
@@ -945,6 +929,20 @@
               "ViewState": "AgIAABMAAAAAAAAAAAA0wBkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-07T05:22:28.097Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 67,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

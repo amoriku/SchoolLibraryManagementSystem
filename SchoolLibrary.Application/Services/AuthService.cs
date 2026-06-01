@@ -6,6 +6,7 @@ using SchoolLibrary.Application.DTOs;
 using SchoolLibrary.Application.DTOs.User;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
+using SchoolLibrary.Application.Shared;
 using SchoolLibrary.Domain.Constants;
 using SchoolLibrary.Domain.Entities;
 using SchoolLibrary.Infrastructure;
@@ -23,7 +24,6 @@ namespace SchoolLibrary.Application.Services
         private readonly ITokenProvider tokenProvider;
         private readonly IHttpContextAccessor httpContextAccessor;
 
-        private readonly string CookieSessionTokenName = "user_session";
         //private readonly IJwtService jwtService;
 
         // Первичная подгрузка сервисов
@@ -62,34 +62,62 @@ namespace SchoolLibrary.Application.Services
             string accessToken = await tokenProvider.CreateTokenAsync(user);
             string refreshToken = tokenProvider.GenerateRefreshToken();
 
+            await tokenProvider.SaveRefreshTokenAsync(user, refreshToken, cancellationToken);
+
             // Добавление сессии пользователя в куки браузера для верификации пользователя.
-            httpContextAccessor.HttpContext.Response.Cookies.Append(CookieSessionTokenName, accessToken,
-                    new CookieOptions
-                    {
-                        Expires = DateTime.UtcNow.AddDays(7),
-                        Secure = true,
-                        SameSite = SameSiteMode.None,
-                        HttpOnly = true,
-                    });
+            httpContextAccessor.HttpContext.Response.Cookies.Append(CookieHeaderNames.CookieHeaderNameAccessToken, accessToken,
+                new CookieOptions
+                {
+                    Expires = DateTime.UtcNow.AddMinutes(8),
+                    Secure = true,
+                    SameSite = SameSiteMode.None,
+                    HttpOnly = true,
+                }
+            );
+
+            httpContextAccessor.HttpContext.Response.Cookies.Append(CookieHeaderNames.CookieHeaderNameRefreshToken, refreshToken,
+                new CookieOptions
+                {
+                    Expires = DateTime.UtcNow.AddDays(30),
+                    Secure = true,
+                    SameSite = SameSiteMode.None,
+                    HttpOnly = true,
+                }
+            );
 
             return new TokenResponseDto
                 (
                     AccessToken: accessToken,
                     RefreshToken: refreshToken
                 );
+        }
 
+        public async Task<TokenResponseDto> RefreshAsync(CancellationToken cancellationToken)
+        {
+            httpContextAccessor.HttpContext.Request.Cookies.TryGetValue(CookieHeaderNames.CookieHeaderNameRefreshToken, out string refreshToken);
+
+            var tokenResponse = await tokenProvider.RefreshAsync(refreshToken, cancellationToken);
+            return tokenResponse;
         }
 
         // Обработка выхода из приложения.
-        public void Logout()
+        public async Task Logout(CancellationToken cancellationToken)
         {
-            // Получение и очистика сессии пользователя в случае, если он авторизован.
+            // Получение и очистка сессии пользователя в случае, если он авторизован.
             string? userId = httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            await tokenProvider.RevokeRefreshTokensAsync(cancellationToken);
 
-            
             if (!string.IsNullOrEmpty(userId))
             {
-                httpContextAccessor.HttpContext.Response.Cookies.Delete(CookieSessionTokenName, new CookieOptions
+                httpContextAccessor.HttpContext.Response.Cookies.Delete(CookieHeaderNames.CookieHeaderNameAccessToken, new CookieOptions
+                {
+                    Expires = DateTime.UtcNow.AddDays(-1),
+                    Secure = true,
+                    SameSite = SameSiteMode.None,
+                    HttpOnly = true,
+                });
+
+                httpContextAccessor.HttpContext.Response.Cookies.Delete(CookieHeaderNames.CookieHeaderNameRefreshToken, new CookieOptions
                 {
                     Expires = DateTime.UtcNow.AddDays(-1),
                     Secure = true,

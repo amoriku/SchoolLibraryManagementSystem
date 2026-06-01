@@ -1,16 +1,15 @@
 import { useData } from "../../hooks/useData"
-import type { ReaderDto } from "../entities/Entity.Types"
+import type { CreateReaderDto, ReaderDto } from "../entities/Entity.Types"
 
 export const useReaderService = () => {
     const { request } = useData();
 
     return {
-        getAllReaders: () => request<ReaderDto[]>(
-            {
-                type: "Auth",
-                method: "get",
-                endpoint: "/Readers"
-            }
-        )
+        create: (data: CreateReaderDto): Promise<ReaderDto> => request({
+            type: "Auth",
+            method: "post",
+            endpoint: "Readers/create",
+            data: data
+        })
     }
 }

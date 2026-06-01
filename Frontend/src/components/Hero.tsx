@@ -4,10 +4,9 @@ import { SideBarItem } from "./SideBarItem";
 import { RoleBased } from "./RoleBased";
 import { Outlet } from "react-router";
 import { FaBookOpen, FaUserPlus } from "react-icons/fa";
-import { BiUser } from "react-icons/bi";
-import { CgGlass, CgUser } from "react-icons/cg";
-import { GrUser } from "react-icons/gr";
-import { GoFileDirectory } from "react-icons/go";
+import { CgGlass } from "react-icons/cg";
+import { GrCatalog, GrUser } from "react-icons/gr";
+import { BiBookContent } from "react-icons/bi";
 
 export default function Hero() {
     const authContext = useAuth();
@@ -31,6 +30,11 @@ export default function Hero() {
                                     <SideBarItem name="Книги" icon={<FaBookOpen />} to="/librarian/books"></SideBarItem>
                                     <SideBarItem name="Читатели" icon={<GrUser />} to="/librarian/readers"></SideBarItem>
                                     <SideBarItem name="Авторы" icon={<FaUserPlus />} to="/librarian/authors"></SideBarItem>
+                                </RoleBased>
+
+                                <RoleBased role="Reader">
+                                    <SideBarItem name="Каталог" icon={<GrCatalog />} to="/reader/catalog"></SideBarItem>
+                                    <SideBarItem name="Мои книги" icon={<BiBookContent/>} to="/reader/my-books"></SideBarItem>
                                 </RoleBased>
                             </nav>
 
