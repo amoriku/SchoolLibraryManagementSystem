@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
-      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\borrowingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\borrowingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\readerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -256,7 +256,7 @@
         },
         {
           "DockedHeight": 134,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -298,8 +298,12 @@
               "IsPinned": true
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BorrowingsController.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
@@ -309,10 +313,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-01T09:23:04.584Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -384,8 +384,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Services\\ReaderService.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAswEAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:32:37.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T09:32:37.91Z"
             },
             {
               "$type": "Document",
@@ -963,7 +962,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",

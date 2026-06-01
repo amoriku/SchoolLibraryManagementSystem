@@ -7,16 +7,16 @@ import { FaBookOpen, FaUserPlus } from "react-icons/fa";
 import { CgGlass } from "react-icons/cg";
 import { GrCatalog, GrUser } from "react-icons/gr";
 import { BiBookContent } from "react-icons/bi";
+import { CatalogPage } from "../pages/CatalogPage";
 
 export default function Hero() {
     const authContext = useAuth();
 
     return (
         <>
-            {authContext.user && (
+            {authContext.user ? (
                 <div className="w-full h-[calc(100dvh-76px)] overflow-hidden bg-slate-50">
                     <div className="flex h-full w-full">
-
                         <aside className="flex flex-col justify-between h-full w-64 min-w-64 max-w-64 bg-white py-6 pl-4 pr-4 border-r border-slate-100 shrink-0">
                             <nav className="flex flex-col gap-1">
                                 <RoleBased role="Admin">
@@ -34,7 +34,7 @@ export default function Hero() {
 
                                 <RoleBased role="Reader">
                                     <SideBarItem name="Каталог" icon={<GrCatalog />} to="/reader/catalog"></SideBarItem>
-                                    <SideBarItem name="Мои книги" icon={<BiBookContent/>} to="/reader/my-books"></SideBarItem>
+                                    <SideBarItem name="Мои книги" icon={<BiBookContent />} to="/reader/my-books"></SideBarItem>
                                 </RoleBased>
                             </nav>
 
@@ -51,6 +51,10 @@ export default function Hero() {
                         </main>
 
                     </div>
+                </div>
+            ) : (
+                <div>
+                    <CatalogPage></CatalogPage>
                 </div>
             )}
         </>

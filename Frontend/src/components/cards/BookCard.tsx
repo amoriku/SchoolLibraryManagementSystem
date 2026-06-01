@@ -1,7 +1,9 @@
 import { CgAdd } from "react-icons/cg"
-import { useReserveService } from "../../api/services/ReservationService";
+import { useReserveService } from "../../api/services/reservationService";
 import { useState } from "react";
 import type { ReserveCreateDto, ReserveDto } from "../../api/entities/Entity.Types";
+import { useAuth } from "../../hooks/useAuth";
+import toast from "react-hot-toast";
 
 interface BookProps {
     id: number,
@@ -14,8 +16,15 @@ interface BookProps {
 
 export const BookCard = ({id, title, description, publishedYear, author, quantity = 0 }: BookProps) => {
     const { reserve } = useReserveService();
+    const { isAuthenticated } = useAuth();
 
     const handleReserve = async () => {
+        if (!isAuthenticated)
+        {
+            toast.success("Войдите, чтобы зарезервировать книгу");
+            return;
+        }
+
         const data: ReserveCreateDto = {
             libraryItemId: id
         }

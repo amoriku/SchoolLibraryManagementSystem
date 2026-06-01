@@ -4,10 +4,18 @@ import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { useState } from "react";
 import { FiBookOpen, FiLogOut } from "react-icons/fi";
 import { CgProfile } from "react-icons/cg";
+import { BaseInput, SearchInput } from "../CustomInput";
+import toast from "react-hot-toast";
 
 export function Header() {
     const authContext = useAuth();
     const [profileOpen, setProfileOpen] = useState(false);
+
+    const handleBookSearch = () => {
+        toast.error("Временно не работает", {
+            position: "top-right"
+        })
+    }
 
     return (
         <header className="bg-white border-b border-slate-100 px-6 py-5 w-full shrink-0">
@@ -21,11 +29,9 @@ export function Header() {
                 </div>
 
                 <div className="flex-1 flex justify-between items-center pl-6">
-
+                    {/* TO-DO: Make this work */}
                     {!authContext.isAuthenticated ? (
-                        <div className="text-slate-400">
-                            Поиск...
-                        </div>
+                        <SearchInput onSearch={handleBookSearch} placeholder="Введите название..."></SearchInput>
                     ) : (
                         <button className="text-slate-400 flex items-center justify-center gap-1 hover:text-slate-400/80 transition-colors font-semibold">
                             <CgProfile></CgProfile>
