@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SchoolLibrary.Application.DTOs.Reserve;
 using SchoolLibrary.Application.Interfaces;
+using SchoolLibrary.Application.Shared;
 using SchoolLibrary.Domain;
 using SchoolLibrary.Domain.Constants;
 
@@ -19,7 +20,35 @@ namespace SchoolLibrary.API.Controllers
             this.reserveService = reserveService;
         }
 
-        [Authorize(Roles = $"{UserRoles.Librarian}, {UserRoles.Admin}")]
+        [Authorize(Roles = UserRoles.Reader)]
+        [HttpGet("active")]
+        public async Task<IResult> GetActive(CancellationToken cancellationToken)
+        {
+            try
+            {
+                return Results.Ok(await reserveService.GetActiveAsync(cancellationToken));
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
+        }
+
+        [Authorize(Policy = PolicyName.AnyUserPolicyName)]
+        [HttpPost("cancel")]
+        public async Task<IResult> Cancel(int reserveId, CancellationToken cancellationToken)
+        {
+            try
+            {
+                return Results.Ok(await reserveService.CancelAsync(reserveId, cancellationToken));
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
+        }
+
+        [Authorize(Policy = PolicyName.StaffOnlyPolicyName)]
         [HttpGet]
         public async Task<IResult> GetAll(CancellationToken cancellationToken)
         {
@@ -34,7 +63,7 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Policy = PolicyName.AnyUserPolicyName)]
         [HttpPost("reserve")]
         public async Task<IResult> Reserve(ReserveCreateDto request, CancellationToken cancellationToken)
         {

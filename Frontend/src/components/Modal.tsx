@@ -1,11 +1,14 @@
+import { useEffect } from "react";
 
 interface ModalProps {
     children?: React.ReactNode,
     modalTitle?: string,
     isOpen?: boolean,
-    formId: string
+    includeOperations?: boolean;
+    formId?: string
     // onSave?: (data: any) => Promise<void>,
     onClose?: () => void;
+    onOpen?: () => void
 }
 
 const Modal = (
@@ -13,9 +16,12 @@ const Modal = (
         children,
         modalTitle,
         isOpen,
+        includeOperations = true,
         formId,
+        onOpen,
         onClose
     }: ModalProps) => {
+
 
     if (!isOpen) return null
 
@@ -40,13 +46,15 @@ const Modal = (
                     </div>
 
                     <div className="w-full flex justify-center text-lg gap-3 text-slate-50 mt-2">
-                        <button
-                            type="submit"
-                            form={formId}
-                            className="flex-1 bg-my-light-green hover:opacity-90 transition-opacity rounded-xl px-5 py-2.5 font-medium"
-                        >
-                            Сохранить
-                        </button>
+                        {includeOperations && (
+                            <button
+                                type="submit"
+                                form={formId}
+                                className="flex-1 bg-my-light-green hover:opacity-90 transition-opacity rounded-xl px-5 py-2.5 font-medium"
+                            >
+                                Сохранить
+                            </button>
+                        )}
                         <button
                             type="button"
                             onClick={onClose}

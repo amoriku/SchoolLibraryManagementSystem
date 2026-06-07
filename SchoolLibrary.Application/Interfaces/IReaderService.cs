@@ -6,8 +6,8 @@ namespace SchoolLibrary.Application.Interfaces
     public interface IReaderService
     {
         // Loan (Borrowing), Return, History
-        Task<UserHistory> CreateUserHistoryRecordAsync(UserHistoryCreateDto dto, CancellationToken cancellationToken);
-        Task<UserHistory?> GetUserHistoryAsync(string userId, CancellationToken cancellationToken);
+        Task<ReaderHistoryDto> CreateReaderHistoryAsync(CreateReaderHistoryDto dto, CancellationToken cancellationToken);
+        Task<List<ReaderHistoryDto>> GetReaderHistoryAsync(string readerId, CancellationToken cancellationToken);
         Task<List<ReaderDto>> GetAllAsync(CancellationToken cancellationToken);
         Task<ReaderDto> CreateAsync(CreateReaderDto dto, CancellationToken cancellationToken);
     }

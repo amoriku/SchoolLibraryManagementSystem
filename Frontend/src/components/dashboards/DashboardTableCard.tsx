@@ -3,13 +3,18 @@ import { Table } from "../Table"
 interface Props {
     columnNames: string[]
     title?: string,
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    includeOperations?: boolean
 }
 
-export const DashboardTableCard = ({ columnNames, title, children }: Props) => {    
+export const DashboardTableCard = ({ columnNames, title, children, includeOperations = true }: Props) => {
     return (
         <div>
-            <Table columnNames={columnNames} title={title}>     
+            <Table
+                columnNames={columnNames}
+                title={title}
+                includeOperations={includeOperations}
+            >
                 {children}
             </Table>
         </div>

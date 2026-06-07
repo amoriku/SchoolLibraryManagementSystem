@@ -1,10 +1,10 @@
 import type { CreateButtonProps } from "./Props"
 
-export const CreateButton = ({ handleCreate, icon }: CreateButtonProps) => {
+export const CreateButton = ({ onCreate, icon }: CreateButtonProps) => {
     return (
         <button
             className="main-section-header-button main-section-header-button-green"
-            onClick={handleCreate}
+            onClick={onCreate}
         >
             {icon}
             Создать

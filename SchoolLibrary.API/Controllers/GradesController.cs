@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SchoolLibrary.Application.DTOs.Grades;
 using SchoolLibrary.Application.Interfaces;
+using SchoolLibrary.Application.Shared;
 
 namespace SchoolLibrary.API.Controllers
 {
@@ -23,6 +25,7 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
+        [Authorize(Policy = PolicyName.StaffOnlyPolicyName)]
         [HttpPost("create")]
         public async Task<IResult> Create(CreateGradeDto dto, CancellationToken cancellationToken)
         {

@@ -21,15 +21,21 @@ export const BookCard = ({id, title, description, publishedYear, author, quantit
     const handleReserve = async () => {
         if (!isAuthenticated)
         {
-            toast.success("Войдите, чтобы зарезервировать книгу");
+            toast.error("Войдите, чтобы зарезервировать книгу")
             return;
         }
 
         const data: ReserveCreateDto = {
             libraryItemId: id
         }
-        const response = await reserve(data)
-        console.log(response);
+
+        try{
+            await reserve(data);
+            toast.success(`Вы забронировали книгу ${title}`)
+        }
+        catch (error){
+            toast.error("У вас уже есть эта книга")
+        }
     }
 
     return (

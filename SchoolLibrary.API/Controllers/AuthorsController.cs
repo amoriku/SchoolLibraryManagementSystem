@@ -5,6 +5,7 @@ using SchoolLibrary.Application.DTOs.Author;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
 using SchoolLibrary.Application.Services;
+using SchoolLibrary.Application.Shared;
 using SchoolLibrary.Domain;
 using SchoolLibrary.Domain.Constants;
 using SchoolLibrary.Domain.Shared;
@@ -23,7 +24,7 @@ namespace SchoolLibrary.API.Controllers
         }
 
         [HttpPost("create")]
-        [Authorize(Roles = $"{UserRoles.Librarian}, {UserRoles.Admin}")]
+        [Authorize(Policy = PolicyName.StaffOnlyPolicyName)]
         public async Task<IActionResult> Create([FromBody] AuthorCreateDto dto, CancellationToken cancellationToken)
         {
             try

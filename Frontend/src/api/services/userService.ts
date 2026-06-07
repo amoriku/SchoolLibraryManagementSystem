@@ -10,6 +10,16 @@ export const useUserService = () => {
             method: "post",
             endpoint: "Users/create",
             data: data
+        }),
+        remove: (userId: string): Promise<void> => request({
+            type: "Auth",
+            method: "delete",
+            endpoint: "Users/remove",
+            config: {
+                params: {
+                    userId: userId
+                }
+            }
         })
     }
 }

@@ -1,9 +1,10 @@
 interface SimpleCardProps {
     title: string,
-    data: any
+    data: any,
+    period?: boolean
 }
 
-export const DashboardSimpleCard = ({ title, data }: SimpleCardProps) => {
+export const DashboardSimpleCard = ({ title, data, period }: SimpleCardProps) => {
     return (
         <>
             <div className="flex-1/5 p-4 bg-white border rounded w-auto border-my-light-gray shadow flex flex-col gap-4">

@@ -11,11 +11,18 @@ import { useDataService } from "../api/services/dataService";
 import { TableDeleteButton } from "../components/buttons/TableDeleteButton";
 import { TableEditButton } from "../components/buttons/TableEditButton";
 import { ActionsContainer } from "../components/ActionsContainer";
+import { useUserService } from "../api/services/userService";
+import { ConfirmModal } from "../components/ConfirmationModal";
+import { RefreshButton } from "../components/buttons/RefreshButton";
 
 export const UsersPage = () => {
     const [users, setUsers] = useState<UserDto[]>([]);
-
     const { getAllUsers, getAllRoles } = useDataService();
+    const { remove } = useUserService();
+
+
+    const [userId, setUserId] = useState<string | null>(null);
+    const [isConfirmOpen, setIsConfirmOpen] = useState<boolean>(false);
 
     const [createModalOpen, setCreateModalOpen] = useState<boolean>(false);
     const [createUserFormData, setCreateUserFormData] = useState({
@@ -35,13 +42,28 @@ export const UsersPage = () => {
         "Роль"
     ]
 
-    const handleUserDelete = async (userId: string) => {
-        // console.log(userId);
+    const handleDelete = (userId: string) => {
+        setUserId(userId);
+        setIsConfirmOpen(true);
+    }
 
-        // I think this will be enough for now
-        if (window.confirm("Вы уверены?")) {
-            await RemoveUser(userId)
-            getAllUsers();
+    const handleDeleteConfirm = async () => {
+        if (userId === null) {
+            return;
+        }
+
+        try {
+            await remove(userId)
+            toast.success("Пользователь успешно удален")
+        }
+        catch (error) {
+            toast.error("При удалении пользователя произошла ошибка");
+            setIsConfirmOpen(false)
+            setUserId(null)
+        }
+        finally {
+            setIsConfirmOpen(false)
+            setUserId(null)
         }
     }
 
@@ -55,6 +77,18 @@ export const UsersPage = () => {
 
     return (
         <>
+            <ConfirmModal
+                isOpen={isConfirmOpen}
+                confirmText="Это необратимое действие"
+                isDanger={true}
+                title="Удаление учетной записи"
+                message="Вы уверены, что хотите удалить учетную запись?"
+                onCancel={() => setIsConfirmOpen(false)}
+                onConfirm={handleDeleteConfirm}
+            >
+
+            </ConfirmModal>
+
             <div>
                 {createModalOpen && (
                     <Modal onClose={() => setCreateModalOpen(false)} formId="create-user-form" isOpen={createModalOpen} modalTitle="Создание пользователя">
@@ -71,13 +105,7 @@ export const UsersPage = () => {
                             <FiUser></FiUser>
                             <span>Создать</span>
                         </button>
-                        <button
-                            className="main-section-header-button main-section-header-button-slate"
-                            onClick={() => getAllUsers()}
-                        >
-                            <FiRefreshCw></FiRefreshCw>
-                            <span>Обновить</span>
-                        </button>
+                        <RefreshButton onRefresh={fetchInitialData}></RefreshButton>
                     </div>
                 </MainSectionHeader>
                 <div>
@@ -101,10 +129,10 @@ export const UsersPage = () => {
                                 </td>
                                 {/* Блок операций */}
                                 <ActionsContainer>
-                                    <TableEditButton handleEdit={() => console.log("edit user")}>
+                                    <TableEditButton onEdit={() => console.log("edit user")}>
 
                                     </TableEditButton>
-                                    <TableDeleteButton handleDelete={() => handleUserDelete(user.id)}>
+                                    <TableDeleteButton onDelete={() => handleDelete(user.id)}>
 
                                     </TableDeleteButton>
                                 </ActionsContainer>

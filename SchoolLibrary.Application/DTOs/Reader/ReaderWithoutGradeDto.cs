@@ -1,6 +1,6 @@
 ﻿namespace SchoolLibrary.Application.DTOs.Reader
 {
-    public record ReaderWithourGradeDto
+    public record ReaderWithoutGradeDto
     (
         string Id,
         string FirstName,

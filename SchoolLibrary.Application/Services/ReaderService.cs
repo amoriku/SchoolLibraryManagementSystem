@@ -30,26 +30,45 @@ namespace SchoolLibrary.Application.Services
             this.userManager = userManager;
         }
 
-        // So operations for reader are:
+        // Операции для читателя сейчас:
         // - Loan || Borrow (Выдача, заимствование)
         // - Return (Возврат)
         // - History of reader (История пользователя) a.k.a электронный формуляр
-        public async Task<UserHistory> CreateUserHistoryRecordAsync(UserHistoryCreateDto dto, CancellationToken cancellationToken)
+        public async Task<ReaderHistoryDto> CreateReaderHistoryAsync(CreateReaderHistoryDto dto, CancellationToken cancellationToken)
         {
-            if (dto.UserId is null)
+            if (string.IsNullOrEmpty(dto.ReaderId))
             {
-                throw new NotFoundException($"{DebugMessages.ApplicationLayerMessage}.ReaderService Invalid user or library item");
+                throw new InvalidOperationException("Invalid reader");
             }
 
-            UserHistory record = new UserHistory
+            var item = await context.LibraryItemCopies
+                .Include(ic => ic.LibraryItem)
+                .Select(ic => ic.LibraryItem)
+                .FirstOrDefaultAsync(cancellationToken);
+
+            if (item is null)
             {
-                UserId = dto.UserId,
+                throw new InvalidOperationException("Invalid library item");
+            }
+
+            UserHistory newHistoryRecord = new()
+            {
                 Date = DateTime.UtcNow,
                 LibraryItemCopyId = dto.LibraryItemCopyId,
+                OperationType = dto.OperationType,
+                UserId = dto.ReaderId,
             };
 
+            context.UserHistories.Add(newHistoryRecord);
+            await context.SaveChangesAsync();
 
-            return null;
+
+            return new ReaderHistoryDto(
+                newHistoryRecord.UserId,
+                item.Title,
+                newHistoryRecord.Date,
+                newHistoryRecord.OperationType.ToString()
+            );
         }
 
         public async Task<ReaderDto> CreateAsync(CreateReaderDto dto, CancellationToken cancellationToken)
@@ -71,8 +90,8 @@ namespace SchoolLibrary.Application.Services
             string translited = Transliteration.CyrillicToLatin(russianRaw, Language.Russian);
  
             string username = $"{translited}_{Random.Shared.Next(1, 99999)}";
-            string password = $"{username}{randomSymbol}";
             FullName fullName = new FullName(dto.FirstName, dto.LastName, dto.MiddleName);
+            string password = $"{username[0]}_1234";
 
             var user = new ApplicationUser
             {
@@ -114,24 +133,32 @@ namespace SchoolLibrary.Application.Services
                         u.FullName.LastName,
                         u.FullName.MiddleName,
                         u.Grade != null ? u.Grade.DisplayName : "-",
-                        u.UserName
+                        string.IsNullOrEmpty(u.UserName) ? "-" : u.UserName
                     )
                 )
                 .ToListAsync(cancellationToken);
 
             return readers;
         }
-        public async Task<UserHistory?> GetUserHistoryAsync(string userId, CancellationToken cancellationToken)
+        public async Task<List<ReaderHistoryDto>> GetReaderHistoryAsync(string readerId, CancellationToken cancellationToken)
         {
-            if (string.IsNullOrEmpty(userId))
+            if (string.IsNullOrEmpty(readerId))
             {
-                throw new NotFoundException($"{DebugMessages.ApplicationLayerMessage}.ReaderService Invalid user");
+                throw new NotFoundException($"Invalid reader");
             }
 
-            UserHistory? userHistory = await context.UserHistories
-                .FirstOrDefaultAsync(uh => uh.UserId == userId, cancellationToken);
+            var readerHistoryRecords = await context.UserHistories
+                .AsNoTracking()
+                .Where(uh => uh.UserId == readerId)
+                .Select(uh => new ReaderHistoryDto(
+                    readerId,
+                    uh.LibraryItemCopy.LibraryItem.Title,
+                    uh.Date,
+                    uh.OperationType.ToString()
+                ))
+                .ToListAsync(cancellationToken);
 
-            return userHistory;
+            return readerHistoryRecords;
         }
     }
 }

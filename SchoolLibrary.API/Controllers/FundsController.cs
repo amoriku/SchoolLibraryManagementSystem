@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SchoolLibrary.Application.DTOs.Fund;
 using SchoolLibrary.Application.Interfaces;
 using SchoolLibrary.Application.Services;
+using SchoolLibrary.Application.Shared;
 
 namespace SchoolLibrary.API.Controllers
 {
@@ -17,7 +19,7 @@ namespace SchoolLibrary.API.Controllers
             this.fundService = fundService;
         }
 
-
+        [Authorize(Policy = PolicyName.StaffOnlyPolicyName)]
         [HttpPost("create")]
         public async Task<IActionResult> Create(FundCreateDto dto, CancellationToken cancellationToken)
         {

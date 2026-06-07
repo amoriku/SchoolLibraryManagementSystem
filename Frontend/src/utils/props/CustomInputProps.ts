@@ -1,7 +1,7 @@
 import React from "react"
 
 export interface BaseInputProps extends React.InputHTMLAttributes<HTMLInputElement>{
-    error?: string,
+    error?: boolean,
 }
 
 export interface CustomInputProps extends BaseInputProps{

@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SchoolLibrary.Application.DTOs.Reader;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
+using SchoolLibrary.Application.Shared;
+using SchoolLibrary.Domain;
+using SchoolLibrary.Domain.Constants;
 
 namespace SchoolLibrary.API.Controllers
 {
@@ -31,11 +35,11 @@ namespace SchoolLibrary.API.Controllers
         }
 
         [HttpPost("create-history-record")]
-        public async Task<IActionResult> CreateHistoryRecord(UserHistoryCreateDto dto, CancellationToken cancellationToken)
+        public async Task<IActionResult> CreateHistoryRecord(CreateReaderHistoryDto dto, CancellationToken cancellationToken)
         {
             try
             {
-                return Ok(await readerService.CreateUserHistoryRecordAsync(dto, cancellationToken));
+                return Ok(await readerService.CreateReaderHistoryAsync(dto, cancellationToken));
             }
             catch (NotFoundException ex)
             {
@@ -43,6 +47,7 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
+        [Authorize(Policy = PolicyName.StaffOnlyPolicyName)]
         [HttpPost("create")]
         public async Task<IResult> Create(CreateReaderDto dto, CancellationToken cancellationToken)
         {
@@ -57,12 +62,13 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
-        [HttpGet("get-user-history")]
-        public async Task<IActionResult> GetUserHistory(string userId, CancellationToken cancellationToken)
+        [Authorize(Policy = PolicyName.LibraryParticipantsPolicyName)]
+        [HttpGet("history")]
+        public async Task<IActionResult> GetReaderHistory(string readerId, CancellationToken cancellationToken)
         {
             try
             {
-                return Ok(await readerService.GetUserHistoryAsync(userId, cancellationToken));
+                return Ok(await readerService.GetReaderHistoryAsync(readerId, cancellationToken));
             }
             catch (NotFoundException ex)
             {

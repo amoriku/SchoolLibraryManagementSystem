@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SchoolLibrary.Application.DTOs.User;
 using SchoolLibrary.Application.Interfaces;
+using SchoolLibrary.Application.Shared;
 using System.Security.Claims;
 
 namespace SchoolLibrary.API.Controllers
@@ -35,7 +36,7 @@ namespace SchoolLibrary.API.Controllers
             }         
         }
 
-        [Authorize]
+        [Authorize(Policy = PolicyName.AnyUserPolicyName)]
         [HttpDelete("logout")]
         public async Task<IResult> Logout(CancellationToken cancellationToken)
         {
@@ -65,7 +66,7 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Policy = PolicyName.AnyUserPolicyName)]
         [HttpGet("current")]
         public async Task<IActionResult> GetCurrent(CancellationToken cancellationToken)
         {
@@ -89,7 +90,7 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Policy = PolicyName.AnyUserPolicyName)]
         [HttpDelete("revoke-refresh-tokens")]
         public async Task<IActionResult> RevokeRefreshTokens(CancellationToken cancellationToken)
         {

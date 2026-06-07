@@ -6,5 +6,7 @@ namespace SchoolLibrary.Application.Interfaces
     {
         Task CreateAsync(ReserveCreateDto dto, CancellationToken cancellationToken);
         Task<List<ReserveDto>> GetAllAsync(CancellationToken cancellationToken);
+        Task<List<ReserveWithoutReaderDto>> GetActiveAsync(CancellationToken cancellationToken);
+        Task<ReserveWithoutReaderDto> CancelAsync(int reserveId, CancellationToken cancellationToken);
     }
 }

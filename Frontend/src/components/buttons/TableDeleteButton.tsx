@@ -1,10 +1,10 @@
 import type { DeleteButtonProps } from "./Props"
 
-export const TableDeleteButton = ({handleDelete}: DeleteButtonProps) => {
+export const TableDeleteButton = ({onDelete}: DeleteButtonProps) => {
     return (
         <button
             className="button button-red"
-            onClick={handleDelete}
+            onClick={onDelete}
         >
             Удалить
         </button>

@@ -1,10 +1,10 @@
 import type { BorrowButtonProps } from "./Props"
 
-export const TableBorrowButton = ({handleBorrow}: BorrowButtonProps) => {
+export const TableBorrowButton = ({onBorrow}: BorrowButtonProps) => {
     return (
         <button
             className="button button-green"
-            onClick={handleBorrow}
+            onClick={onBorrow}
         >
             Выдать
         </button>

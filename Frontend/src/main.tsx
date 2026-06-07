@@ -18,10 +18,11 @@ import { AuthorsPage } from './pages/AuthorsPage.tsx'
 import { GradesPage } from './pages/GradesPage.tsx'
 import { MyBooksPage } from './pages/MyBooksPage.tsx'
 import { CatalogPage } from './pages/CatalogPage.tsx'
+import { MyReservationsPage } from './pages/MyReservationsPage.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <>
-    <Toaster position="bottom-right" containerClassName='text-xl'></Toaster>
+    <Toaster position="top-center" containerClassName='text-xl'></Toaster>
     <StrictMode>
       <BrowserRouter>
         <DataProvider>
@@ -40,6 +41,7 @@ createRoot(document.getElementById('root')!).render(
 
                   <Route path='/reader/catalog' element={<CatalogPage />}></Route>
                   <Route path='/reader/my-books' element={<MyBooksPage />}></Route>
+                  <Route path='/reader/my-reservations' element={<MyReservationsPage />}></Route>
                 </Route>
               </Route>
 

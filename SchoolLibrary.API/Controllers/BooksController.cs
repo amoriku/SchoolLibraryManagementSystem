@@ -5,6 +5,7 @@ using SchoolLibrary.Application.DTOs;
 using SchoolLibrary.Application.DTOs.Book;
 using SchoolLibrary.Application.Interfaces;
 using SchoolLibrary.Application.Services;
+using SchoolLibrary.Application.Shared;
 using SchoolLibrary.Domain.Constants;
 
 namespace SchoolLibrary.API.Controllers
@@ -34,7 +35,7 @@ namespace SchoolLibrary.API.Controllers
             }
         }
 
-        [Authorize(Roles = $"{UserRoles.Admin}, {UserRoles.Librarian}")]
+        [Authorize(Policy = PolicyName.StaffOnlyPolicyName)]
         [HttpPost("create")]
         public async Task<IActionResult> Create(BookCreateDto dto, CancellationToken cancellationToken)
         {

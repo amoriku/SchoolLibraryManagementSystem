@@ -7,5 +7,7 @@
         Loan = 1,
         Return = 2,
         Borrowing = 3,
+        Reservation = 4,
+        ReservationCancel = 5,
     }
 }

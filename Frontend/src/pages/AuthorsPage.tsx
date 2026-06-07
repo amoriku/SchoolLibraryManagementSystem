@@ -16,8 +16,8 @@ export const AuthorsPage = () => {
     const [authors, setAuthors] = useState<AuthorDto[]>([])
     const columnNames: string[] = [
         "Идентификатор",
-        "Имя",
         "Фамилия",
+        "Имя",
         "Отчество"
     ]
 
@@ -70,16 +70,16 @@ export const AuthorsPage = () => {
                                 {author.id}
                             </td>
                             <td
-                                key={author.firstName}
-                                className="table-td"
-                            >
-                                {author.firstName}
-                            </td>
-                            <td
                                 key={author.lastName}
                                 className="table-td"
                             >
                                 {author.lastName}
+                            </td>
+                            <td
+                                key={author.firstName}
+                                className="table-td"
+                            >
+                                {author.firstName}
                             </td>
                             <td
                                 key={author.middleName}

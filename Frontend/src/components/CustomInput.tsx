@@ -16,17 +16,18 @@ export const BaseInput = (
     }: BaseInputProps) => {
 
     return (
-        <input
-            type={type}
-            className={`caret-my-light-green p-3 transition-all rounded-xl outline-slate-400 outline-1 hover:outline-slate-600 hover:outline-2 focus:outline-2 focus:outline-slate-600 focus:placeholder-transparent 
-                ${error ? 'border-red-500' : ''}`}
-            placeholder={placeholder}
-            required={required}
-            name={name}
-            onChange={onChange}
-            width={width}
-            {...rest}
-        />
+        <>
+            <input
+                type={type}
+                className={error ? 'incorrect-input' : 'correct-input'}
+                placeholder={placeholder}
+                required={required}
+                name={name}
+                onChange={onChange}
+                width={width}
+                {...rest}
+            />
+        </>
     )
 }
 

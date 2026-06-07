@@ -1,12 +1,10 @@
-﻿
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using SchoolLibrary.Application.DTOs;
-using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
 using SchoolLibrary.Application.Shared;
 using SchoolLibrary.Domain.Entities;
@@ -36,6 +34,7 @@ namespace SchoolLibrary.Application.Services
             this.httpContextAccessor = httpContextAccessor;
         }
 
+        // Получение нового токена доступа для пользователя, если его время действия истекло
         public async Task<TokenResponseDto> RefreshAsync(string refreshToken, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(refreshToken))
@@ -91,8 +90,10 @@ namespace SchoolLibrary.Application.Services
             return new TokenResponseDto(newAccessToken, newRefreshToken);
         }
 
+        // Сохранение токена восстановления в базу данных
         public async Task SaveRefreshTokenAsync(ApplicationUser user, string refreshToken, CancellationToken cancellationToken)
         {
+            // Получение активных токенов восстановления
             var activeTokens = await context.RefreshTokens
                 .Where(rt => rt.UserId == user.Id && !rt.IsRevoked && rt.ExpiresOnUtc > DateTime.UtcNow)
                 .ToListAsync(cancellationToken);
@@ -116,6 +117,7 @@ namespace SchoolLibrary.Application.Services
             await context.SaveChangesAsync(cancellationToken);
         }
 
+        // Создание токена доступа для пользователя
         public async Task<string> CreateTokenAsync(ApplicationUser user)
         {
             SymmetricSecurityKey key = new(Encoding.UTF8.GetBytes(configuration["JwtConfig:Secret"]!));
@@ -147,11 +149,13 @@ namespace SchoolLibrary.Application.Services
             return token;
         }
 
+        // Генерация токена восстановления
         public string GenerateRefreshToken()
         {
             return Convert.ToBase64String(RandomNumberGenerator.GetBytes(32));
         }
 
+        // Аннулирование всех токенов восстановления
         public async Task<bool> RevokeRefreshTokensAsync(CancellationToken cancellationToken)
         {
             var currentUserId = httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);

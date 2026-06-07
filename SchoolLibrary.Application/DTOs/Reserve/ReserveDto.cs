@@ -5,7 +5,7 @@ namespace SchoolLibrary.Application.DTOs.Reserve
 {
     public record ReserveDto(
         int ReserveId,
-        ReaderWithourGradeDto Reader,
+        ReaderWithoutGradeDto Reader,
         string LibraryItem,
         DateTime ReservationDate
     );

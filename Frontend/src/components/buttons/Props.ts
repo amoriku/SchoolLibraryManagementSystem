@@ -1,16 +1,27 @@
 export interface DeleteButtonProps{
-    handleDelete: () => void;
+    onDelete: () => void;
 }
 
 export interface EditButtonProps{
-    handleEdit: () => void;
+    onEdit: () => void;
 }
 
 export interface BorrowButtonProps{
-    handleBorrow: () => void;
+    onBorrow: () => void;
+}
+export interface ReturnButtonProps{
+    onReturn: () => void;
 }
 
 export interface CreateButtonProps{
     icon?: React.ReactNode
-    handleCreate: () => void;
+    onCreate: () => void;
+}
+
+export interface CancelButtonProps{
+    onCancel: () => void;
+}
+
+export interface ReaderHistoryButtonProps{
+    onReaderHistoryOpen: () => void;
 }

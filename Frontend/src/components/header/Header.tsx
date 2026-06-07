@@ -2,19 +2,17 @@ import { Link } from "react-router";
 import { useAuth } from "../../hooks/useAuth";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import { useState } from "react";
-import { FiBookOpen, FiLogOut } from "react-icons/fi";
-import { CgProfile } from "react-icons/cg";
-import { BaseInput, SearchInput } from "../CustomInput";
-import toast from "react-hot-toast";
+import { FiBell, FiBookOpen, FiLogOut } from "react-icons/fi";
+import { SearchInput } from "../CustomInput";
+
 
 export function Header() {
     const authContext = useAuth();
     const [profileOpen, setProfileOpen] = useState(false);
+    const [notificationsOpen, setNotificationsOpen] = useState<boolean>(false);
 
     const handleBookSearch = () => {
-        toast.error("Временно не работает", {
-            position: "top-right"
-        })
+
     }
 
     return (
@@ -30,14 +28,11 @@ export function Header() {
 
                 <div className="flex-1 flex justify-between items-center pl-6">
                     {/* TO-DO: Make this work */}
-                    {!authContext.isAuthenticated ? (
-                        <SearchInput onSearch={handleBookSearch} placeholder="Введите название..."></SearchInput>
-                    ) : (
-                        <button className="text-slate-400 flex items-center justify-center gap-1 hover:text-slate-400/80 transition-colors font-semibold">
-                            <CgProfile></CgProfile>
-                            <span className="text-xl">Профиль</span>
-                        </button>
-                    )}
+                    <div className="">
+                        {!authContext.isAuthenticated && (
+                            <SearchInput onSearch={handleBookSearch} placeholder="Введите название..."></SearchInput>
+                        )}
+                    </div>
 
 
                     {!authContext.user ? (
@@ -45,22 +40,55 @@ export function Header() {
                             <Link to="/login">Войти</Link>
                         </div>
                     ) : (
-                        <div
-                            className="flex items-center gap-2 justify-center"
-                            style={{ cursor: "pointer" }}
-                            title="Открыть профиль пользователя"
-                            onClick={() => setProfileOpen(!profileOpen)}
-                        >
-                            <p className="">{authContext.user.username}</p>
-                            {profileOpen && (
-                                <div className="px-4 fixed top-16 right-0">
-                                    <button onClick={authContext.logout} className="flex items-center gap-3 w-full text-slate-500 hover:text-red-500 py-3 rounded-lg font-medium transition-colors">
-                                        <FiLogOut className="text-xl" />
-                                        <span>Выйти из аккаунта</span>
-                                    </button>
-                                </div>
-                            )}
-                            {!profileOpen ? <FaAngleDown className="text-slate-400" /> : <FaAngleUp className="text-slate-400" />}
+                        <div className="flex items-center gap-6 text-base font-medium relative">
+
+                            {/* ================= ФИЧА: ЦЕНТР УВЕДОМЛЕНИЙ ================= */}
+                            <div className="relative">
+                                <button
+                                    onClick={() => {
+                                        setNotificationsOpen(!notificationsOpen);
+                                        setProfileOpen(false); // Закрываем профиль, если открыли колокольчик
+                                    }}
+                                    className="p-2 text-slate-500 hover:text-slate-800 transition-colors relative flex items-center justify-center rounded-lg hover:bg-slate-50"
+                                    title="Уведомления"
+                                >
+                                    <FiBell className="text-2xl" />
+                                    {/* Красная точка-индикатор, если есть уведомления */}
+                                    {/* {hasNotifications && (
+                                        <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-rose-500 rounded-full ring-2 ring-white animate-pulse" />
+                                    )} */}
+                                </button>
+
+                                {/* Выпадающее меню уведомлений */}
+                                {notificationsOpen && (
+                                    <div className="absolute right-0 top-12 w-80 bg-white rounded-xl shadow-xl border border-slate-150 p-4 flex flex-col gap-2 z-50 text-sm">
+                                        <h3 className="font-bold text-slate-850 border-b border-slate-100 pb-2 mb-1">Уведомления</h3>
+                                    </div>
+                                )}
+                            </div>
+
+                            <div
+                                className="flex items-center gap-2 justify-center select-none"
+                                onClick={() => {
+                                    setProfileOpen(!profileOpen);
+                                    setNotificationsOpen(false);
+                                }}
+                            >
+                                <p className="text-xl text-slate-700 hover:text-slate-900 transition-colors font-medium">{authContext.user.username}</p>
+                                {!profileOpen ? <FaAngleDown className="text-slate-400" /> : <FaAngleUp className="text-slate-400" />}
+
+                                {profileOpen && (
+                                    <div className="absolute right-0 top-12 w-48 bg-white rounded-xl shadow-xl border border-slate-150 p-2 z-50">
+                                        <button
+                                            onClick={authContext.logout}
+                                            className="flex items-center gap-3 w-full text-slate-600 hover:text-red-600 hover:bg-red-50 p-2.5 rounded-lg text-sm font-medium transition-all"
+                                        >
+                                            <FiLogOut className="text-xl" />
+                                            <span>Выйти</span>
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     )}
                 </div>

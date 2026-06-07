@@ -4,9 +4,9 @@ using Microsoft.IdentityModel.Tokens;
 using Scalar.AspNetCore;
 using SchoolLibrary.Application;
 using SchoolLibrary.Application.Shared;
+using SchoolLibrary.Domain.Constants;
 using SchoolLibrary.Domain.Entities;
 using SchoolLibrary.Infrastructure;
-using SchoolLibrary.Infrastructure.Common;
 using System.Text;
 
 var reactAppOrigins = "ReactApp";
@@ -55,7 +55,23 @@ builder.Services.AddApplication();
 builder.Services.AddOpenApi();
 
 #region AuthServices
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy(PolicyName.StaffOnlyPolicyName, policy =>
+    {
+        policy.RequireRole(UserRoles.Librarian, UserRoles.Admin);
+    });
+
+    options.AddPolicy(PolicyName.AnyUserPolicyName, policy =>
+    {
+        policy.RequireRole(UserRoles.Librarian, UserRoles.Admin, UserRoles.Reader);
+    });
+
+    options.AddPolicy(PolicyName.LibraryParticipantsPolicyName, policy =>
+    {
+        policy.RequireRole(UserRoles.Librarian, UserRoles.Reader);
+    });
+});
 builder.Services
     .AddAuthentication(options =>
     {
@@ -113,9 +129,9 @@ app.Run();
 // Инициализия базы данных / Data base initialization
 async void DataSeeding()
 {
-    using (var scope = app.Services.CreateScope())
-    {
-        var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
-        await dbInitializer.Initialize();
-    }
+    //using (var scope = app.Services.CreateScope())
+    //{
+    //    var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+    //    await dbInitializer.Initialize();
+    //}
 }

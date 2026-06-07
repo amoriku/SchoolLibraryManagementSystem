@@ -275,3 +275,4 @@ C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.API\bin\Debug\net10.0\Micros
 C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.API\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.API\bin\Debug\net10.0\Scalar.AspNetCore.dll
 C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.API\bin\Debug\net10.0\NickBuhro.Translit.dll
+C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

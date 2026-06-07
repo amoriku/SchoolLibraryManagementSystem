@@ -6,7 +6,7 @@ import { Outlet } from "react-router";
 import { FaBookOpen, FaUserPlus } from "react-icons/fa";
 import { CgGlass } from "react-icons/cg";
 import { GrCatalog, GrUser } from "react-icons/gr";
-import { BiBookContent } from "react-icons/bi";
+import { BiBookContent, BiBookmark } from "react-icons/bi";
 import { CatalogPage } from "../pages/CatalogPage";
 
 export default function Hero() {
@@ -35,6 +35,7 @@ export default function Hero() {
                                 <RoleBased role="Reader">
                                     <SideBarItem name="Каталог" icon={<GrCatalog />} to="/reader/catalog"></SideBarItem>
                                     <SideBarItem name="Мои книги" icon={<BiBookContent />} to="/reader/my-books"></SideBarItem>
+                                    <SideBarItem name="Мои брони" icon={<BiBookmark />} to="/reader/my-reservations"></SideBarItem>
                                 </RoleBased>
                             </nav>
 

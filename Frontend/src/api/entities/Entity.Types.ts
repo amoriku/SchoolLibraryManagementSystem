@@ -5,14 +5,25 @@ export interface AuthorDto {
     middleName?: string 
 }
 
+export interface ReaderHistoryDto{
+    readerId: string,
+    libraryItemTitle: string,
+    date: string,
+    operationType: string
+}
+
 export interface CreateBorrowingDto{
-    ReservationId: number,
-    DueDate?: Date
+    readerId?: string,
+    bookId?: number,
+    reservationId?: number,
+    dueDate?: string
 }
 
 export interface BorrowingDto{
     id: number,
     libraryItem: string,
+    libraryItemId: number | null
+    reader: ReaderWithoutGradeDto
     borrowedDate: string,
     dueDate: string,
     returnDate: string
@@ -36,6 +47,12 @@ export interface ReserveDto{
     reservationDate: string
 }
 
+export interface ReserveWithoutUserDto{
+    reserveId: number,
+    libraryItem: string,
+    reservationDate: string
+}
+
 export interface GradeDto{
     id: number,
     displayName: string
@@ -47,7 +64,7 @@ export interface CreateGradeDto{
 }
 
 export interface ReaderDto{
-    id: number,
+    id: string,
     firstName: string,
     lastName: string,
     middleName?: string,

@@ -2,7 +2,9 @@
 {
     public record CreateBorrowingDto
     (
-        int ReservationId,
+        string? ReaderId,
+        int? BookId,
+        int? ReservationId,
         DateTime? DueDate
     );
 }
