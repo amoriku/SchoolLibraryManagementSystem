@@ -1,18 +1,14 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.IdentityModel.Tokens;
 using NickBuhro.Translit;
 using SchoolLibrary.Application.DTOs.Reader;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
 using SchoolLibrary.Domain.Constants;
 using SchoolLibrary.Domain.Entities;
-using SchoolLibrary.Domain.Shared;
 using SchoolLibrary.Domain.ValueObjects;
 using SchoolLibrary.Infrastructure;
-using SchoolLibrary.Infrastructure.Migrations;
-using System.Security.Cryptography.X509Certificates;
 
 namespace SchoolLibrary.Application.Services
 {
@@ -71,8 +67,10 @@ namespace SchoolLibrary.Application.Services
             );
         }
 
+        // Создание читателя
         public async Task<ReaderDto> CreateAsync(CreateReaderDto dto, CancellationToken cancellationToken)
         {
+            // Получение полного наименования класса
             string? gradeName = await context.Grades
                 .Where(g => g.Id == dto.GradeId)
                 .Select(g => g.DisplayName)
@@ -83,6 +81,7 @@ namespace SchoolLibrary.Application.Services
                 throw new InvalidOperationException($"Grade with {dto.GradeId} not exists");
             }
 
+            // Генерация никнейма по шаблону: "Фамилия_(цифра и буква класса)_случайные числа от 1 до 99999.
             string specialSymbols = "~!@#$%^&*()_+={}|:;'<,>.?/";
             string randomSymbol = specialSymbols[Random.Shared.Next(0, specialSymbols.Length)].ToString();
 
@@ -93,6 +92,7 @@ namespace SchoolLibrary.Application.Services
             FullName fullName = new FullName(dto.FirstName, dto.LastName, dto.MiddleName);
             string password = $"{username[0]}_1234";
 
+            // Создание записи
             var user = new ApplicationUser
             {
                 UserName = username,
@@ -119,6 +119,7 @@ namespace SchoolLibrary.Application.Services
             );
         }
 
+        // Получение всех читателей
         public async Task<List<ReaderDto>> GetAllAsync(CancellationToken cancellationToken)
         {
             var readers = await context.Users
@@ -140,6 +141,8 @@ namespace SchoolLibrary.Application.Services
 
             return readers;
         }
+
+        // Получение истории читателя
         public async Task<List<ReaderHistoryDto>> GetReaderHistoryAsync(string readerId, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(readerId))

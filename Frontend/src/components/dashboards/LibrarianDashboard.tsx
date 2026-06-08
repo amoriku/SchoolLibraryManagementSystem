@@ -144,7 +144,7 @@ export const LibrarianDashboard = () => {
                         </tr>
                     ))}
                 </DashboardTableCard>
-                <div className="flex-1/2 gap-4 flex-wrap">
+                <div className="flex gap-4 w-full">
                     <DashboardTableCard title="Активные читатели" columnNames={["Читатель", "Книга", "Дата выдачи"]}>
                         {borrowings.map(borrowing => (
                             <tr

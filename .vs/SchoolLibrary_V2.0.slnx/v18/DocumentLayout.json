@@ -402,11 +402,15 @@
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\ReaderService.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReaderService.cs",
               "RelativeToolTip": "SchoolLibrary.Application\\Services\\ReaderService.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAewKAAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAgwKcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T09:32:37.91Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -418,12 +422,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T07:44:54.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2026-06-07T07:44:54.231Z"
             },
             {
               "$type": "Document",
@@ -435,8 +434,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\Controllers\\GradesController.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAgwBsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T08:00:34.786Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T08:00:34.786Z"
             },
             {
               "$type": "Document",
@@ -448,8 +446,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\Controllers\\ReservationsController.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAIwEEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T12:08:16.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-03T12:08:16.297Z"
             },
             {
               "$type": "Document",
@@ -461,8 +458,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\Controllers\\ReadersController.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAD4v0AAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:31:55.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T09:31:55.843Z"
             },
             {
               "$type": "Document",
@@ -474,8 +470,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\Program.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAqwEcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T07:17:09.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-10T07:17:09.425Z"
             },
             {
               "$type": "Document",
@@ -487,8 +482,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T12:59:39.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-03T12:59:39.493Z"
             },
             {
               "$type": "Document",
@@ -500,8 +494,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T05:50:57.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-07T05:50:57.269Z"
             },
             {
               "$type": "Document",
@@ -513,8 +506,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T05:37:37.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-07T05:37:37.415Z"
             },
             {
               "$type": "Document",
@@ -526,8 +518,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Common\\DataGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T05:37:41.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-07T05:37:41.265Z"
             },
             {
               "$type": "Document",
@@ -551,8 +542,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Services\\BorrowingService.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAowGEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T11:35:52.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-03T11:35:52.333Z"
             },
             {
               "$type": "Document",

@@ -3,6 +3,7 @@ import { useBorrowingService } from "../api/services/borrowingService"
 import { MainSectionHeader } from "../components/MainSectionHeader";
 import { Table } from "../components/Table";
 import type { BorrowingDto } from "../api/entities/Entity.Types";
+import dayjs from "dayjs";
 
 export const MyBooksPage = () => {
     const [activeBooks, setActiveBooks] = useState<BorrowingDto[]>([]);
@@ -26,7 +27,10 @@ export const MyBooksPage = () => {
             <MainSectionHeader title="Мои книги" desc="Раздел выданных книг">
 
             </MainSectionHeader>
-            <Table columnNames={columnNames}>
+            <Table
+                columnNames={columnNames}
+                includeOperations={false}
+            >
                 {activeBooks.map(activeBook => (
                     <tr
                         className="table-tr"
@@ -43,7 +47,7 @@ export const MyBooksPage = () => {
                             {new Date(activeBook.borrowedDate).toLocaleString()}
                         </td>
                         <td
-                            className="table-td"
+                            className={`${dayjs(activeBook.dueDate).diff(dayjs(), 'day') < 0 ? 'table-td text-rose-600' : 'table-td'}`}
                         >
                             {activeBook.dueDate ? new Date(activeBook.dueDate).toLocaleString() : "-"}
                         </td>

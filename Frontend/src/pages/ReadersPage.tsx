@@ -228,7 +228,7 @@ export const ReadersPage = () => {
                     >
                         <td
                             key={reader.lastName}
-                            className="table-td-id"
+                            className="table-td"
                         >
                             {reader.lastName}
                         </td>

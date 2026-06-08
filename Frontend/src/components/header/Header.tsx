@@ -10,6 +10,7 @@ export function Header() {
     const authContext = useAuth();
     const [profileOpen, setProfileOpen] = useState(false);
     const [notificationsOpen, setNotificationsOpen] = useState<boolean>(false);
+    const [hasNotifications, setHasNotifications] = useState<boolean>(false);
 
     const handleBookSearch = () => {
 
@@ -27,7 +28,6 @@ export function Header() {
                 </div>
 
                 <div className="flex-1 flex justify-between items-center pl-6">
-                    {/* TO-DO: Make this work */}
                     <div className="">
                         {!authContext.isAuthenticated && (
                             <SearchInput onSearch={handleBookSearch} placeholder="Введите название..."></SearchInput>
@@ -42,7 +42,6 @@ export function Header() {
                     ) : (
                         <div className="flex items-center gap-6 text-base font-medium relative">
 
-                            {/* ================= ФИЧА: ЦЕНТР УВЕДОМЛЕНИЙ ================= */}
                             <div className="relative">
                                 <button
                                     onClick={() => {
@@ -53,13 +52,11 @@ export function Header() {
                                     title="Уведомления"
                                 >
                                     <FiBell className="text-2xl" />
-                                    {/* Красная точка-индикатор, если есть уведомления */}
-                                    {/* {hasNotifications && (
+                                    {hasNotifications && (
                                         <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-rose-500 rounded-full ring-2 ring-white animate-pulse" />
-                                    )} */}
+                                    )}
                                 </button>
 
-                                {/* Выпадающее меню уведомлений */}
                                 {notificationsOpen && (
                                     <div className="absolute right-0 top-12 w-80 bg-white rounded-xl shadow-xl border border-slate-150 p-4 flex flex-col gap-2 z-50 text-sm">
                                         <h3 className="font-bold text-slate-850 border-b border-slate-100 pb-2 mb-1">Уведомления</h3>
