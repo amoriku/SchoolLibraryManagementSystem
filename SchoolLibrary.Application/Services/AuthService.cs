@@ -64,13 +64,15 @@ namespace SchoolLibrary.Application.Services
 
             await tokenProvider.SaveRefreshTokenAsync(user, refreshToken, cancellationToken);
 
+            bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
+
             // Добавление сессии пользователя в куки браузера для верификации пользователя.
             httpContextAccessor.HttpContext.Response.Cookies.Append(CookieHeaderNames.CookieHeaderNameAccessToken, accessToken,
                 new CookieOptions
                 {
                     Expires = DateTime.UtcNow.AddMinutes(8),
-                    Secure = true,
-                    SameSite = SameSiteMode.None,
+                    Secure = !isProduction,
+                    SameSite = isProduction ? SameSiteMode.Lax : SameSiteMode.None,
                     HttpOnly = true,
                 }
             );
@@ -79,8 +81,8 @@ namespace SchoolLibrary.Application.Services
                 new CookieOptions
                 {
                     Expires = DateTime.UtcNow.AddDays(30),
-                    Secure = true,
-                    SameSite = SameSiteMode.None,
+                    Secure = !isProduction,
+                    SameSite = isProduction ? SameSiteMode.Lax : SameSiteMode.None,
                     HttpOnly = true,
                 }
             );
