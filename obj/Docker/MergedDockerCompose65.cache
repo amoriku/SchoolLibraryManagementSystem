@@ -1,0 +1,140 @@
+name: dockercompose5925795137756316899
+services:
+  postgres_db:
+    container_name: postgres_api_db
+    environment:
+      POSTGRES_DB: school_library
+      POSTGRES_PASSWORD: "12345"
+      POSTGRES_USER: postgres
+    image: postgres:16-alpine
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: pgdata
+        target: /var/lib/postgresql/data
+        volume: {}
+  reactjs:
+    build:
+      context: C:\Projects\CSharp\SchoolLibrary_V2.0\Frontend
+      dockerfile: Dockerfile.production
+      args:
+        VITE_API_URL: http://5.129.203.95:5000/api
+    depends_on:
+      schoollibrary.api:
+        condition: service_started
+        required: true
+    image: reactjs
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "80"
+        protocol: tcp
+  schoollibrary.api:
+    build:
+      context: C:\Projects\CSharp\SchoolLibrary_V2.0
+      dockerfile: SchoolLibrary.API/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Debug
+        LAUNCHING_FROM_VS: "true"
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: SchoolLibrary.API
+      target: base
+    depends_on:
+      postgres_db:
+        condition: service_started
+        required: true
+    entrypoint:
+      - dotnet
+      - --roll-forward
+      - Major
+      - /VSTools/DistrolessHelper/DistrolessHelper.dll
+      - --wait
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: http://+:8080
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /.nuget/fallbackpackages
+    image: schoollibraryapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /.nuget/packages --additionalProbingPath /.nuget/fallbackpackages  "/app/bin/Debug/net10.0/SchoolLibrary.API.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: dotnet --roll-forward Major /VSTools/DistrolessHelper/DistrolessHelper.dll --stop dotnet
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "5000"
+        protocol: tcp
+    tty: true
+    volumes:
+      - type: bind
+        source: C:\Projects\CSharp\SchoolLibrary_V2.0\SchoolLibrary.API
+        target: /app
+        bind: {}
+      - type: bind
+        source: C:\Projects\CSharp\SchoolLibrary_V2.0
+        target: /src
+        bind: {}
+      - type: bind
+        source: C:\Users\Артем\vsdbg\vs2017u5
+        target: /remote_debugger
+        bind: {}
+      - type: bind
+        source: C:\Users\Артем\.nuget\packages
+        target: /.nuget/packages
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+        target: /.nuget/fallbackpackages
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\Артем\AppData\Roaming\ASP.NET\Https
+        target: /root/.aspnet/https
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\Артем\AppData\Roaming\ASP.NET\Https
+        target: /home/app/.aspnet/https
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\Артем\AppData\Roaming\Microsoft\UserSecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\Артем\AppData\Roaming\Microsoft\UserSecrets
+        target: /home/app/.microsoft/usersecrets
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Program Files\Microsoft Visual Studio\18\Insiders\MSBuild\Sdks\Microsoft.Docker.Sdk\tools\linux-x64\net6.0
+        target: /VSTools
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Program Files\Microsoft Visual Studio\18\Insiders\Common7\IDE\extensions\Microsoft\managedprojectsystem\HotReload
+        target: /HotReloadAgent
+        read_only: true
+        bind: {}
+networks:
+  default:
+    name: dockercompose5925795137756316899_default
+volumes:
+  pgdata:
+    name: dockercompose5925795137756316899_pgdata

@@ -8,7 +8,7 @@ namespace SchoolLibrary.Infrastructure.Common
 {
     public class DbInitializer : IDbInitializer
     {
-         private readonly UserManager<ApplicationUser> userManager;
+        private readonly UserManager<ApplicationUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly AppDbContext context;
 
@@ -23,7 +23,6 @@ namespace SchoolLibrary.Infrastructure.Common
             this.context = context;
         }
 
-        // ИСПРАВЛЕНО: Метод стал асинхронным Task вместо void
         public async Task Initialize() 
         {
             int retryCount = 6;
@@ -35,7 +34,6 @@ namespace SchoolLibrary.Infrastructure.Common
                 {
                     Console.WriteLine($"[DbInitializer] Checking pending migrations... (Attempts left: {retryCount})");
 
-                    // Используем асинхронную проверку миграций
                     var pendingMigrations = await context.Database.GetPendingMigrationsAsync();
                     if (pendingMigrations.Any())
                     {
@@ -57,11 +55,10 @@ namespace SchoolLibrary.Infrastructure.Common
                     }
 
                     Console.WriteLine("[DbInitializer] Waiting 5 seconds before retrying...");
-                    await Task.Delay(5000); // ИСПРАВЛЕНО: Task.Delay вместо Thread.Sleep для асинхронного кода
+                    await Task.Delay(5000); 
                 }
             }
 
-            // ИСПРАВЛЕНО: Вызываем добавление первичных данных только после успеха миграций
             Console.WriteLine("[DbInitializer] Starting SeedData...");
             await SeedData();
         }

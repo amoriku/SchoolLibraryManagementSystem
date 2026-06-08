@@ -7,6 +7,7 @@ using SchoolLibrary.Application.Shared;
 using SchoolLibrary.Domain.Constants;
 using SchoolLibrary.Domain.Entities;
 using SchoolLibrary.Infrastructure;
+using SchoolLibrary.Infrastructure.Common;
 using System.Text;
 
 var reactAppOrigins = "ReactApp";
@@ -123,15 +124,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Первичное добавление данных в базу данных / Initial data seeding
-DataSeeding();
-app.Run();
-
-// Инициализия базы данных / Data base initialization
-async void DataSeeding()
+using (var scope = app.Services.CreateScope())
 {
-    //using (var scope = app.Services.CreateScope())
-    //{
-    //    var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
-    //    await dbInitializer.Initialize();
-    //}
+    var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+    await dbInitializer.Initialize();
 }
+app.Run();
