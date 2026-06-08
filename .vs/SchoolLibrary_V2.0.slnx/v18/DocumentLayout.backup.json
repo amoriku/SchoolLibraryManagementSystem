@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
-      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\common\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -360,7 +360,7 @@
         },
         {
           "DockedHeight": 164,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
@@ -425,12 +425,15 @@
               "ViewState": "AgIAAJUAAAAAAAAAAAAgwKcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T09:32:37.91Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -442,10 +445,6 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
@@ -455,8 +454,7 @@
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\AppDbContext.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T04:18:12.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-10T04:18:12.628Z"
             },
             {
               "$type": "Document",
@@ -468,18 +466,17 @@
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
               "ViewState": "AgIAAGkAAAAAAAAAAAAgwHsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T08:36:38.907Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T08:36:38.907Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Program.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.API\\Program.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Program.cs",
               "RelativeToolTip": "SchoolLibrary.API\\Program.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAQwIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAAB+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-10T07:17:09.425Z",
               "EditorCaption": ""
@@ -494,8 +491,7 @@
               "RelativeToolTip": "docker-compose.production.yml",
               "ViewState": "AgIAABcAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-06-08T11:04:22.487Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-08T11:04:22.487Z"
             },
             {
               "$type": "Document",
@@ -507,21 +503,19 @@
               "RelativeToolTip": "docker-compose.development.yml",
               "ViewState": "AgIAABcAAAAAAAAAAAAowCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-06-05T07:26:05.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T07:26:05.858Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "docker-compose",
+              "Title": "docker-compose.dcproj",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.dcproj",
               "RelativeDocumentMoniker": "docker-compose.dcproj",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.dcproj",
               "RelativeToolTip": "docker-compose.dcproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-08T11:03:49.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-08T11:03:49.36Z"
             },
             {
               "$type": "Document",
@@ -533,8 +527,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\appsettings.Production.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-08T11:07:50.285Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-08T11:07:50.285Z"
             },
             {
               "$type": "Document",
@@ -546,8 +539,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-08T11:07:59.399Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-08T11:07:59.399Z"
             },
             {
               "$type": "Document",
@@ -559,8 +551,7 @@
               "RelativeToolTip": "launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-05T07:26:06.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T07:26:06.257Z"
             },
             {
               "$type": "Document",
@@ -572,8 +563,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\Properties\\launchSettings.json",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-05T07:26:12.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T07:26:12.432Z"
             },
             {
               "$type": "Document",
@@ -585,8 +575,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-05T07:26:22.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T07:26:22.196Z"
             },
             {
               "$type": "Document",
