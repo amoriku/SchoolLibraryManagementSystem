@@ -62,13 +62,15 @@ namespace SchoolLibrary.Application.Services
             var httpContext = httpContextAccessor.HttpContext;
             if (httpContext != null)
             {
+                bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
+
                 httpContext.Response.Cookies.Append(
                     CookieHeaderNames.CookieHeaderNameAccessToken,
                     newAccessToken,
                     new CookieOptions
                     {
-                        Secure = true,
-                        SameSite = SameSiteMode.None,
+                        Secure = isProduction,
+                        SameSite = isProduction ? SameSiteMode.Lax : SameSiteMode.None,
                         HttpOnly = true,
                         Expires = DateTime.UtcNow.AddMinutes(configuration.GetValue<int>("JwtConfig:ExpiryInMinutes"))
                     }
@@ -79,8 +81,8 @@ namespace SchoolLibrary.Application.Services
                     newRefreshToken,
                     new CookieOptions
                     {
-                        Secure = true,
-                        SameSite = SameSiteMode.None,
+                        Secure = isProduction,
+                        SameSite = isProduction ? SameSiteMode.Lax : SameSiteMode.None,
                         HttpOnly = true,
                         Expires = DateTime.UtcNow.AddDays(30)
                     }
