@@ -69,7 +69,7 @@ namespace SchoolLibrary.Application.Services
                     newAccessToken,
                     new CookieOptions
                     {
-                        Secure = isProduction,
+                        Secure = !isProduction,
                         SameSite = isProduction ? SameSiteMode.Lax : SameSiteMode.None,
                         HttpOnly = true,
                         Expires = DateTime.UtcNow.AddMinutes(configuration.GetValue<int>("JwtConfig:ExpiryInMinutes"))
@@ -81,7 +81,7 @@ namespace SchoolLibrary.Application.Services
                     newRefreshToken,
                     new CookieOptions
                     {
-                        Secure = isProduction,
+                        Secure = !isProduction,
                         SameSite = isProduction ? SameSiteMode.Lax : SameSiteMode.None,
                         HttpOnly = true,
                         Expires = DateTime.UtcNow.AddDays(30)
