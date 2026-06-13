@@ -1,13 +1,13 @@
 services:
   postgres_db:
-    image: postgres:17-alpine
+    image: postgres:16-alpine
     container_name: postgres_api_db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 12345
       POSTGRES_DB: school_library
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
 
@@ -31,7 +31,7 @@ services:
       context: ./Frontend
       dockerfile: Dockerfile.production
       args:
-        - VITE_API_URL=http://5.129.203.95/api
+        - VITE_API_URL=http://localhost:5000/api
     ports:
       - "80:80"
     depends_on:

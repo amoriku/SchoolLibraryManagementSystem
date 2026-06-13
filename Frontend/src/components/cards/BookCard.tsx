@@ -4,6 +4,9 @@ import { useState } from "react";
 import type { ReserveCreateDto, ReserveDto } from "../../api/entities/Entity.Types";
 import { useAuth } from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import { RoleBased } from "../RoleBased";
+import { BsQuestion } from "react-icons/bs";
+import { FaQuestion } from "react-icons/fa";
 
 interface BookProps {
     id: number,
@@ -14,13 +17,16 @@ interface BookProps {
     author?: string,
 }
 
-export const BookCard = ({id, title, description, publishedYear, author, quantity = 0 }: BookProps) => {
+export const BookCard = ({ id, title, description, publishedYear, author, quantity = 0 }: BookProps) => {
     const { reserve } = useReserveService();
     const { isAuthenticated } = useAuth();
 
+    const handlePotentialTimeInfo = () => {
+        
+    }
+
     const handleReserve = async () => {
-        if (!isAuthenticated)
-        {
+        if (!isAuthenticated) {
             toast.error("Войдите, чтобы зарезервировать книгу")
             return;
         }
@@ -29,12 +35,12 @@ export const BookCard = ({id, title, description, publishedYear, author, quantit
             libraryItemId: id
         }
 
-        try{
+        try {
             await reserve(data);
             toast.success(`Вы забронировали книгу ${title}`)
         }
-        catch (error){
-            toast.error("У вас уже есть эта книга")
+        catch (error) {
+            toast.error("Вы уже бронировали или у вас есть эта книга")
         }
     }
 
@@ -45,7 +51,8 @@ export const BookCard = ({id, title, description, publishedYear, author, quantit
                     <h3 className="font-bold text-lg text-slate-800 line-clamp-2 leading-snug" title={title}>
                         {title}
                     </h3>
-                    {quantity > 0 && (
+
+                    {quantity > 0 ? (
                         <button
                             className="book-card-available"
                             title="Зарезервировать"
@@ -53,7 +60,17 @@ export const BookCard = ({id, title, description, publishedYear, author, quantit
                         >
                             <CgAdd size={20}></CgAdd>
                         </button>
+                    ) : (
+                        <button
+                            className="book-card-available"
+                            title="Узнать приблизительное время доступности книги"
+                            onClick={handlePotentialTimeInfo}
+                        >
+                            <BsQuestion size={20}></BsQuestion>
+                        </button>
                     )}
+
+
                 </div>
 
                 {author && (

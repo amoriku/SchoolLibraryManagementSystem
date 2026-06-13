@@ -9,3 +9,8 @@ V1.3
 Renamed the user history functional to reader based history
 Added checkout reader history for librarian (ReadersPage in Frontend)
 Added new list of guys who didn't return book on date
+
+V1.42
+
+Add ReserveCleanupBackgroundService
+Add Some Filters on Frontend

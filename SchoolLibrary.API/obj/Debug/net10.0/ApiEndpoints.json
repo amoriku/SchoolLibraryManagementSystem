@@ -57,6 +57,16 @@
   },
   {
     "ContainingType": "SchoolLibrary.API.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "api/Auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "api/Auth/register",
     "HttpMethod": "POST",
@@ -186,6 +196,74 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "SchoolLibrary.API.Controllers.BooksController",
+    "Method": "GetByTitle",
+    "RelativePath": "api/Books/get-by-title",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "title",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.BorrowingsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Borrowings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.BorrowingsController",
+    "Method": "GetActive",
+    "RelativePath": "api/Borrowings/active",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.BorrowingsController",
+    "Method": "Create",
+    "RelativePath": "api/Borrowings/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SchoolLibrary.Application.DTOs.Borrow.CreateBorrowingDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.BorrowingsController",
+    "Method": "Return",
+    "RelativePath": "api/Borrowings/return",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemCopyId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SchoolLibrary.API.Controllers.FundsController",
     "Method": "Create",
     "RelativePath": "api/Funds/create",
@@ -265,6 +343,22 @@
   },
   {
     "ContainingType": "SchoolLibrary.API.Controllers.ReadersController",
+    "Method": "Create",
+    "RelativePath": "api/Readers/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SchoolLibrary.Application.DTOs.Reader.CreateReaderDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.ReadersController",
     "Method": "CreateHistoryRecord",
     "RelativePath": "api/Readers/create-history-record",
     "HttpMethod": "POST",
@@ -273,7 +367,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "SchoolLibrary.Application.DTOs.Reader.UserHistoryCreateDto",
+        "Type": "SchoolLibrary.Application.DTOs.Reader.CreateReaderHistoryDto",
         "IsRequired": true
       }
     ],
@@ -281,16 +375,68 @@
   },
   {
     "ContainingType": "SchoolLibrary.API.Controllers.ReadersController",
-    "Method": "GetUserHistory",
-    "RelativePath": "api/Readers/get-user-history",
+    "Method": "GetReaderHistory",
+    "RelativePath": "api/Readers/history",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
+        "Name": "readerId",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.ReservationsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Reservations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.ReservationsController",
+    "Method": "GetActive",
+    "RelativePath": "api/Reservations/active",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.ReservationsController",
+    "Method": "Cancel",
+    "RelativePath": "api/Reservations/cancel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reserveId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolLibrary.API.Controllers.ReservationsController",
+    "Method": "Reserve",
+    "RelativePath": "api/Reservations/reserve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SchoolLibrary.Application.DTOs.Reserve.ReserveCreateDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

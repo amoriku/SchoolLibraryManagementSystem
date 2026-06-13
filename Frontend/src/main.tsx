@@ -39,7 +39,7 @@ createRoot(document.getElementById('root')!).render(
                   <Route path="/librarian/readers" element={<ReadersPage />}></Route>
                   <Route path="/librarian/authors" element={<AuthorsPage />}></Route>
 
-                  <Route path='/reader/catalog' element={<CatalogPage />}></Route>
+                  <Route path='/catalogue' element={<CatalogPage />}></Route>
                   <Route path='/reader/my-books' element={<MyBooksPage />}></Route>
                   <Route path='/reader/my-reservations' element={<MyReservationsPage />}></Route>
                 </Route>

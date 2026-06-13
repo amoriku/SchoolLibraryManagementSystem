@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { type AuthorDto, type BookDto } from "../api/entities/Entity.Types";
 import { MainSectionHeader } from "../components/MainSectionHeader"
 import { Table } from "../components/Table"
@@ -11,6 +11,7 @@ import { RefreshButton } from "../components/buttons/RefreshButton";
 export const BooksPage = () => {
     const { getAllAuthors, getAllBooks } = useDataService();
 
+    const [filterResult, setFilterResult] = useState<string>("");
     const [bookCreateModalOpen, setBookCreateModalOpen] = useState<boolean>(false);
 
     const [books, setBooks] = useState<BookDto[]>([]);
@@ -23,6 +24,10 @@ export const BooksPage = () => {
         "Количество копий",
         "Автор"
     ]
+
+    const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFilterResult(e.currentTarget.value);
+    }
 
     const fetchData = async () => {
         setBooks(await getAllBooks())
@@ -47,59 +52,83 @@ export const BooksPage = () => {
             )}
 
             <div className="flex flex-col gap-2">
-                <MainSectionHeader title="Книги" desc="Управление библиотечным фондом">
-                    <div className="flex items-center gap-4">
-                        <button
-                            className="main-section-header-button main-section-header-button-green"
-                            onClick={() => setBookCreateModalOpen(true)}
-                        >
-                            <FiBook></FiBook>
-                            <span>Создать</span>
-                        </button>
-                        <RefreshButton onRefresh={() => fetchData()}></RefreshButton>
-                    </div>
-                </MainSectionHeader>
+                <div className="flex">
+                    <MainSectionHeader
+                        title="Книги"
+                        desc="Управление библиотечным фондом"
+                        includeFilter={true}
+                        onFilter={handleFilter}
+                        filterText="Название, год, автор"
+                    >
+                        <div className="flex items-center gap-4">
+                            <button
+                                className="main-section-header-button main-section-header-button-green"
+                                onClick={() => setBookCreateModalOpen(true)}
+                            >
+                                <FiBook></FiBook>
+                                <span>Создать</span>
+                            </button>
+                            <RefreshButton onRefresh={() => fetchData()}></RefreshButton>
+                        </div>
+                    </MainSectionHeader>
+                </div>
                 <Table columnNames={columnNames}>
-                    {books.map(book => (
-                        <tr
-                            key={book.id}
-                            className="table-tr"
-                        >
-                            <td
+                    {
+                        books
+                        .filter(book => {
+                            if (!filterResult) return books;
+                            const query: string = filterResult.toLowerCase().trim();
+
+                            const matchTitle: boolean = book.title.toLowerCase().trim().includes(query);
+                            const matchYear: boolean = String(book.publishedYear).toLowerCase().trim().includes(query);
+
+                            const matchAuthor: boolean = book.authors?.some(author => {
+                                const fullName = `${author.lastName} ${author.firstName} ${author.middleName || ''}`.toLowerCase().trim()
+                                return fullName.includes(query);
+                            })
+
+                            return matchTitle || matchYear || matchAuthor
+                        })
+                        .map(book => (
+                            <tr
                                 key={book.id}
-                                className="table-td-id"
+                                className="table-tr"
                             >
-                                {book.id}
-                            </td>
-                            <td
-                                key={book.title}
-                                className="table-td"
-                            >
-                                {book.title}
-                            </td>
-                            <td
-                                key={book.publishedYear}
-                                className="table-td"
-                            >
-                                {book.publishedYear ? book.publishedYear : "-"}
-                            </td>
-                            <td
-                                key={book.quantity}
-                                className="table-td"
-                            >
-                                {book.quantity ? book.quantity : "-"}
-                            </td>
-                            {book.authors.map(author => (
                                 <td
-                                    key={author.id}
+                                    key={book.id}
                                     className="table-td"
                                 >
-                                    
-                                    {`${author.lastName} ${author.firstName[0]}. ${author.middleName ? author.middleName[0] : ""}.`}
+                                    {book.id}
                                 </td>
-                            ))}
-                        </tr>
-                    ))}
+                                <td
+                                    key={book.title}
+                                    className="table-td"
+                                >
+                                    {book.title}
+                                </td>
+                                <td
+                                    key={book.publishedYear}
+                                    className="table-td"
+                                >
+                                    {book.publishedYear ? book.publishedYear : "-"}
+                                </td>
+                                <td
+                                    key={book.quantity}
+                                    className="table-td"
+                                >
+                                    {book.quantity ? book.quantity : "-"}
+                                </td>
+                                {book.authors.map(author => (
+                                    <td
+                                        key={author.id}
+                                        className="table-td"
+                                    >
+
+                                        {`${author.lastName} ${author.firstName[0]}. ${author.middleName ? author.middleName[0] : ""}.`}
+                                    </td>
+                                ))}
+                            </tr>
+                        ))}
                 </Table>
             </div>
         </>

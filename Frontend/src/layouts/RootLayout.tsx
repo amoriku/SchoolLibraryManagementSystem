@@ -1,14 +1,18 @@
 import { Outlet } from "react-router"
 import { Header } from "../components/header/Header"
+import { useState } from "react"
 
 export const RootLayout = () => {
-    
+    const [searchQuery, setSearchQuery] = useState<string>("");
+
     return (
         <> 
-            <Header></Header>
+            <Header onSearchChange={setSearchQuery}>
+
+            </Header>
 
             <div>
-                <Outlet></Outlet>
+                <Outlet context={{filterResult: searchQuery}}></Outlet>
             </div>
         </>
     )

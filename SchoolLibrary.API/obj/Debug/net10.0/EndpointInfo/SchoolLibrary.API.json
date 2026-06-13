@@ -57,6 +57,18 @@
         }
       }
     },
+    "/api/Auth/refresh": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Auth/current": {
       "get": {
         "tags": [
@@ -219,6 +231,27 @@
         }
       }
     },
+    "/api/Books/get-by-title": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Books/create": {
       "post": {
         "tags": [
@@ -302,6 +335,88 @@
               "type": "string"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Borrowings/active": {
+      "get": {
+        "tags": [
+          "Borrowings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Borrowings/return": {
+      "post": {
+        "tags": [
+          "Borrowings"
+        ],
+        "parameters": [
+          {
+            "name": "itemCopyId",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Borrowings/create": {
+      "post": {
+        "tags": [
+          "Borrowings"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBorrowingDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBorrowingDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBorrowingDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Borrowings": {
+      "get": {
+        "tags": [
+          "Borrowings"
         ],
         "responses": {
           "200": {
@@ -445,17 +560,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserHistoryCreateDto"
+                "$ref": "#/components/schemas/CreateReaderHistoryDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserHistoryCreateDto"
+                "$ref": "#/components/schemas/CreateReaderHistoryDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserHistoryCreateDto"
+                "$ref": "#/components/schemas/CreateReaderHistoryDto"
               }
             }
           },
@@ -468,20 +583,134 @@
         }
       }
     },
-    "/api/Readers/get-user-history": {
+    "/api/Readers/create": {
+      "post": {
+        "tags": [
+          "Readers"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateReaderDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateReaderDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateReaderDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Readers/history": {
       "get": {
         "tags": [
           "Readers"
         ],
         "parameters": [
           {
-            "name": "userId",
+            "name": "readerId",
             "in": "query",
             "schema": {
               "type": "string"
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Reservations/active": {
+      "get": {
+        "tags": [
+          "Reservations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Reservations/cancel": {
+      "post": {
+        "tags": [
+          "Reservations"
+        ],
+        "parameters": [
+          {
+            "name": "reserveId",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Reservations": {
+      "get": {
+        "tags": [
+          "Reservations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Reservations/reserve": {
+      "post": {
+        "tags": [
+          "Reservations"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReserveCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReserveCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReserveCreateDto"
+              }
+            }
+          },
+          "required": true
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -625,7 +854,9 @@
           "authorIds",
           "publishedYear",
           "price",
-          "description"
+          "description",
+          "quantity",
+          "isbn"
         ],
         "type": "object",
         "properties": {
@@ -666,6 +897,62 @@
               "null",
               "string"
             ]
+          },
+          "quantity": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "isbn": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "CreateBorrowingDto": {
+        "required": [
+          "readerId",
+          "bookId",
+          "reservationId",
+          "dueDate"
+        ],
+        "type": "object",
+        "properties": {
+          "readerId": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "bookId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "reservationId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "null",
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "dueDate": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time"
           }
         }
       },
@@ -686,6 +973,61 @@
           },
           "letter": {
             "type": "string"
+          }
+        }
+      },
+      "CreateReaderDto": {
+        "required": [
+          "firstName",
+          "lastName",
+          "middleName",
+          "gradeId"
+        ],
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "gradeId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int16"
+          }
+        }
+      },
+      "CreateReaderHistoryDto": {
+        "required": [
+          "readerId",
+          "libraryItemCopyId",
+          "operationType"
+        ],
+        "type": "object",
+        "properties": {
+          "readerId": {
+            "type": "string"
+          },
+          "libraryItemCopyId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
           }
         }
       },
@@ -731,6 +1073,22 @@
       "OperationType": {
         "type": "integer"
       },
+      "ReserveCreateDto": {
+        "required": [
+          "libraryItemId"
+        ],
+        "type": "object",
+        "properties": {
+          "libraryItemId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          }
+        }
+      },
       "UserCreateDto": {
         "required": [
           "lastName",
@@ -772,30 +1130,6 @@
               "null",
               "string"
             ]
-          }
-        }
-      },
-      "UserHistoryCreateDto": {
-        "required": [
-          "userId",
-          "libraryItemCopyId",
-          "operationType"
-        ],
-        "type": "object",
-        "properties": {
-          "userId": {
-            "type": "string"
-          },
-          "libraryItemCopyId": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "operationType": {
-            "$ref": "#/components/schemas/OperationType"
           }
         }
       },
@@ -853,6 +1187,9 @@
       "name": "Books"
     },
     {
+      "name": "Borrowings"
+    },
+    {
       "name": "Funds"
     },
     {
@@ -860,6 +1197,9 @@
     },
     {
       "name": "Readers"
+    },
+    {
+      "name": "Reservations"
     },
     {
       "name": "Roles"

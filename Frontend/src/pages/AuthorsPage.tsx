@@ -65,7 +65,7 @@ export const AuthorsPage = () => {
                         >
                             <td
                                 key={author.id}
-                                className="table-td-id"
+                                className="table-td"
                             >
                                 {author.id}
                             </td>

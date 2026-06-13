@@ -3,32 +3,52 @@
   "WorkspaceRootPath": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
       "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\common\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\common\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\reservationcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\reservationcleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.production.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
-      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.production.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.development.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
-      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.development.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\schoollibrary.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\schoollibrary.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\schoollibrary.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\schoollibrary.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\enums\\operationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\enums\\operationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -39,28 +59,52 @@
       "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.production.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.production.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\tokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\tokenprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\common\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\common\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14103E10-F645-4051-80BD-8D60EC78C8C8}|SchoolLibrary.Infrastructure\\SchoolLibrary.Infrastructure.csproj|solutionrelative:schoollibrary.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.development.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.development.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|c:\\projects\\csharp\\schoollibrary_v2.0\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{81DDED9D-158B-E303-5F62-77A2896D2A5A}|docker-compose.dcproj|solutionrelative:launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\readerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\readerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\reader\\readerhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\reader\\readerhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\readerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,10 +159,6 @@
       "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6DFD55AF-7E54-1D2D-40AB-EDBB985972D0}|SchoolLibrary.API\\SchoolLibrary.API.csproj|solutionrelative:schoollibrary.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -127,24 +167,12 @@
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\shared\\policyname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\ireaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\ireaderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\reader\\createreaderhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\reader\\createreaderhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\ireserveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\ireserveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\userhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\borrow\\createborrowingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -163,32 +191,12 @@
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\reserveservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\enums\\operationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\enums\\operationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\borrowing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\ifundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\ifundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\reserve\\reservedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\reserve\\reservedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.domain\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FF913DE-EBE8-4D83-B1F2-2D65EDA3528D}|SchoolLibrary.Domain\\SchoolLibrary.Domain.csproj|solutionrelative:schoollibrary.domain\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\gradeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -205,10 +213,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\authorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\interfaces\\iauthorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -249,10 +253,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\author\\authorcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\dtos\\author\\authorcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|solutionrelative:schoollibrary.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A1B5873-A22B-44E1-9968-0DFFC416DB8F}|SchoolLibrary.Application\\SchoolLibrary.Application.csproj|c:\\projects\\csharp\\schoollibrary_v2.0\\schoollibrary.application\\dtos\\user\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -359,203 +359,99 @@
           ]
         },
         {
-          "DockedHeight": 164,
-          "SelectedChildIndex": 9,
+          "DockedHeight": 159,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IUserService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAABiAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ReservationCleanupService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReservationCleanupService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\ReservationCleanupService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReservationCleanupService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\ReservationCleanupService.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAwGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T05:00:05.675Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\UserService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\UserService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Services\\UserService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAApwCkAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T04:59:58.795Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "BookService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BookService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\BookService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BookService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Services\\BookService.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAIwDcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T06:50:20.188Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IReaderService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IReaderService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IReaderService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IReaderService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IReaderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:32:11.127Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ReaderService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReaderService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\ReaderService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReaderService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Services\\ReaderService.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAgwKcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:32:37.91Z",
-              "IsPinned": true
+              "WhenOpened": "2026-06-12T07:26:36.832Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DependencyInjection.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T10:33:26.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Reservation.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Reservation.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Reservation.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Reservation.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAswBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T11:59:05.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserHistory.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\UserHistory.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\UserHistory.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\UserHistory.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\UserHistory.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T05:23:10.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Borrowing.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Borrowing.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Borrowing.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Borrowing.cs",
+              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Borrowing.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T11:27:53.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-06-08T11:14:14.001Z",
+              "WhenOpened": "2026-06-12T10:26:47.493Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\AppDbContext.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\AppDbContext.cs",
-              "RelativeToolTip": "SchoolLibrary.Infrastructure\\AppDbContext.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T04:18:12.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
-              "RelativeToolTip": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAgwHsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T08:36:38.907Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Program.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Program.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Program.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBcAAAB+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T07:17:09.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "docker-compose.production.yml",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.production.yml",
-              "RelativeDocumentMoniker": "docker-compose.production.yml",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.production.yml",
-              "RelativeToolTip": "docker-compose.production.yml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-06-08T11:04:22.487Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "docker-compose.development.yml",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.development.yml",
-              "RelativeDocumentMoniker": "docker-compose.development.yml",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.development.yml",
-              "RelativeToolTip": "docker-compose.development.yml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAowCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-06-05T07:26:05.858Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "docker-compose.dcproj",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.dcproj",
-              "RelativeDocumentMoniker": "docker-compose.dcproj",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.dcproj",
-              "RelativeToolTip": "docker-compose.dcproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-08T11:03:49.36Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.Production.json",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.Production.json",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\appsettings.Production.json",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.Production.json",
-              "RelativeToolTip": "SchoolLibrary.API\\appsettings.Production.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-08T11:07:50.285Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\appsettings.Development.json",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.Development.json",
-              "RelativeToolTip": "SchoolLibrary.API\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-08T11:07:59.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\launchSettings.json",
-              "RelativeDocumentMoniker": "launchSettings.json",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\launchSettings.json",
-              "RelativeToolTip": "launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-05T07:26:06.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "SchoolLibrary.API\\Properties\\launchSettings.json",
@@ -563,431 +459,155 @@
               "RelativeToolTip": "SchoolLibrary.API\\Properties\\launchSettings.json",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-05T07:26:12.432Z"
+              "WhenOpened": "2026-06-05T07:26:12.432Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.json",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\appsettings.json",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.json",
-              "RelativeToolTip": "SchoolLibrary.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-05T07:26:22.196Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ReadersController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\ReadersController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\ReadersController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\ReadersController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\ReadersController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAD4v0AAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Program.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Program.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Program.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwBcAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T09:31:55.843Z"
+              "WhenOpened": "2026-05-10T07:17:09.425Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 3,
               "Title": "ReservationsController.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\ReservationsController.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\ReservationsController.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\ReservationsController.cs",
               "RelativeToolTip": "SchoolLibrary.API\\Controllers\\ReservationsController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAIwEEAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowEEAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T12:08:16.297Z"
+              "WhenOpened": "2026-06-03T12:08:16.297Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GradesController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\GradesController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\GradesController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\GradesController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\GradesController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAgwBsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T08:00:34.786Z"
+              "DocumentIndex": 9,
+              "Title": "SchoolLibrary.Application",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\SchoolLibrary.Application.csproj",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\SchoolLibrary.Application.csproj",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\SchoolLibrary.Application.csproj",
+              "RelativeToolTip": "SchoolLibrary.Application\\SchoolLibrary.Application.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-12T07:30:03.193Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ReaderHistoryDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T07:44:54.231Z"
+              "DocumentIndex": 10,
+              "Title": "SchoolLibrary.API",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\SchoolLibrary.API.csproj",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\SchoolLibrary.API.csproj",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\SchoolLibrary.API.csproj",
+              "RelativeToolTip": "SchoolLibrary.API\\SchoolLibrary.API.csproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-12T07:30:09.831Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "BorrowingDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T12:59:39.493Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ReaderWithoutGradeDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T05:50:57.269Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "NotificationsCenter.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T05:37:37.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DataGenerator.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Common\\DataGenerator.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Common\\DataGenerator.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Common\\DataGenerator.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Common\\DataGenerator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T05:37:41.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RolesController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\RolesController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\RolesController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\RolesController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\RolesController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T10:40:48.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "BorrowingService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BorrowingService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\BorrowingService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BorrowingService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Services\\BorrowingService.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowGEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T11:35:52.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAIwDsAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T05:03:27.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FundsController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\FundsController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\FundsController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\FundsController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\FundsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T14:56:08.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "BorrowingsController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAIwEEAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T09:23:04.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "BooksController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BooksController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\BooksController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BooksController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\BooksController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAwwCUAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T15:15:03.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AuthorsController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthorsController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\AuthorsController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthorsController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\AuthorsController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAwwBoAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T15:14:54.612Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Dockerfile",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Dockerfile",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Dockerfile",
-              "RelativeToolTip": "SchoolLibrary.API\\Dockerfile",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-06-04T12:34:13.198Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "PolicyName.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Shared\\PolicyName.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Shared\\PolicyName.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Shared\\PolicyName.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Shared\\PolicyName.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T15:12:27.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAqwCYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T14:45:54.142Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "CreateReaderHistoryDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\CreateReaderHistoryDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reader\\CreateReaderHistoryDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\CreateReaderHistoryDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\CreateReaderHistoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T07:35:21.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "IReserveService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IReserveService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IReserveService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IReserveService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IReserveService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T11:53:47.485Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "UserHistory.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\UserHistory.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\UserHistory.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\UserHistory.cs",
-              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\UserHistory.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAswA0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:23:10.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "IBorrowingService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T11:35:35.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "CreateBorrowingDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Borrow\\CreateBorrowingDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Borrow\\CreateBorrowingDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Borrow\\CreateBorrowingDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Borrow\\CreateBorrowingDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T12:59:25.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ReaderDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T15:56:10.159Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 11,
               "Title": "OperationType.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Enums\\OperationType.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Enums\\OperationType.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Enums\\OperationType.cs",
               "RelativeToolTip": "SchoolLibrary.Domain\\Enums\\OperationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T11:27:47.691Z"
+              "WhenOpened": "2026-06-04T11:27:47.691Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ReserveService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReserveService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\ReserveService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReserveService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Services\\ReserveService.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAowIwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T11:54:43.629Z"
+              "DocumentIndex": 12,
+              "Title": "appsettings.Production.json",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.Production.json",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\appsettings.Production.json",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.Production.json",
+              "RelativeToolTip": "SchoolLibrary.API\\appsettings.Production.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-08T11:07:50.285Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Borrowing.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Borrowing.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Borrowing.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Borrowing.cs",
-              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Borrowing.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAswBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T11:27:53.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "IFundService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IFundService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IFundService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IFundService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IFundService.cs",
+              "DocumentIndex": 13,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\appsettings.Development.json",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.Development.json",
+              "RelativeToolTip": "SchoolLibrary.API\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T11:16:27.844Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-08T11:07:59.399Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ReserveDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reserve\\ReserveDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reserve\\ReserveDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reserve\\ReserveDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reserve\\ReserveDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T11:57:51.166Z"
+              "DocumentIndex": 14,
+              "Title": "docker-compose.production.yml",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.production.yml",
+              "RelativeDocumentMoniker": "docker-compose.production.yml",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.production.yml",
+              "RelativeToolTip": "docker-compose.production.yml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-06-08T11:04:22.487Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Reservation.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Reservation.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Reservation.cs",
-              "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Reservation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwCYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T11:59:05.749Z"
+              "WhenOpened": "2026-05-17T14:45:54.142Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "BookCreateDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "TokenProvider.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\TokenProvider.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\TokenProvider.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\TokenProvider.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\TokenProvider.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAQwEcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T14:55:21.375Z"
+              "WhenOpened": "2026-06-08T12:10:29.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "CreateGradeDto.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAIBJwEAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T08:41:29.765Z"
+              "WhenOpened": "2026-05-10T05:00:26.065Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "GradeService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\GradeService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\GradeService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\GradeService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Services\\GradeService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAawBEAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T07:56:16.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "IBookService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBookService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IBookService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBookService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBookService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T13:43:49.068Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 18,
               "Title": "AuthorService.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthorService.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\AuthorService.cs",
@@ -995,11 +615,454 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Services\\AuthorService.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAUwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:06:56.651Z"
+              "WhenOpened": "2026-05-15T14:06:56.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAgwHsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T08:36:38.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\AppDbContext.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "SchoolLibrary.Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T04:18:12.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "docker-compose.development.yml",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.development.yml",
+              "RelativeDocumentMoniker": "docker-compose.development.yml",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.development.yml",
+              "RelativeToolTip": "docker-compose.development.yml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-06-05T07:26:05.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "docker-compose.dcproj",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-08T11:03:49.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\launchSettings.json",
+              "RelativeDocumentMoniker": "launchSettings.json",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\launchSettings.json",
+              "RelativeToolTip": "launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-05T07:26:06.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.json",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\appsettings.json",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\appsettings.json",
+              "RelativeToolTip": "SchoolLibrary.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-05T07:26:22.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ReadersController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\ReadersController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\ReadersController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\ReadersController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\ReadersController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAD4v0AAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T09:31:55.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GradesController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\GradesController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\GradesController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\GradesController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\GradesController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgwBsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T08:00:34.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ReaderHistoryDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderHistoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T07:44:54.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BorrowingDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Borrow\\BorrowingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T12:59:39.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ReaderWithoutGradeDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderWithoutGradeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T05:50:57.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "NotificationsCenter.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Common\\NotificationsCenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBAAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T05:37:37.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DataGenerator.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Common\\DataGenerator.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Common\\DataGenerator.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Common\\DataGenerator.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Common\\DataGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T05:37:41.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\RolesController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\RolesController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T10:40:48.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "BorrowingService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BorrowingService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\BorrowingService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BorrowingService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\BorrowingService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowGEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T11:35:52.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwDsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T05:03:27.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "FundsController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\FundsController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\FundsController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\FundsController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\FundsController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAxwBUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T14:56:08.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "BorrowingsController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\BorrowingsController.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAIwEEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T09:23:04.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\BooksController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAwwCUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T15:15:03.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "AuthorsController.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthorsController.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Controllers\\AuthorsController.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Controllers\\AuthorsController.cs",
+              "RelativeToolTip": "SchoolLibrary.API\\Controllers\\AuthorsController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAwwBoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T15:14:54.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Dockerfile",
+              "RelativeDocumentMoniker": "SchoolLibrary.API\\Dockerfile",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.API\\Dockerfile",
+              "RelativeToolTip": "SchoolLibrary.API\\Dockerfile",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-04T12:34:13.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PolicyName.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Shared\\PolicyName.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Shared\\PolicyName.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Shared\\PolicyName.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Shared\\PolicyName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T15:12:27.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CreateReaderHistoryDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\CreateReaderHistoryDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reader\\CreateReaderHistoryDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\CreateReaderHistoryDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\CreateReaderHistoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T07:35:21.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IReserveService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IReserveService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IReserveService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IReserveService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IReserveService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T11:53:47.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "IBorrowingService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T11:35:35.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "CreateBorrowingDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Borrow\\CreateBorrowingDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Borrow\\CreateBorrowingDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Borrow\\CreateBorrowingDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Borrow\\CreateBorrowingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T12:59:25.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ReaderDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reader\\ReaderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T15:56:10.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ReserveService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReserveService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\ReserveService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\ReserveService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\ReserveService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAowIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T11:54:43.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IFundService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IFundService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IFundService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IFundService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IFundService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T11:16:27.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ReserveDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reserve\\ReserveDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Reserve\\ReserveDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Reserve\\ReserveDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Reserve\\ReserveDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T11:57:51.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "BookCreateDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Book\\BookCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T14:55:21.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "CreateGradeDto.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Grades\\CreateGradeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T08:41:29.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GradeService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\GradeService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\GradeService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\GradeService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Services\\GradeService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAawBEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T07:56:16.213Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 52,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBookService.cs",
+              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IBookService.cs",
+              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IBookService.cs",
+              "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T13:43:49.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
               "Title": "IAuthorService.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IAuthorService.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IAuthorService.cs",
@@ -1007,23 +1070,25 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IAuthorService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:05:57.026Z"
+              "WhenOpened": "2026-05-15T14:05:57.026Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "Grade.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Grade.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Domain\\Entities\\Grade.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\Entities\\Grade.cs",
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Grade.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAwAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAABBwAwAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:24:30.248Z"
+              "WhenOpened": "2026-05-07T05:24:30.248Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "GradeDto.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Grades\\GradeDto.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Grades\\GradeDto.cs",
@@ -1031,11 +1096,12 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Grades\\GradeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T07:48:46.071Z"
+              "WhenOpened": "2026-05-26T07:48:46.071Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "GradeConfiguration.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\GradeConfiguration.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Configurations\\GradeConfiguration.cs",
@@ -1043,11 +1109,12 @@
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\GradeConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowA4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:07:33.068Z"
+              "WhenOpened": "2026-05-07T05:07:33.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "BaseService.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\BaseService.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\BaseService.cs",
@@ -1055,11 +1122,12 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Services\\BaseService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T07:10:24.014Z"
+              "WhenOpened": "2026-05-09T07:10:24.014Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "IGradeService.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Interfaces\\IGradeService.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\Interfaces\\IGradeService.cs",
@@ -1067,11 +1135,12 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IGradeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T08:02:38.042Z"
+              "WhenOpened": "2026-05-26T08:02:38.042Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "AuthorUpdateDto.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Author\\AuthorUpdateDto.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Author\\AuthorUpdateDto.cs",
@@ -1079,11 +1148,12 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Author\\AuthorUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-25T08:46:31.302Z"
+              "WhenOpened": "2026-05-25T08:46:31.302Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "AuthorDto.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Author\\AuthorDto.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Author\\AuthorDto.cs",
@@ -1091,11 +1161,12 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Author\\AuthorDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:06:16.316Z"
+              "WhenOpened": "2026-05-15T14:06:16.316Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "BookDto.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Book\\BookDto.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Book\\BookDto.cs",
@@ -1103,23 +1174,12 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Book\\BookDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T15:02:05.262Z"
+              "WhenOpened": "2026-05-09T15:02:05.262Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 62,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "SchoolLibrary.Application\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\Services\\AuthService.cs",
-              "RelativeToolTip": "SchoolLibrary.Application\\Services\\AuthService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAqwC4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T05:00:26.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
               "Title": "AuthorCreateDto.cs",
               "DocumentMoniker": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Application\\DTOs\\Author\\AuthorCreateDto.cs",
               "RelativeDocumentMoniker": "SchoolLibrary.Application\\DTOs\\Author\\AuthorCreateDto.cs",
@@ -1127,7 +1187,8 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Author\\AuthorCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T14:06:08.523Z"
+              "WhenOpened": "2026-05-15T14:06:08.523Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1139,7 +1200,8 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\User\\UserCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T17:44:18.394Z"
+              "WhenOpened": "2026-05-23T17:44:18.394Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1151,7 +1213,8 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\User\\UserRegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAMwAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T17:43:12.804Z"
+              "WhenOpened": "2026-05-23T17:43:12.804Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1163,7 +1226,8 @@
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\ApplicationUserConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:07:21.899Z"
+              "WhenOpened": "2026-05-07T05:07:21.899Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1175,7 +1239,8 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\User\\UserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T14:31:58.156Z"
+              "WhenOpened": "2026-05-17T14:31:58.156Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1187,7 +1252,8 @@
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\ApplicationUser.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAIwBQAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:00:20.399Z"
+              "WhenOpened": "2026-05-07T05:00:20.399Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1199,7 +1265,8 @@
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:26:01.047Z"
+              "WhenOpened": "2026-05-07T05:26:01.047Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1211,7 +1278,8 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwAsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-10T05:00:08.919Z"
+              "WhenOpened": "2026-05-10T05:00:08.919Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1223,7 +1291,8 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\User\\UserLoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T09:35:41.891Z"
+              "WhenOpened": "2026-05-17T09:35:41.891Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1235,7 +1304,8 @@
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Author.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:25:21.338Z"
+              "WhenOpened": "2026-05-07T05:25:21.338Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1247,7 +1317,8 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\QueryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T16:01:41.512Z"
+              "WhenOpened": "2026-05-09T16:01:41.512Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1259,7 +1330,8 @@
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\LibraryItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T16:11:07.081Z"
+              "WhenOpened": "2026-05-14T16:11:07.081Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1271,7 +1343,8 @@
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\LibraryItemCopy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T16:09:49.95Z"
+              "WhenOpened": "2026-05-14T16:09:49.95Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1283,7 +1356,8 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBaseService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T14:23:24.687Z"
+              "WhenOpened": "2026-05-14T14:23:24.687Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1293,9 +1367,10 @@
               "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\DependencyInjection.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\DependencyInjection.cs",
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T13:46:41.166Z"
+              "WhenOpened": "2026-05-06T13:46:41.166Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1307,7 +1382,8 @@
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\ItemAuthor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:00:47.168Z"
+              "WhenOpened": "2026-05-07T05:00:47.168Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1319,7 +1395,8 @@
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\Fund.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:26:03.471Z"
+              "WhenOpened": "2026-05-07T05:26:03.471Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1329,9 +1406,10 @@
               "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Configurations\\FullNameConfiguration.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Configurations\\FullNameConfiguration.cs",
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\FullNameConfiguration.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:21:24.749Z"
+              "WhenOpened": "2026-05-07T05:21:24.749Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1343,7 +1421,8 @@
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\AuthorConfiguration.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAgwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:07:28.948Z"
+              "WhenOpened": "2026-05-07T05:07:28.948Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1355,7 +1434,8 @@
               "RelativeToolTip": "SchoolLibrary.Domain\\Entities\\RefreshToken.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T04:59:55.288Z"
+              "WhenOpened": "2026-05-07T04:59:55.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1367,7 +1447,8 @@
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\Configurations\\UserHistoryConfiguration.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:07:57.681Z"
+              "WhenOpened": "2026-05-07T05:07:57.681Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1377,18 +1458,15 @@
               "RelativeDocumentMoniker": "SchoolLibrary.Domain\\ValueObjects\\FullName.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Domain\\ValueObjects\\FullName.cs",
               "RelativeToolTip": "SchoolLibrary.Domain\\ValueObjects\\FullName.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA0wBkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwBkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T05:22:28.097Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2026-05-07T05:22:28.097Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 66,
+          "DockedHeight": 71,
           "SelectedChildIndex": -1,
           "Children": [
             {

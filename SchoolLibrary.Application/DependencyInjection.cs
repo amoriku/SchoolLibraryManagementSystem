@@ -19,6 +19,7 @@ namespace SchoolLibrary.Application
             services.AddScoped<IGradeService, GradeService>();
             services.AddScoped<IReserveService, ReserveService>();
             services.AddScoped<IBorrowingService, BorrowingService>();
+            services.AddHostedService<ReservationCleanupService>();
 
             return services;
         }

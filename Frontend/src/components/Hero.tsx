@@ -2,15 +2,22 @@ import { FiLogOut, FiLayout, FiUsers } from "react-icons/fi";
 import { useAuth } from "../hooks/useAuth";
 import { SideBarItem } from "./SideBarItem";
 import { RoleBased } from "./RoleBased";
-import { Outlet } from "react-router";
+import { Outlet, useOutletContext } from "react-router";
 import { FaBookOpen, FaUserPlus } from "react-icons/fa";
 import { CgGlass } from "react-icons/cg";
 import { GrCatalog, GrUser } from "react-icons/gr";
 import { BiBookContent, BiBookmark } from "react-icons/bi";
 import { CatalogPage } from "../pages/CatalogPage";
 
+
+interface RootContextType{
+    filterResult: string
+}
+
 export default function Hero() {
     const authContext = useAuth();
+
+    const { filterResult } = (useOutletContext<RootContextType>() || {}) as RootContextType;
 
     return (
         <>
@@ -27,13 +34,14 @@ export default function Hero() {
 
                                 <RoleBased role="Librarian">
                                     <SideBarItem name="Дашборд" icon={<FiLayout />} to="/librarian/dashboard"></SideBarItem>
+                                    {/* <SideBarItem name="Каталог" icon={<GrCatalog />} to="/catalogue"></SideBarItem> */}
                                     <SideBarItem name="Книги" icon={<FaBookOpen />} to="/librarian/books"></SideBarItem>
                                     <SideBarItem name="Читатели" icon={<GrUser />} to="/librarian/readers"></SideBarItem>
                                     <SideBarItem name="Авторы" icon={<FaUserPlus />} to="/librarian/authors"></SideBarItem>
                                 </RoleBased>
 
                                 <RoleBased role="Reader">
-                                    <SideBarItem name="Каталог" icon={<GrCatalog />} to="/reader/catalog"></SideBarItem>
+                                    <SideBarItem name="Каталог" icon={<GrCatalog />} to="/catalogue"></SideBarItem>
                                     <SideBarItem name="Мои книги" icon={<BiBookContent />} to="/reader/my-books"></SideBarItem>
                                     <SideBarItem name="Мои брони" icon={<BiBookmark />} to="/reader/my-reservations"></SideBarItem>
                                 </RoleBased>
@@ -48,14 +56,14 @@ export default function Hero() {
                         </aside>
 
                         <main className="flex-1 h-full overflow-y-auto p-6 pl-12">
-                            <Outlet></Outlet>
+                            <Outlet context={filterResult}></Outlet>
                         </main>
 
                     </div>
                 </div>
             ) : (
                 <div>
-                    <CatalogPage></CatalogPage>
+                    <CatalogPage filterResult={filterResult}></CatalogPage>
                 </div>
             )}
         </>

@@ -7,7 +7,9 @@
         Loan = 1,
         Return = 2,
         Borrowing = 3,
-        Reservation = 4,
-        ReservationCancel = 5,
+        Reserve = 4,
+        ReserveCancel = 5,
+        ReadyForPickup = 6,
+        ReserveExpired = 7,
     }
 }

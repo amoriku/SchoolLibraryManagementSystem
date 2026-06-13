@@ -39,7 +39,7 @@ export const ReadersPage = () => {
         "Никнейм"
     ]
 
-
+    const [filterResult, setFilterResult] = useState<string>("");
     const [readers, setReaders] = useState<ReaderDto[]>([]);
     const [readerHistory, setReaderHistory] = useState<ReaderHistoryDto[]>([])
     const { getAllReaders, getAllBooks } = useDataService();
@@ -85,6 +85,10 @@ export const ReadersPage = () => {
         setIsDueDateCorrect(validateDate(e.currentTarget.value));
     }
 
+    const handleReaderFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFilterResult(e.currentTarget.value);
+    }
+
     const fetchData = async () => {
         setReaders(await getAllReaders());
         setBooks(await getAllBooks());
@@ -108,7 +112,7 @@ export const ReadersPage = () => {
                 isOpen={isReaderHistoryOpen}
                 onClose={() => setIsReaderHistoryOpen(false)}
                 onOpen={async () => console.log(await getHistory(readerId))}
-                includeOperations = {false}
+                includeOperations={false}
             >
                 <Table
                     columnNames={["Дата", "Книга", "Действие"]}
@@ -166,6 +170,7 @@ export const ReadersPage = () => {
                     onSubmit={handleBorrowSubmit}
                     className="create-form"
                 >
+                    <label htmlFor="dueDate">Выберите дату возврата</label>
                     <BaseInput
                         type="date"
                         id="dueDate"
@@ -204,7 +209,14 @@ export const ReadersPage = () => {
                 </CreateReaderForm>
             </Modal>
 
-            <MainSectionHeader title="Читатели" desc="Просмотр информации о читателях">
+            <MainSectionHeader
+                title="Читатели"
+                desc="Просмотр информации о читателях"
+                includeFilter={true}
+                onFilter={handleReaderFilter}
+                filterText="ФИО, класс"
+
+            >
                 <div className="flex items-center gap-4">
                     <CreateButton
                         icon={<CgAdd />}
@@ -220,58 +232,67 @@ export const ReadersPage = () => {
             <Table
                 columnNames={columnNames}
             >
-                {readers.map(reader => (
-                    <tr
-                        key={reader.id}
-                        onMouseEnter={() => setReaderId(reader.id)}
-                        className="table-tr"
-                    >
-                        <td
-                            key={reader.lastName}
-                            className="table-td"
-                        >
-                            {reader.lastName}
-                        </td>
-                        <td
-                            key={reader.firstName}
-                            className="table-td"
-                        >
-                            {reader.firstName}
-                        </td>
-                        <td
-                            key={reader.middleName}
-                            className="table-td"
-                        >
-                            {reader.middleName ? reader.middleName : "-"}
-                        </td>
-                        <td
-                            key={reader.gradeName}
-                            className="table-td"
-                        >
-                            {reader.gradeName}
-                        </td>
-                        <td
-                            key={reader.username}
-                            className="table-td"
-                        >
-                            {reader.username}
-                        </td>
-                        <td className="table-td table-td-actions">
-                            <div className="actions-container">
-                                <TableReaderHistoryButton
-                                    onReaderHistoryOpen={() => handleReaderHistoryOpen()}
-                                >
+                {
+                    readers.filter(reader => {
+                        const query: string = filterResult.toLowerCase().trim();
 
-                                </TableReaderHistoryButton>
-                                <TableBorrowButton
-                                    onBorrow={() => handleBorrow(reader.id, `${reader.lastName} ${reader.firstName}`)}
-                                >
+                        const matchGrade: boolean = reader.gradeName.toLowerCase().trim().includes(query);
+                        const matchReader: boolean = `${reader.lastName} ${reader.firstName} ${reader.middleName}`.toLowerCase().trim().includes(query);
 
-                                </TableBorrowButton>
-                            </div>
-                        </td>
-                    </tr>
-                ))}
+                        return matchGrade || matchReader
+                    })
+                    .map(reader => (
+                        <tr
+                            key={reader.id}
+                            onMouseEnter={() => setReaderId(reader.id)}
+                            className="table-tr"
+                        >
+                            <td
+                                key={reader.lastName}
+                                className="table-td"
+                            >
+                                {reader.lastName}
+                            </td>
+                            <td
+                                key={reader.firstName}
+                                className="table-td"
+                            >
+                                {reader.firstName}
+                            </td>
+                            <td
+                                key={reader.middleName}
+                                className="table-td"
+                            >
+                                {reader.middleName ? reader.middleName : "-"}
+                            </td>
+                            <td
+                                key={reader.gradeName}
+                                className="table-td"
+                            >
+                                {reader.gradeName}
+                            </td>
+                            <td
+                                key={reader.username}
+                                className="table-td"
+                            >
+                                {reader.username}
+                            </td>
+                            <td className="table-td table-td-actions">
+                                <div className="actions-container">
+                                    <TableReaderHistoryButton
+                                        onReaderHistoryOpen={() => handleReaderHistoryOpen()}
+                                    >
+
+                                    </TableReaderHistoryButton>
+                                    <TableBorrowButton
+                                        onBorrow={() => handleBorrow(reader.id, `${reader.lastName} ${reader.firstName}`)}
+                                    >
+
+                                    </TableBorrowButton>
+                                </div>
+                            </td>
+                        </tr>
+                    ))}
             </Table>
         </>
     )

@@ -1,20 +1,16 @@
 import { Link } from "react-router";
 import { useAuth } from "../../hooks/useAuth";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-import { useState } from "react";
+import { useState, type InputHTMLAttributes } from "react";
 import { FiBell, FiBookOpen, FiLogOut } from "react-icons/fi";
-import { SearchInput } from "../CustomInput";
+import { BaseInput, SearchInput } from "../CustomInput";
 
 
-export function Header() {
+export function Header({onSearchChange}: {onSearchChange?: (value: string) => void}) {
     const authContext = useAuth();
     const [profileOpen, setProfileOpen] = useState(false);
     const [notificationsOpen, setNotificationsOpen] = useState<boolean>(false);
     const [hasNotifications, setHasNotifications] = useState<boolean>(false);
-
-    const handleBookSearch = () => {
-
-    }
 
     return (
         <header className="bg-white border-b border-slate-100 px-6 py-5 w-full shrink-0">
@@ -30,7 +26,11 @@ export function Header() {
                 <div className="flex-1 flex justify-between items-center pl-6">
                     <div className="">
                         {!authContext.isAuthenticated && (
-                            <SearchInput onSearch={handleBookSearch} placeholder="Введите название..."></SearchInput>
+                            <BaseInput
+                                onChange={(e) => onSearchChange === undefined ? console.log() : onSearchChange(e.target.value)}
+                                placeholder="Введите название...">
+
+                            </BaseInput>
                         )}
                     </div>
 
