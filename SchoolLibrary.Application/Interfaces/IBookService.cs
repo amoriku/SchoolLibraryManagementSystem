@@ -10,5 +10,7 @@ namespace SchoolLibrary.Application.Interfaces
         Task<Book?> GetByIdAsync(int id, CancellationToken cancellationToken);
         Task<Book?> GetByTitleAsync(string title, CancellationToken cancellationToken);
         Task<List<BookDto>> GetAllAsync(QueryDto query, CancellationToken cancellationToken);
+        Task<List<BookHistoryDto>> GetBookHistoryAsync(int bookId, CancellationToken cancellationToken);
+        Task<DateTime?> GetNearestAvailabilityDateAsync(int bookId, CancellationToken cancellationToken);
     }
 }

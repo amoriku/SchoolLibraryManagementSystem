@@ -101,6 +101,12 @@ export interface BookDto{
     authors: AuthorDto[]
 }
 
+export interface BookHistoryDto{
+    bookId: number,
+    operationType: string,
+    date: string,
+}
+
 export interface CreateBookDto{
     title: string,
     description?: string,

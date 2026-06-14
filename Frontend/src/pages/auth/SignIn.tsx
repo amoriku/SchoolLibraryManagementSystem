@@ -44,9 +44,9 @@ export default function SignIn() {
     return (
         <>
             <div className="flex items-center justify-center h-screen bg-slate-100">
-                <div className="flex flex-col gap-4 border shadow rounded-2xl p-6 bg-white border-my-light-green w-80 max-w-96">
+                <div className="flex flex-col gap-4 max-md:gap-2 border shadow rounded-2xl p-6 bg-white border-my-light-green w-80 max-w-96 max-md:w-64">
                     <div className="flex flex-col">
-                        <h2 className="text-center text-2xl font-semibold">Вход в систему</h2>
+                        <h2 className="text-center text-2xl max-md:text-xl font-semibold">Вход в систему</h2>
                     </div>
                     <div className="mt-6">
                         <form className="" onSubmit={handleSignIn}>
@@ -72,7 +72,7 @@ export default function SignIn() {
                                 </BaseInput>
                                 <button 
                                     type="submit"
-                                    className="mt-6 w-full border border-slate-400 p-2 text-xl rounded-lg hover:text-slate-50 hover:border-slate-600 hover:bg-my-light-green/80 transition-all ">Войти</button>
+                                    className="mt-6 w-full border border-slate-400 p-2 text-xl max-md:text-[0.8rem] rounded-lg hover:text-slate-50 hover:border-slate-600 hover:bg-my-light-green/80 transition-all ">Войти</button>
                             </div>
                         </form>
                     </div>

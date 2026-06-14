@@ -21,6 +21,21 @@ namespace SchoolLibrary.API.Controllers
             this.bookService = bookService;
         }
 
+
+        [HttpGet("nearest-availability-date")]
+        public async Task<IResult> GetNearestAvailabilityDate(int bookId, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var date = await bookService.GetNearestAvailabilityDateAsync(bookId, cancellationToken);
+                return Results.Ok(date);
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
+        }
+
         [HttpGet("get-by-title")]
         public async Task<IResult> GetByTitle(string title, CancellationToken cancellationToken)
         {
@@ -46,6 +61,20 @@ namespace SchoolLibrary.API.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("history")]
+        public async Task<IResult> GetBookHistory(int bookId, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var history = await bookService.GetBookHistoryAsync(bookId, cancellationToken);
+                return Results.Ok(history);
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
             }
         }
 

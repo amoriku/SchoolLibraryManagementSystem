@@ -1,5 +1,6 @@
+import { SiParamountplus } from "react-icons/si";
 import { useData } from "../../hooks/useData"
-import type { BookDto, CreateBookDto } from "../entities/Entity.Types";
+import type { BookDto, BookHistoryDto, CreateBookDto } from "../entities/Entity.Types";
 
 export const useBookService = () => {
     const { request } = useData();
@@ -25,6 +26,26 @@ export const useBookService = () => {
             config: {
                 params: {
                     title: title
+                }
+            }
+        }),
+        getHistory: (bookId: number): Promise<BookHistoryDto[]> => request<BookHistoryDto[]>({
+            type: "Auth",
+            method: "get",
+            endpoint: "Books/history",
+            config: {
+                params: {
+                    bookId: bookId
+                }
+            }
+        }),
+        getNearestAvailabilityDate: (bookId: number): Promise<string> => request<string>({
+            type: "Public",
+            method: "get",
+            endpoint: "Books/nearest-availability-date",
+            config: {
+                params: {
+                    bookId: bookId
                 }
             }
         })

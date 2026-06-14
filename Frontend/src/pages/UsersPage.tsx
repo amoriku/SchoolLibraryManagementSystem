@@ -79,7 +79,7 @@ export const UsersPage = () => {
         <>
             <ConfirmModal
                 isOpen={isConfirmOpen}
-                confirmText="Это необратимое действие"
+                confirmText="Это действие необратимо"
                 isDanger={true}
                 title="Удаление учетной записи"
                 message="Вы уверены, что хотите удалить учетную запись?"
@@ -115,7 +115,7 @@ export const UsersPage = () => {
                                 className="table-tr"
                                 key={user.id}
                             >
-                                <td className="table-td-id">
+                                <td className="table-td">
                                     {user.id}
                                 </td>
                                 <td className="table-td">
@@ -129,9 +129,9 @@ export const UsersPage = () => {
                                 </td>
                                 {/* Блок операций */}
                                 <ActionsContainer>
-                                    <TableEditButton onEdit={() => console.log("edit user")}>
+                                    {/* <TableEditButton onEdit={() => console.log("edit user")}>
 
-                                    </TableEditButton>
+                                    </TableEditButton> */}
                                     <TableDeleteButton onDelete={() => handleDelete(user.id)}>
 
                                     </TableDeleteButton>

@@ -7,6 +7,7 @@ import type { GradeDto } from "../api/entities/Entity.Types"
 import { useDataService } from "../api/services/dataService"
 import Modal from "../components/Modal"
 import { CreateGradeForm } from "../components/forms/CreateGradeForm"
+import { RefreshButton } from "../components/buttons/RefreshButton"
 
 export const GradesPage = () => {
     const { getAllGrades } = useDataService();
@@ -51,22 +52,17 @@ export const GradesPage = () => {
                             <MdClass></MdClass>
                             <span>Создать</span>
                         </button>
-                        <button
-                            className="main-section-header-button main-section-header-button-slate"
-                        >
-                            <FiRefreshCcw></FiRefreshCcw>
-                            <span>Обновить</span>
-                        </button>
+                        <RefreshButton onRefresh={() => fetchData()}></RefreshButton>
                     </div>
                 </MainSectionHeader>
-                <Table columnNames={columnNames}>
+                <Table columnNames={columnNames} includeOperations={false}>
                     {grades.map(grade => (
                         <tr
                             key={grade.id}
                             className="table-tr"
                         >
                             <td
-                                className="table-td-id"
+                                className="table-td"
                             >
                                 {grade.id}
                             </td>

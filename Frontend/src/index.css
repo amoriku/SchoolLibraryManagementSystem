@@ -55,11 +55,11 @@ button {
 }
 
 .correct-input{
-    @apply caret-my-light-green p-3 transition-all rounded-xl outline-slate-400 outline-1 hover:outline-slate-600 hover:outline-2 focus:outline-2 focus:outline-slate-600 focus:placeholder-transparent
+    @apply max-md:text-[0.8rem] max-md:p-4 caret-my-light-green p-3 transition-all rounded-xl outline-slate-400 outline-1 hover:outline-slate-600 hover:outline-2 focus:outline-2 focus:outline-slate-600 focus:placeholder-transparent
 }
 
 .incorrect-input{
-    @apply caret-my-light-green p-3 transition-all rounded-xl outline-rose-400 outline-1 hover:outline-rose-600 hover:outline-2 focus:outline-2 focus:outline-rose-600 focus:placeholder-transparent
+    @apply max-md:text-[0.8rem] max-md:p-4 caret-my-light-green p-3 transition-all rounded-xl outline-rose-400 outline-1 hover:outline-rose-600 hover:outline-2 focus:outline-2 focus:outline-rose-600 focus:placeholder-transparent
 }
 
 .button-rose{

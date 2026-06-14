@@ -7,6 +7,8 @@ import Modal from "../components/Modal";
 import { useDataService } from "../api/services/dataService";
 import { CreateBookForm } from "../components/forms/CreateBookForm";
 import { RefreshButton } from "../components/buttons/RefreshButton";
+import { TableBookHistoryButton } from "../components/buttons/TableBookHistoryButton";
+import { ActionsContainer } from "../components/ActionsContainer";
 
 export const BooksPage = () => {
     const { getAllAuthors, getAllBooks } = useDataService();
@@ -75,60 +77,66 @@ export const BooksPage = () => {
                 <Table columnNames={columnNames}>
                     {
                         books
-                        .filter(book => {
-                            if (!filterResult) return books;
-                            const query: string = filterResult.toLowerCase().trim();
+                            .filter(book => {
+                                if (!filterResult) return books;
+                                const query: string = filterResult.toLowerCase().trim();
 
-                            const matchTitle: boolean = book.title.toLowerCase().trim().includes(query);
-                            const matchYear: boolean = String(book.publishedYear).toLowerCase().trim().includes(query);
+                                const matchTitle: boolean = book.title.toLowerCase().trim().includes(query);
+                                const matchYear: boolean = String(book.publishedYear).toLowerCase().trim().includes(query);
 
-                            const matchAuthor: boolean = book.authors?.some(author => {
-                                const fullName = `${author.lastName} ${author.firstName} ${author.middleName || ''}`.toLowerCase().trim()
-                                return fullName.includes(query);
+                                const matchAuthor: boolean = book.authors?.some(author => {
+                                    const fullName = `${author.lastName} ${author.firstName} ${author.middleName || ''}`.toLowerCase().trim()
+                                    return fullName.includes(query);
+                                })
+
+                                return matchTitle || matchYear || matchAuthor
                             })
-
-                            return matchTitle || matchYear || matchAuthor
-                        })
-                        .map(book => (
-                            <tr
-                                key={book.id}
-                                className="table-tr"
-                            >
-                                <td
+                            .map(book => (
+                                <tr
                                     key={book.id}
-                                    className="table-td"
+                                    className="table-tr"
                                 >
-                                    {book.id}
-                                </td>
-                                <td
-                                    key={book.title}
-                                    className="table-td"
-                                >
-                                    {book.title}
-                                </td>
-                                <td
-                                    key={book.publishedYear}
-                                    className="table-td"
-                                >
-                                    {book.publishedYear ? book.publishedYear : "-"}
-                                </td>
-                                <td
-                                    key={book.quantity}
-                                    className="table-td"
-                                >
-                                    {book.quantity ? book.quantity : "-"}
-                                </td>
-                                {book.authors.map(author => (
                                     <td
-                                        key={author.id}
+                                        key={book.id}
                                         className="table-td"
                                     >
-
-                                        {`${author.lastName} ${author.firstName[0]}. ${author.middleName ? author.middleName[0] : ""}.`}
+                                        {book.id}
                                     </td>
-                                ))}
-                            </tr>
-                        ))}
+                                    <td
+                                        key={book.title}
+                                        className="table-td"
+                                    >
+                                        {book.title}
+                                    </td>
+                                    <td
+                                        key={book.publishedYear}
+                                        className="table-td"
+                                    >
+                                        {book.publishedYear ? book.publishedYear : "-"}
+                                    </td>
+                                    <td
+                                        key={book.quantity}
+                                        className="table-td"
+                                    >
+                                        {book.quantity ? book.quantity : "-"}
+                                    </td>
+                                    {book.authors && book.authors.length > 0 ? (
+                                        book.authors?.map(author => (
+                                            <td
+                                                key={author.id}
+                                                className="table-td"
+                                            >
+                                                {`${author.lastName} ${author.firstName[0]}. ${author.middleName ? author.middleName[0] : ""}.`};
+                                            </td>)
+                                        )
+                                    ) :
+                                        <td className="table-td">Автор не указан</td>
+                                    }
+                                    <ActionsContainer>
+                                        <TableBookHistoryButton></TableBookHistoryButton>
+                                    </ActionsContainer>
+                                </tr>
+                            ))}
                 </Table>
             </div>
         </>

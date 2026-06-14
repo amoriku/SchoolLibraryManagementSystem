@@ -10,6 +10,8 @@ import { TableReturnButton } from "../buttons/TableReturnButton";
 import { ConfirmModal } from "../ConfirmationModal";
 import toast from "react-hot-toast";
 import dayjs from "dayjs";
+import { TableCancelButton } from "../buttons/TableCancelButton";
+import { useReserveService } from "../../api/services/reservationService";
 
 export const LibrarianDashboard = () => {
     const [books, setBooks] = useState<BookDto[]>([]);
@@ -23,8 +25,11 @@ export const LibrarianDashboard = () => {
     const [isReturnConfirmOpen, setIsReturnConfirmOpen] = useState<boolean>(false);
     const [itemCopyId, setItemCopyId] = useState<number | null>(null);
 
+    const [isReserveCancelConfirmOpen, setIsReserveCancelConfirmOpen] = useState<boolean>(false);
+
     const { getAllBooks, getAllReaders, getAllReservations, getAllBorrowings } = useDataService();
     const { create, returnBook } = useBorrowingService();
+    const { cancel } = useReserveService();
 
     const todayDate = new Date();
 
@@ -63,7 +68,30 @@ export const LibrarianDashboard = () => {
         setIsBorrowingConfirmOpen(true)
     }
 
+    const handleReserveCancel = (reservationId: number) => {
+        setReservationId(reservationId);
+        setIsReserveCancelConfirmOpen(true);
+    }
+
     const totalBooksCount = books.reduce((acc, book) => acc + book.quantity, 0);
+
+    const handleCancelReserveConfirm = async () => {
+        if (reservationId === null) return;
+
+        try {
+            await cancel(reservationId);
+            toast.success("Бронь отменена");
+        }
+        catch {
+            toast.error("Не удалось отменить бронь");
+            setIsReserveCancelConfirmOpen(false);
+            setReservationId(null);
+        }
+        finally {
+            setIsReserveCancelConfirmOpen(false);
+            setReservationId(null);
+        }
+    }
 
     const handleBorrowingConfirm = async () => {
         if (reservationId === null) return;
@@ -87,6 +115,16 @@ export const LibrarianDashboard = () => {
 
     return (
         <>
+            <ConfirmModal
+                isOpen={isReserveCancelConfirmOpen}
+                confirmText="Отменить бронь"
+                message="Отмена брони читателя"
+                onCancel={() => setIsReserveCancelConfirmOpen(false)}
+                onConfirm={handleCancelReserveConfirm}
+            >
+
+            </ConfirmModal>
+
             <ConfirmModal
                 isOpen={isReturnConfirmOpen}
                 confirmText="Вернуть"
@@ -140,11 +178,13 @@ export const LibrarianDashboard = () => {
 
                             <ActionsContainer>
                                 <TableBorrowButton onBorrow={() => handleBorrowing(reservation.reserveId)}></TableBorrowButton>
+                                <TableCancelButton onCancel={() => handleReserveCancel(reservation.reserveId)}></TableCancelButton>
                             </ActionsContainer>
                         </tr>
                     ))}
                 </DashboardTableCard>
-                <div className="flex gap-4 w-full">
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-4 w-full">
+
                     <DashboardTableCard title="Активные читатели" columnNames={["Читатель", "Книга", "Дата выдачи"]}>
                         {borrowings.map(borrowing => (
                             <tr
@@ -153,19 +193,19 @@ export const LibrarianDashboard = () => {
                             >
                                 <td
                                     key={borrowing.reader.id}
-                                    className="table-td">
+                                    className="table-td py-2 md:py-3 px-3 text-xs md:text-sm">
                                     {`
-                                    ${borrowing.reader.firstName}
-                                    ${borrowing.reader.lastName}
-                                    ${borrowing.reader.middleName}
-                                `}
+                    ${borrowing.reader.firstName}
+                    ${borrowing.reader.lastName}
+                    ${borrowing.reader.middleName}
+                `}
                                 </td>
 
-                                <td className="table-td">
+                                <td className="table-td py-2 md:py-3 px-3 text-xs md:text-sm">
                                     {borrowing.libraryItem}
                                 </td>
 
-                                <td className="table-td">
+                                <td className="table-td py-2 md:py-3 px-3 text-xs md:text-sm">
                                     {new Date(borrowing.borrowedDate).toLocaleString()}
                                 </td>
 
@@ -173,7 +213,6 @@ export const LibrarianDashboard = () => {
                                     <TableReturnButton onReturn={() => handleReturn(borrowing.libraryItemId)}></TableReturnButton>
                                 </ActionsContainer>
                             </tr>
-
                         ))}
                     </DashboardTableCard>
 
@@ -191,29 +230,31 @@ export const LibrarianDashboard = () => {
                                 >
                                     <td
                                         key={borrowing.reader.id}
-                                        className="table-td">
+                                        className="table-td py-2 md:py-3 px-3 text-xs md:text-sm">
                                         {`
-                                            ${borrowing.reader.firstName}
-                                            ${borrowing.reader.lastName}
-                                            ${borrowing.reader.middleName}
-                                        `}
+                            ${borrowing.reader.firstName}
+                            ${borrowing.reader.lastName}
+                            ${borrowing.reader.middleName}
+                        `}
                                     </td>
 
-                                    <td className="table-td">
+                                    <td className="table-td py-2 md:py-3 px-3 text-xs md:text-sm">
                                         {borrowing.libraryItem}
                                     </td>
 
-                                    <td className="table-td">
+                                    <td className="table-td py-2 md:py-3 px-3 text-xs md:text-sm text-red-500 font-medium">
                                         {`${-dayjs(borrowing.dueDate).diff(dayjs(), "day")} дн`}
                                     </td>
 
-                                    <td className="table-td">
-                                        {}
+                                    <td className="table-td py-2 md:py-3 px-3">
+                                        { }
                                     </td>
                                 </tr>
                             ))}
                     </DashboardTableCard>
+
                 </div>
+
             </div>
         </>
     )

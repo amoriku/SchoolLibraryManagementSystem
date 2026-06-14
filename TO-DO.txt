@@ -1,3 +1,6 @@
 1. Create reader queue for books that are not available right now
-2. Make book catalogue for librarian
-3. Adaptive design for mobile devices
+
+How can i know about the nearest date when this book will free though?
+I need to get active reservations at first.
+
+2. Adaptive design for mobile devices

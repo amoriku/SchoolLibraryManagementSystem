@@ -57,7 +57,7 @@ export const AuthorsPage = () => {
                         <RefreshButton onRefresh={() => fetchData()}></RefreshButton>
                     </div>
                 </MainSectionHeader>
-                <Table columnNames={columnNames}>
+                <Table columnNames={columnNames} includeOperations={false}>
                     {authors.map(author => (
                         <tr
                             key={author.id}

@@ -9,7 +9,7 @@ interface Props {
 
 export const DashboardTableCard = ({ columnNames, title, children, includeOperations = true }: Props) => {
     return (
-        <div>
+        <div className="w-full">
             <Table
                 columnNames={columnNames}
                 title={title}

@@ -6,14 +6,115 @@ using SchoolLibrary.Application.DTOs.Author;
 using SchoolLibrary.Application.DTOs.Book;
 using SchoolLibrary.Application.Exceptions;
 using SchoolLibrary.Application.Interfaces;
+using SchoolLibrary.Domain;
 using SchoolLibrary.Domain.Entities;
 using SchoolLibrary.Infrastructure;
+using SchoolLibrary.Infrastructure.Migrations;
 
 namespace SchoolLibrary.Application.Services
 {
     public class BookService : BaseService<BookService>, IBookService
     {
-        public BookService(AppDbContext context, ILogger<BookService> logger) : base(context, logger) { }
+        private readonly IAuthService authService;
+
+        public BookService(IAuthService authService,AppDbContext context, ILogger<BookService> logger) : base(context, logger) 
+        {
+            this.authService = authService;
+        }
+
+
+        public async Task<DateTime?> GetNearestAvailabilityDateAsync(int bookId, CancellationToken cancellationToken)
+        {
+            var currentUser = await authService.GetCurrentUserAsync(cancellationToken);
+            string currentUserId = currentUser.Id;
+
+            // 1. Проверяем, существуют ли физические копии
+            var copyIds = await context.LibraryItemCopies
+                .Where(ic => ic.LibraryItemId == bookId)
+                .Select(ic => ic.Id)
+                .ToListAsync(cancellationToken);
+
+            int totalCopiesCount = copyIds.Count;
+            if (totalCopiesCount == 0) return null;
+
+            // 2. Считаем, сколько людей заняли эту книгу РАНЬШЕ текущего пользователя
+            var userReservation = await context.Reservations
+                .FirstOrDefaultAsync(r => r.IsActive && r.LibraryItemId == bookId && r.ReaderId == currentUserId, cancellationToken);
+
+            int peopleAhead = 0;
+            if (userReservation != null)
+            {
+                peopleAhead = await context.Reservations
+                    .CountAsync(r => r.IsActive && r.LibraryItemId == bookId && r.ReservedAt < userReservation.ReservedAt, cancellationToken);
+            }
+            else
+            {
+                peopleAhead = await context.Reservations
+                    .CountAsync(r => r.IsActive && r.LibraryItemId == bookId, cancellationToken);
+            }
+
+            // 3. Считаем свободные копии на текущий момент времени
+            int availableCopiesCount = await context.LibraryItemCopies
+                .CountAsync(ic => ic.LibraryItemId == bookId && ic.Status == Domain.ItemCopyStatus.Available, cancellationToken);
+
+            // Если книги на полке есть, и их больше, чем людей перед нами (или мы первые),
+            // значит экземпляр свободен для нас прямо сейчас
+            if (availableCopiesCount > peopleAhead)
+            {
+                return DateTime.UtcNow; // Книга доступна прямо сейчас
+            }
+
+            // 4. Логика для больших очередей
+            if (peopleAhead > totalCopiesCount * 2)
+            {
+                const int averageReadingDays = 14;
+                double cycles = (double)peopleAhead / totalCopiesCount;
+                int estimatedDaysWaiting = (int)Math.Ceiling(cycles * averageReadingDays);
+
+                return DateTime.UtcNow.AddDays(estimatedDaysWaiting);
+            }
+
+            // 5. Стандартная логика для маленьких очередей (когда книги на полке кончились)
+            var nearestBorrowingDueDate = await context.Borrowings
+                .Where(b => copyIds.Contains(b.LibraryItemCopyId) && b.ReturnedAt == null)
+                .OrderBy(b => b.DueDate)
+                .Select(b => b.DueDate)
+                .FirstOrDefaultAsync(cancellationToken);
+
+            var nearestReservationExpiration = await context.Reservations
+                .Where(r => r.IsActive && r.LibraryItemId == bookId)
+                .OrderBy(r => r.ReservedAt)
+                .Select(r => (DateTime?)r.ReservedAt.AddDays(2))
+                .FirstOrDefaultAsync(cancellationToken);
+
+            if (nearestBorrowingDueDate != null && nearestReservationExpiration != null)
+            {
+                return nearestBorrowingDueDate < nearestReservationExpiration ? nearestBorrowingDueDate : nearestReservationExpiration;
+            }
+
+            return nearestBorrowingDueDate ?? nearestReservationExpiration ?? DateTime.UtcNow.AddDays(14);
+        }
+
+
+
+        public async Task<List<BookHistoryDto>> GetBookHistoryAsync(int bookId, CancellationToken cancellationToken)
+        {
+            var book = await context.Books
+                .FirstOrDefaultAsync(b => b.Id == bookId, cancellationToken);
+
+            if (book == null)
+            {
+                logger.LogError("Book with id {bookId} doesnt exist", bookId);
+                throw new InvalidOperationException("Invalid book");
+            }
+
+            var bookHistory = await context.UserHistories
+                .Where(uh => uh.LibraryItemCopy.LibraryItemId == bookId)
+                .Select(uh => new BookHistoryDto(book.Title, bookId, uh.Date, uh.OperationType.ToString()))
+                .ToListAsync(cancellationToken);
+
+            return bookHistory;
+        }
 
         public async Task<BookDto> CreateAsync(BookCreateDto dto, CancellationToken cancellationToken)
         {

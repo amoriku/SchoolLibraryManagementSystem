@@ -14,16 +14,15 @@ export function Header({onSearchChange}: {onSearchChange?: (value: string) => vo
 
     return (
         <header className="bg-white border-b border-slate-100 px-6 py-5 w-full shrink-0">
-            <div className="flex items-center w-full text-2xl">
-
-                <div className="w-64 min-w-64 max-w-64 font-bold text-slate-800">
-                    <Link className="flex items-center gap-3" to="/home">
+            <div className="flex items-center text-2xl gap-8 max-md:grid max-md:gap-4">
+                <div className=" font-bold text-slate-800">
+                    <Link className="flex items-center max-md:justify-center gap-3" to="/home">
                         <FiBookOpen className=" text-slate-600 shrink-0" />
-                        <h1>Библиотека</h1>
+                        <h1 className="text-center">Библиотека</h1>
                     </Link>
                 </div>
 
-                <div className="flex-1 flex justify-between items-center pl-6">
+                <div className="flex justify-between items-center w-full">
                     <div className="">
                         {!authContext.isAuthenticated && (
                             <BaseInput
@@ -40,7 +39,7 @@ export function Header({onSearchChange}: {onSearchChange?: (value: string) => vo
                             <Link to="/login">Войти</Link>
                         </div>
                     ) : (
-                        <div className="flex items-center gap-6 text-base font-medium relative">
+                        <div className="flex items-center gap-6 text-base font-medium relative max-md:justify-center w-full justify-end">
 
                             <div className="relative">
                                 <button
@@ -58,7 +57,7 @@ export function Header({onSearchChange}: {onSearchChange?: (value: string) => vo
                                 </button>
 
                                 {notificationsOpen && (
-                                    <div className="absolute right-0 top-12 w-80 bg-white rounded-xl shadow-xl border border-slate-150 p-4 flex flex-col gap-2 z-50 text-sm">
+                                    <div className="absolute right-0 top-12 max-md:w-56 max-md:p-3 max-md:-right-24 w-80 bg-white rounded-xl shadow-xl border border-slate-150 p-4 flex flex-col gap-2 z-50 text-sm">
                                         <h3 className="font-bold text-slate-850 border-b border-slate-100 pb-2 mb-1">Уведомления</h3>
                                     </div>
                                 )}
@@ -75,7 +74,7 @@ export function Header({onSearchChange}: {onSearchChange?: (value: string) => vo
                                 {!profileOpen ? <FaAngleDown className="text-slate-400" /> : <FaAngleUp className="text-slate-400" />}
 
                                 {profileOpen && (
-                                    <div className="absolute right-0 top-12 w-48 bg-white rounded-xl shadow-xl border border-slate-150 p-2 z-50">
+                                    <div className="absolute right-0 top-12 max-md:w-32 max-md:right-24 w-48 bg-white rounded-xl shadow-xl border border-slate-150 p-2 z-50">
                                         <button
                                             onClick={authContext.logout}
                                             className="flex items-center gap-3 w-full text-slate-600 hover:text-red-600 hover:bg-red-50 p-2.5 rounded-lg text-sm font-medium transition-all"

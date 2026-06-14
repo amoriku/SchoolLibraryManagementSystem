@@ -1,4 +1,5 @@
 ﻿using SchoolLibrary.Application.DTOs.Author;
+using SchoolLibrary.Domain;
 
 namespace SchoolLibrary.Application.DTOs.Book
 {
