@@ -96,6 +96,7 @@ export const ReadersPage = () => {
 
     const handleReaderHistoryOpen = async () => {
         setReaderId(readerId);
+        setReaderHistory([]);
         setIsReaderHistoryOpen(true);
 
         try {
@@ -116,8 +117,7 @@ export const ReadersPage = () => {
             <Modal
                 modalTitle="Читательский формуляр"
                 isOpen={isReaderHistoryOpen}
-                onClose={() => setIsReaderHistoryOpen(false)}
-                onOpen={async () => console.log(await getHistory(readerId))}
+                onClose={() => setIsReaderHistoryOpen(false)}                
                 includeOperations={false}
             >
                 <Table
