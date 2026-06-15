@@ -6,7 +6,7 @@ export const TableReaderHistoryButton = ({ onReaderHistoryOpen }: ReaderHistoryB
             onClick={onReaderHistoryOpen}
             className="button button-rose"
         >
-            Формуляр
+            История
         </button>
     )
 }

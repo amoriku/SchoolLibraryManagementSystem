@@ -5,7 +5,7 @@ export const TableBookHistoryButton = ({ onClick }: { onClick: () => void }) => 
             className="button button-rose"
             onClick={onClick}
         >
-            Формуляр
+            История
         </button>
     )
 }

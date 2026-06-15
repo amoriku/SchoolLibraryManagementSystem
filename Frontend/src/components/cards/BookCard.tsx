@@ -45,10 +45,10 @@ export const BookCard = ({ id, title, description, publishedYear, author, quanti
 
         try {
             await reserve(data);
-            toast.success(`Вы забронировали книгу ${title}`)
+            toast.success(`Вы забронировали книгу ${title}. Не забудьте забрать её в течение 2 дней`)
         }
         catch (error) {
-            toast.error("Вы уже бронировали или у вас есть эта книга")
+            toast.error("У вас есть активная бронь или вы уже данную книгу")
         }
     }
 

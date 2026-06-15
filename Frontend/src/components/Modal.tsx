@@ -22,6 +22,12 @@ const Modal = (
         onClose
     }: ModalProps) => {
 
+    useEffect(() => {
+        if (onOpen !== undefined){
+            onOpen();
+        }
+    }, [])
+
     if (!isOpen) return null
 
     return (

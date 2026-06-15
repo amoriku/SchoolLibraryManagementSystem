@@ -11,6 +11,7 @@ import { TableBookHistoryButton } from "../components/buttons/TableBookHistoryBu
 import { ActionsContainer } from "../components/ActionsContainer";
 import { useBookService } from "../api/services/bookService";
 import { MdHdrEnhancedSelect } from "react-icons/md";
+import { translator } from "../utils/translator";
 
 export const BooksPage = () => {
     const { getAllAuthors, getAllBooks } = useDataService();
@@ -34,24 +35,34 @@ export const BooksPage = () => {
         "Автор"
     ]
 
-    const handleClick = async (bookId: number) => {
-        setBookId(bookId);
+    // const handleClick = async (bookId: number) => {
+    //     setBookId(bookId);
+    //     setIsBookFormularOpen(true);
+
+    //     if (bookId === null) return;
+
+    //     const history = await getHistory(bookId);
+    //     console.log(history);
+    // }
+
+    const handleBookFormularOpenButton = (bookId: number) => {
         setIsBookFormularOpen(true);
-
-        if (bookId === null) return;
-
-        const history = await getHistory(bookId);
-        console.log(history);
+        setBookId(bookId);
+        
     }
 
     const handleBookFormularOpen = async () => {
         if (bookId === null) return;
+        setBookHistory([]);
 
         try {
             const history = await getHistory(bookId);
-            console.log(history);
+            if (history !== null || history !== undefined) {
+                setBookHistory(history);
+            }
         }
         catch (ex) {
+            setIsBookFormularOpen(false);
             console.error(ex);
         }
     }
@@ -76,8 +87,40 @@ export const BooksPage = () => {
                     modalTitle="Формуляр книги"
                     onClose={() => setIsBookFormularOpen(false)}
                     isOpen={isBookFormularOpen}
+                    onOpen={() => handleBookFormularOpen()}
+                    includeOperations={false}
                 >
-
+                    <Table
+                        columnNames={["Дата", "Название", "Операция"]}
+                        includeOperations={false}
+                        isModalVersion={true}
+                    >
+                        {bookHistory.map(record => (
+                            <tr
+                                className="table-tr"
+                                key={record.bookId}
+                            >
+                                <td
+                                    key={record.date}
+                                    className="table-td"
+                                >
+                                    {new Date(record.date).toLocaleDateString("ru-RU")}
+                                </td>
+                                <td
+                                    key={record.bookTitle}
+                                    className="table-td"
+                                >
+                                    {record.bookTitle}
+                                </td>
+                                <td
+                                    key={record.operationType}
+                                    className="table-td"
+                                >
+                                    {translator(record.operationType)}
+                                </td>
+                            </tr>
+                        ))}
+                    </Table>
                 </Modal>
             )}
 
@@ -172,7 +215,7 @@ export const BooksPage = () => {
                                         <td className="table-td">Автор не указан</td>
                                     }
                                     <ActionsContainer>
-                                        <TableBookHistoryButton onClick={() => handleClick(book.id)}></TableBookHistoryButton>
+                                        <TableBookHistoryButton onClick={() => handleBookFormularOpenButton(book.id)}></TableBookHistoryButton>
                                     </ActionsContainer>
                                 </tr>
                             ))}

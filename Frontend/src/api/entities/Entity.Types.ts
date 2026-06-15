@@ -102,6 +102,7 @@ export interface BookDto{
 }
 
 export interface BookHistoryDto{
+    bookTitle: string,
     bookId: number,
     operationType: string,
     date: string,

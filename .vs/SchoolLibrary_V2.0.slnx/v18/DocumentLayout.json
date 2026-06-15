@@ -369,8 +369,7 @@
               "ViewState": "AgIAACMAAAAAAAAAAAAuwF0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-12T07:26:36.832Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -383,8 +382,7 @@
               "ViewState": "AgIAAGIAAAAAAAAAAAAwwGUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-13T07:23:50.544Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -397,8 +395,7 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAmwA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T13:43:49.068Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -411,8 +408,11 @@
               "ViewState": "AgIAAAgBAAAAAAAAAAAAABIBAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-13T07:42:29.846Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -424,12 +424,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\DTOs\\Book\\BookHistoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T08:24:46.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2026-06-15T08:24:46.829Z"
             },
             {
               "$type": "Document",
@@ -441,8 +436,7 @@
               "RelativeToolTip": "SchoolLibrary.API\\Controllers\\BooksController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAiwCUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T13:56:36.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-13T13:56:36.258Z"
             },
             {
               "$type": "Document",
@@ -454,8 +448,7 @@
               "RelativeToolTip": "docker-compose.yml",
               "ViewState": "AgIAABkAAAAAAAAAAAAqwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2026-06-15T08:11:21.857Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-15T08:11:21.857Z"
             },
             {
               "$type": "Document",
@@ -465,7 +458,7 @@
               "RelativeDocumentMoniker": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
               "ToolTip": "C:\\Projects\\CSharp\\SchoolLibrary_V2.0\\SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
               "RelativeToolTip": "SchoolLibrary.Infrastructure\\Common\\DbInitializer.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowCwAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowCwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-22T08:36:38.907Z",
               "EditorCaption": ""
@@ -528,8 +521,7 @@
               "RelativeToolTip": "SchoolLibrary.Application\\Interfaces\\IBorrowingService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-03T11:35:35.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-03T11:35:35.266Z"
             },
             {
               "$type": "Document",
