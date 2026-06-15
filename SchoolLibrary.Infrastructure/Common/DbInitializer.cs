@@ -23,25 +23,37 @@ namespace SchoolLibrary.Infrastructure.Common
             this.context = context;
         }
 
-        public async Task Initialize() 
+        public async Task Initialize()
         {
-            int retryCount = 6;
+            int retryCount = 10; 
             bool isDbReady = false;
 
             while (!isDbReady && retryCount > 0)
             {
                 try
                 {
-                    Console.WriteLine($"[DbInitializer] Checking pending migrations... (Attempts left: {retryCount})");
+                    Console.WriteLine($"[DbInitializer] Testing connection to PostgreSQL... (Attempts left: {retryCount})");
+
+                    if (!await context.Database.CanConnectAsync())
+                    {
+                        throw new Exception("PostgreSQL port is not open or database is initializing.");
+                    }
+
+                    Console.WriteLine("[DbInitializer] Connection successful! Checking pending migrations...");
 
                     var pendingMigrations = await context.Database.GetPendingMigrationsAsync();
                     if (pendingMigrations.Any())
                     {
                         Console.WriteLine("[DbInitializer] Applying pending migrations...");
                         await context.Database.MigrateAsync();
+                        Console.WriteLine("[DbInitializer] Migrations applied successfully.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("[DbInitializer] No pending migrations found.");
                     }
 
-                    isDbReady = true; 
+                    isDbReady = true;
                 }
                 catch (Exception ex)
                 {
@@ -51,11 +63,11 @@ namespace SchoolLibrary.Infrastructure.Common
                     if (retryCount == 0)
                     {
                         Console.WriteLine("[DbInitializer] CRITICAL: Could not connect to the database. Exiting.");
-                        throw; 
+                        throw;
                     }
 
-                    Console.WriteLine("[DbInitializer] Waiting 5 seconds before retrying...");
-                    await Task.Delay(5000); 
+                    Console.WriteLine("[DbInitializer] Waiting 3 seconds before retrying...");
+                    await Task.Delay(3000); // 3 секунды вполне достаточно
                 }
             }
 

@@ -22,7 +22,6 @@ const Modal = (
         onClose
     }: ModalProps) => {
 
-
     if (!isOpen) return null
 
     return (

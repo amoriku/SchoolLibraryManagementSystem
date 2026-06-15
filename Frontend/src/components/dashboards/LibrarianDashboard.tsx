@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { DashboardSimpleCard } from "./DashboardCard"
-import type { BookDto, BorrowingDto, ReaderDto, ReserveDto } from "../../api/entities/Entity.Types";
+import type { BookDto, BookHistoryDto, BorrowingDto, ReaderDto, ReserveDto } from "../../api/entities/Entity.Types";
 import { useDataService } from "../../api/services/dataService";
 import { DashboardTableCard } from "./DashboardTableCard";
 import { TableBorrowButton } from "../buttons/TableBorrowButton";
@@ -12,12 +12,15 @@ import toast from "react-hot-toast";
 import dayjs from "dayjs";
 import { TableCancelButton } from "../buttons/TableCancelButton";
 import { useReserveService } from "../../api/services/reservationService";
+import { useBookService } from "../../api/services/bookService";
 
 export const LibrarianDashboard = () => {
     const [books, setBooks] = useState<BookDto[]>([]);
     const [readers, setReaders] = useState<ReaderDto[]>([]);
     const [reservations, setReservations] = useState<ReserveDto[]>([]);
     const [borrowings, setBorrowings] = useState<BorrowingDto[]>([]);
+    const [borrowingHistores, setBorrowingHistores] = useState<BookHistoryDto[]>([]);
+    const [returnHistories, setReturnHistories] = useState<BookHistoryDto[]>([]);
 
     const [isBorrowingConfirmOpen, setIsBorrowingConfirmOpen] = useState<boolean>(false);
     const [reservationId, setReservationId] = useState<number | null>(null);
@@ -30,6 +33,7 @@ export const LibrarianDashboard = () => {
     const { getAllBooks, getAllReaders, getAllReservations, getAllBorrowings } = useDataService();
     const { create, returnBook } = useBorrowingService();
     const { cancel } = useReserveService();
+    const { getBorrowingHistories, getReturnHistories} = useBookService();
 
     const todayDate = new Date();
 
@@ -38,6 +42,8 @@ export const LibrarianDashboard = () => {
         setReaders(await getAllReaders());
         setReservations(await getAllReservations());
         setBorrowings(await getAllBorrowings());
+        setBorrowingHistores(await getBorrowingHistories());
+        setReturnHistories(await getReturnHistories());
     }
 
     const handleReturn = (itemCopyId: number | null) => {
@@ -147,8 +153,8 @@ export const LibrarianDashboard = () => {
 
             <div className="flex flex-wrap gap-4">
                 <DashboardSimpleCard title="Всего читателей" data={readers.length}></DashboardSimpleCard>
-                <DashboardSimpleCard title="Выдано книг" data={borrowings.length}></DashboardSimpleCard>
-                <DashboardSimpleCard title="Возвращено книг" data={0}></DashboardSimpleCard>
+                <DashboardSimpleCard title="Выдано книг" data={borrowingHistores.length}></DashboardSimpleCard>
+                <DashboardSimpleCard title="Возвращено книг" data={returnHistories.length}></DashboardSimpleCard>
                 <DashboardSimpleCard title="Утерянные книги" data={0}></DashboardSimpleCard>
                 <DashboardSimpleCard title="Всего книг" data={totalBooksCount}></DashboardSimpleCard>
                 <DashboardSimpleCard title="Активные читатели" data={borrowings.length}></DashboardSimpleCard>

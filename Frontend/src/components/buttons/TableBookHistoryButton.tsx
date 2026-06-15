@@ -1,8 +1,11 @@
-export const TableBookHistoryButton = () => {
+export const TableBookHistoryButton = ({ onClick }: { onClick: () => void }) => {
 
     return (
-        <button className="button button-rose">
+        <button
+            className="button button-rose"
+            onClick={onClick}
+        >
             Формуляр
-        </button>   
+        </button>
     )
 }

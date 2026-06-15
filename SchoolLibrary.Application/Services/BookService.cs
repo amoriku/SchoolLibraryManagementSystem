@@ -245,5 +245,39 @@ namespace SchoolLibrary.Application.Services
                 .Where(b => b.Title == title)
                 .FirstOrDefaultAsync();
         }
+
+        // Gets all time borrowings from UserHistories
+        public async Task<List<BookHistoryDto>> GetBorrowingHistoriesAsync(CancellationToken cancellationToken)
+        {
+            var borrowingHistories = await context.UserHistories
+                .AsNoTracking()
+                .Where(uh => uh.OperationType == Domain.OperationType.Borrowing)
+                .Select(uh => new BookHistoryDto(
+                    uh.LibraryItemCopy.LibraryItem.Title,
+                    uh.LibraryItemCopy.LibraryItemId,
+                    uh.Date,
+                    uh.OperationType.ToString()
+                    ))
+                .ToListAsync(cancellationToken);
+
+            return borrowingHistories;
+        }
+
+        // Gets all time returns from UserHistories
+        public async Task<List<BookHistoryDto>> GetReturnHistoriesAsync(CancellationToken cancellationToken)
+        {
+            var returnHistories = await context.UserHistories
+                .AsNoTracking()
+                .Where(uh => uh.OperationType == Domain.OperationType.Return)
+                .Select(uh => new BookHistoryDto(
+                    uh.LibraryItemCopy.LibraryItem.Title,
+                    uh.LibraryItemCopy.LibraryItemId,
+                    uh.Date,
+                    uh.OperationType.ToString()
+                    ))
+                .ToListAsync(cancellationToken);
+
+            return returnHistories;
+        }
     }
 }

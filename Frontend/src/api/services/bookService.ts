@@ -39,6 +39,16 @@ export const useBookService = () => {
                 }
             }
         }),
+        getBorrowingHistories: (): Promise<BookHistoryDto[]> => request<BookHistoryDto[]>({
+            type: "Auth",
+            method: "get",
+            endpoint: "Books/borrowing-histories",
+        }),
+        getReturnHistories: (): Promise<BookHistoryDto[]> => request<BookHistoryDto[]>({
+            type: "Auth",
+            method: "get",
+            endpoint: "Books/return-histories"
+        }),
         getNearestAvailabilityDate: (bookId: number): Promise<string> => request<string>({
             type: "Public",
             method: "get",

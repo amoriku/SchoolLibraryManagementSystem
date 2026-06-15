@@ -24,7 +24,7 @@ export function Header({onSearchChange}: {onSearchChange?: (value: string) => vo
 
                 <div className="flex justify-between items-center w-full">
                     <div className="">
-                        {!authContext.isAuthenticated && (
+                        {(!authContext.isAuthenticated) && (
                             <BaseInput
                                 onChange={(e) => onSearchChange === undefined ? console.log() : onSearchChange(e.target.value)}
                                 placeholder="Введите название...">

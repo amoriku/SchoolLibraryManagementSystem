@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { type AuthorDto, type BookDto } from "../api/entities/Entity.Types";
+import { type AuthorDto, type BookDto, type BookHistoryDto } from "../api/entities/Entity.Types";
 import { MainSectionHeader } from "../components/MainSectionHeader"
 import { Table } from "../components/Table"
 import { FiBook } from "react-icons/fi";
@@ -9,9 +9,16 @@ import { CreateBookForm } from "../components/forms/CreateBookForm";
 import { RefreshButton } from "../components/buttons/RefreshButton";
 import { TableBookHistoryButton } from "../components/buttons/TableBookHistoryButton";
 import { ActionsContainer } from "../components/ActionsContainer";
+import { useBookService } from "../api/services/bookService";
+import { MdHdrEnhancedSelect } from "react-icons/md";
 
 export const BooksPage = () => {
     const { getAllAuthors, getAllBooks } = useDataService();
+    const { getHistory } = useBookService();
+
+    const [bookHistory, setBookHistory] = useState<BookHistoryDto[]>([]);
+    const [bookId, setBookId] = useState<number | null>(null);
+    const [isBookFormularOpen, setIsBookFormularOpen] = useState<boolean>(false);
 
     const [filterResult, setFilterResult] = useState<string>("");
     const [bookCreateModalOpen, setBookCreateModalOpen] = useState<boolean>(false);
@@ -26,6 +33,28 @@ export const BooksPage = () => {
         "Количество копий",
         "Автор"
     ]
+
+    const handleClick = async (bookId: number) => {
+        setBookId(bookId);
+        setIsBookFormularOpen(true);
+
+        if (bookId === null) return;
+
+        const history = await getHistory(bookId);
+        console.log(history);
+    }
+
+    const handleBookFormularOpen = async () => {
+        if (bookId === null) return;
+
+        try {
+            const history = await getHistory(bookId);
+            console.log(history);
+        }
+        catch (ex) {
+            console.error(ex);
+        }
+    }
 
     const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFilterResult(e.currentTarget.value);
@@ -42,6 +71,16 @@ export const BooksPage = () => {
 
     return (
         <>
+            {isBookFormularOpen && (
+                <Modal
+                    modalTitle="Формуляр книги"
+                    onClose={() => setIsBookFormularOpen(false)}
+                    isOpen={isBookFormularOpen}
+                >
+
+                </Modal>
+            )}
+
             {bookCreateModalOpen && (
                 <Modal
                     modalTitle="Создание книги"
@@ -118,7 +157,7 @@ export const BooksPage = () => {
                                         key={book.quantity}
                                         className="table-td"
                                     >
-                                        {book.quantity ? book.quantity : "-"}
+                                        {book.quantity ? book.quantity : "0"}
                                     </td>
                                     {book.authors && book.authors.length > 0 ? (
                                         book.authors?.map(author => (
@@ -133,7 +172,7 @@ export const BooksPage = () => {
                                         <td className="table-td">Автор не указан</td>
                                     }
                                     <ActionsContainer>
-                                        <TableBookHistoryButton></TableBookHistoryButton>
+                                        <TableBookHistoryButton onClick={() => handleClick(book.id)}></TableBookHistoryButton>
                                     </ActionsContainer>
                                 </tr>
                             ))}

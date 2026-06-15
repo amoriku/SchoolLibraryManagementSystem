@@ -22,6 +22,32 @@ namespace SchoolLibrary.API.Controllers
         }
 
 
+        [HttpGet("return-histories")]
+        public async Task<IResult> GetAllTimeReturnHistories(CancellationToken cancellationToken)
+        {
+            try
+            {
+                return Results.Ok(await bookService.GetReturnHistoriesAsync(cancellationToken));
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("borrowing-histories")]
+        public async Task<IResult> GetAllTimeBorrowingHistories(CancellationToken cancellationToken)
+        {
+            try
+            {
+                return Results.Ok(await bookService.GetBorrowingHistoriesAsync(cancellationToken));
+            }
+            catch (Exception ex)
+            {
+                return Results.BadRequest(ex.Message);
+            }
+        }
+
         [HttpGet("nearest-availability-date")]
         public async Task<IResult> GetNearestAvailabilityDate(int bookId, CancellationToken cancellationToken)
         {

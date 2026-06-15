@@ -12,5 +12,8 @@ namespace SchoolLibrary.Application.Interfaces
         Task<List<BookDto>> GetAllAsync(QueryDto query, CancellationToken cancellationToken);
         Task<List<BookHistoryDto>> GetBookHistoryAsync(int bookId, CancellationToken cancellationToken);
         Task<DateTime?> GetNearestAvailabilityDateAsync(int bookId, CancellationToken cancellationToken);
+        Task<List<BookHistoryDto>> GetBorrowingHistoriesAsync(CancellationToken cancellationToken);
+        Task<List<BookHistoryDto>> GetReturnHistoriesAsync(CancellationToken cancellationToken);
+
     }
 }

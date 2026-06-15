@@ -97,8 +97,14 @@ export const ReadersPage = () => {
     const handleReaderHistoryOpen = async () => {
         setReaderId(readerId);
         setIsReaderHistoryOpen(true);
-        setReaderHistory(await getHistory(readerId))
-        console.log(readerHistory);
+
+        try {
+            setReaderHistory(await getHistory(readerId))
+        }
+        catch (ex) {
+            setReaderHistory([]);
+            setIsReaderHistoryOpen(false);
+        }
     }
 
     useEffect(() => {
@@ -241,58 +247,58 @@ export const ReadersPage = () => {
 
                         return matchGrade || matchReader
                     })
-                    .map(reader => (
-                        <tr
-                            key={reader.id}
-                            onMouseEnter={() => setReaderId(reader.id)}
-                            className="table-tr"
-                        >
-                            <td
-                                key={reader.lastName}
-                                className="table-td"
+                        .map(reader => (
+                            <tr
+                                key={reader.id}
+                                onMouseEnter={() => setReaderId(reader.id)}
+                                className="table-tr"
                             >
-                                {reader.lastName}
-                            </td>
-                            <td
-                                key={reader.firstName}
-                                className="table-td"
-                            >
-                                {reader.firstName}
-                            </td>
-                            <td
-                                key={reader.middleName}
-                                className="table-td"
-                            >
-                                {reader.middleName ? reader.middleName : "-"}
-                            </td>
-                            <td
-                                key={reader.gradeName}
-                                className="table-td"
-                            >
-                                {reader.gradeName}
-                            </td>
-                            <td
-                                key={reader.username}
-                                className="table-td"
-                            >
-                                {reader.username}
-                            </td>
-                            <td className="table-td table-td-actions">
-                                <div className="actions-container">
-                                    <TableReaderHistoryButton
-                                        onReaderHistoryOpen={() => handleReaderHistoryOpen()}
-                                    >
+                                <td
+                                    key={reader.lastName}
+                                    className="table-td"
+                                >
+                                    {reader.lastName}
+                                </td>
+                                <td
+                                    key={reader.firstName}
+                                    className="table-td"
+                                >
+                                    {reader.firstName}
+                                </td>
+                                <td
+                                    key={reader.middleName}
+                                    className="table-td"
+                                >
+                                    {reader.middleName ? reader.middleName : "-"}
+                                </td>
+                                <td
+                                    key={reader.gradeName}
+                                    className="table-td"
+                                >
+                                    {reader.gradeName}
+                                </td>
+                                <td
+                                    key={reader.username}
+                                    className="table-td"
+                                >
+                                    {reader.username}
+                                </td>
+                                <td className="table-td table-td-actions">
+                                    <div className="actions-container">
+                                        <TableReaderHistoryButton
+                                            onReaderHistoryOpen={() => handleReaderHistoryOpen()}
+                                        >
 
-                                    </TableReaderHistoryButton>
-                                    <TableBorrowButton
-                                        onBorrow={() => handleBorrow(reader.id, `${reader.lastName} ${reader.firstName}`)}
-                                    >
+                                        </TableReaderHistoryButton>
+                                        <TableBorrowButton
+                                            onBorrow={() => handleBorrow(reader.id, `${reader.lastName} ${reader.firstName}`)}
+                                        >
 
-                                    </TableBorrowButton>
-                                </div>
-                            </td>
-                        </tr>
-                    ))}
+                                        </TableBorrowButton>
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
             </Table>
         </>
     )

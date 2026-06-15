@@ -1,0 +1,65 @@
+name: dockercompose5925795137756316899
+services:
+  postgres_db:
+    container_name: postgres_api_db
+    environment:
+      POSTGRES_DB: school_library
+      POSTGRES_PASSWORD: "12345"
+      POSTGRES_USER: postgres
+    image: postgres:16-alpine
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: pgdata
+        target: /var/lib/postgresql/data
+        volume: {}
+  reactjs:
+    build:
+      context: C:\Projects\CSharp\SchoolLibrary_V2.0\Frontend
+      dockerfile: Dockerfile.production
+      args:
+        VITE_API_URL: http://localhost:8080/api
+    depends_on:
+      schoollibrary.api:
+        condition: service_started
+        required: true
+    image: reactjs
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 80
+        published: "80"
+        protocol: tcp
+  schoollibrary.api:
+    build:
+      context: C:\Projects\CSharp\SchoolLibrary_V2.0
+      dockerfile: SchoolLibrary.API/Dockerfile
+    depends_on:
+      postgres_db:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_URLS: http://+:8080
+    image: schoollibraryapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose5925795137756316899_default
+volumes:
+  pgdata:
+    name: dockercompose5925795137756316899_pgdata

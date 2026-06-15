@@ -14,3 +14,14 @@ V1.42
 
 Add ReserveCleanupBackgroundService
 Add Some Filters on Frontend
+
+
+V1.5
+
+Created basic responsive design for smaller screens
+
+V1.51
+
+Added the try catch block inside ReadersPage handleReaderHistoryOpen function
+Update BookService in SchoolLibrary.Application (add GetAllTimeReturnHistoriesAsync, GetHistoryAsync and GetAllTimeBorrowingHistoriesAsync);
+Other changes

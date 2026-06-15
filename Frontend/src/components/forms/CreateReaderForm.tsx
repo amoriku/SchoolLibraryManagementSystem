@@ -12,7 +12,7 @@ export const CreateReaderForm = ({ handleSubmit }: MyFormProps,) => {
         firstName: "",
         lastName: "",
         middleName: "",
-        gradeId: 3
+        gradeId: 0
     });
 
     const [grades, setGrades] = useState<GradeDto[]>([]);
